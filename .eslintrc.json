@@ -22,7 +22,7 @@
     "plugins": [
         "@typescript-eslint",
         "react",
-        "jsx-a1ly"
+        "jsx-a11y"
     ],
     "rules": {
         "react/react-in-jsx-scope": "off",
