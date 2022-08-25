@@ -24,12 +24,12 @@ jobs:
 
     steps:
       - name: Check out Git repository
-        uses: actions/checkout@v2
-        
+        uses: actions/checkout@v3
+
       - name: Set up Node.js
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
         with:
-          node-version: 12
+          node-version: 14.17.3
 
       # ESLint and Prettier must be in `package.json`
       - name: Install Node.js dependencies
@@ -42,9 +42,8 @@ jobs:
         with:
           # Enable your linters here
           eslint: true
-          prettier: true
-          eslint_extensions: "ts,tsx"
-          eslint_args: "--max-warnings 0"
-          
+          eslint_extensions: 'ts,tsx'
+          eslint_args: '--max-warnings 0'
+
       - name: Run format check
         run: npm run format -- --write=false --check
