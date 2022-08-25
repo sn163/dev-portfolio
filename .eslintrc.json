@@ -8,7 +8,6 @@
         "plugin:jsx-a11y/recommended",
         "plugin:react/recommended",
         "plugin:react-hooks/recommended",
-        "plugin:prettier/recommended",
         "plugin:@typescript-eslint/recommended"
     ],
     "parser": "@typescript-eslint/parser",
@@ -22,7 +21,7 @@
     "plugins": [
         "@typescript-eslint",
         "react",
-        "jsx-a1ly"
+        "jsx-a11y"
     ],
     "rules": {
         "react/react-in-jsx-scope": "off",
