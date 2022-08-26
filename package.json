@@ -29,7 +29,7 @@
     "eject": "react-scripts eject",
     "lint": "eslint --no-error-on-unmatched-pattern src/",
     "lint:fix": "eslint --fix",
-    "format": "prettier --write src '**/*.json'"
+    "format": "prettier --write src"
   },
   "browserslist": {
     "production": [
