@@ -1,6 +1,6 @@
 import "./assets/App.scss";
 import "./assets/theme.scss";
-import Dashboard from "./Dashboard";
+import Dashboard from "./modules/Dashboard";
 
 export default function App() {
   return (

@@ -1,9 +1,9 @@
-import About from "./components/About.jsx";
-import Blog from "./components/Blog.jsx";
-import Contact from "./components/Contact.jsx";
-import Projects from "./components/Projects";
-import Resume from "./components/Resume";
-import NavHeader from "./components/NavHeader";
+import About from "../components/About";
+import Blog from "../components/Blog.jsx";
+import Contact from "../components/Contact.jsx";
+import Projects from "../components/Projects";
+import Resume from "../components/Resume";
+import NavHeader from "../components/NavHeader";
 import { Routes, Route } from "react-router-dom";
 
 export default function Dashboard() {
