@@ -23,7 +23,7 @@ export default function NavHeader() {
               <Nav.Link>Projects</Nav.Link>
             </LinkContainer>
             <LinkContainer to="/contact">
-              <Nav.Link>Contact</Nav.Link>
+              <Nav.Link>Contact Test</Nav.Link>
             </LinkContainer>
           </Nav>
         </Navbar.Collapse>
