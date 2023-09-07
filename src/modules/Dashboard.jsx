@@ -1,3 +1,4 @@
+import Home from "../components/Home";
 import About from "../components/About";
 import Blog from "../components/Blog.jsx";
 import Contact from "../components/Contact.jsx";
@@ -11,11 +12,12 @@ export default function Dashboard() {
     <div>
       <NavHeader />
       <Routes>
-        <Route path="/" element={<About />} />
+        <Route path="about" element={<About />} />
         <Route path="blog" element={<Blog />} />
         <Route path="contact" element={<Contact />} />
         <Route path="projects" element={<Projects />} />
         <Route path="resume" element={<Resume />} />
+        <Route path="/" component={<Home />} />
       </Routes>
     </div>
   );
