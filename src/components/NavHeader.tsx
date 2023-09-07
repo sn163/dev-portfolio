@@ -1,11 +1,9 @@
-import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
+import { Container, Nav, Navbar } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 
 export default function NavHeader() {
   return (
-    <Navbar bg="light" fluid>
+    <Navbar bg="light">
       <Container>
         <LinkContainer to="/">
           <Navbar.Brand>Sonny Nguyen</Navbar.Brand>
@@ -19,11 +17,11 @@ export default function NavHeader() {
             <LinkContainer to="/blog">
               <Nav.Link>Blog</Nav.Link>
             </LinkContainer>
-            <LinkContainer to="/projects">
-              <Nav.Link>Projects</Nav.Link>
+            <LinkContainer to="/resume">
+              <Nav.Link>Resume</Nav.Link>
             </LinkContainer>
             <LinkContainer to="/contact">
-              <Nav.Link>Contact Main test 3</Nav.Link>
+              <Nav.Link>Contact</Nav.Link>
             </LinkContainer>
           </Nav>
         </Navbar.Collapse>

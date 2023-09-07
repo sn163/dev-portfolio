@@ -1,0 +1,180 @@
+export const cvData = {
+  personalData: {
+    name: "Sonny Nguyen",
+    title: "Software Engineer",
+    image: "https://i.imgur.com/1sDGpQK.png",
+    contacts: [
+      { type: "email", value: "sonnynguyen163@gmail.com" },
+      { type: "phone", value: "626-863-5972" },
+      { type: "location", value: "Los Angeles, CA" },
+      {
+        type: "linkedin",
+        value: "https://www.linkedin.com/in/sonny-nguyen163/",
+      },
+      { type: "github", value: "https://github.com/sn163" },
+    ],
+  },
+  sections: [
+    {
+      type: "text",
+      title: "Career Profile",
+      content: `Software Engineer experienced in building full-stack applications, practicing and utilizing modern technologies in React or Vue, Node.js/Express, & Typescript/JavaScript. Keen in creating robust, highly scalable software for extended maintainability as well as committed to building projects that strengthen our future communities and provide a positive impact on people. Active open-source contributor passionate about creating tools that solve pressing problems/improve client experience.Co-developer of OverVue, an open-source cross-platform web application prototyping tool that allows developers to dynamically build and envision Vue applications. (2100+ stars on Github). Featured speaker @ SingleSprout's Tech Talk Series: “Continuous Integration & Continuous Delivery (CI/CD)"`,
+      icon: "usertie",
+    },
+    {
+      type: "common-list",
+      title: "Education",
+      icon: "graduation",
+      items: [
+        {
+          title: "Computer Engineering (BS)",
+          authority: "University",
+          authorityWebSite: "https://sample.edu",
+          rightSide: "2013 - 2017",
+        },
+        {
+          title: "Some Department (PHD)",
+          authority: "Another University",
+          authorityWebSite: "https://sample.edu",
+          rightSide: "2017 - Present",
+        },
+      ],
+    },
+    {
+      type: "experiences-list",
+      title: "Experiences",
+      description: "",
+      icon: "archive",
+      items: [
+        {
+          title: "Software Engineer",
+          company: "Dropps",
+          description: "",
+          companyWebSite: "http://www.dropps.com",
+          datesBetween: "May 2022 - Present",
+        },
+        {
+          title: "Software Engineer",
+          company: "OverVue",
+          description: "",
+          companyWebSite: "https://www.overvue.org/",
+          companyMeta: "",
+          datesBetween: "Sept 2021 - May 2022",
+        },
+      ],
+    },
+    // {
+    //   type: "projects-list",
+    //   title: "Projects",
+    //   description: "Optional",
+    //   icon: "tasks",
+    //   groups: [
+    //     {
+    //       sectionHeader: "Company Name",
+    //       description: "Optional",
+    //       items: [
+    //         {
+    //           title: "Project",
+    //           projectUrl: "optional",
+    //           description: "Optional",
+    //         },
+    //         {
+    //           title: "Project",
+    //           projectUrl: "optional",
+    //           description: "Optional",
+    //         },
+    //         {
+    //           title: "Project",
+    //           projectUrl: "optional",
+    //           description: "Optional",
+    //         },
+    //       ],
+    //     },
+    //   ],
+    // },
+    {
+      type: "common-list",
+      title: "Conferences & Certificates",
+      description: "",
+      icon: "comments",
+      items: [
+        {
+          title: "Some Conferences / 2019",
+          authority: "SomeConf",
+          authorityWebSite: "https://www.someconf.somesome",
+        },
+        {
+          title: "Some Conferences / 2019",
+          authority: "SomeConf",
+          authorityMeta: "Speaker",
+          authorityWebSite: "https://www.someconf.somesome",
+          rightSide: "test",
+        },
+        {
+          title: "Some Conferences / 2012",
+          authorityMeta: "Speaker",
+        },
+      ],
+    },
+    {
+      type: "common-list",
+      title: "Languages",
+      icon: "language",
+      items: [
+        {
+          authority: "English",
+          authorityMeta: "Professional",
+        },
+        {
+          authority: "Spanish",
+          authorityMeta: "Beginner",
+        },
+      ],
+    },
+    {
+      type: "tag-list",
+      title: "Skills Proficiency",
+      icon: "rocket",
+      items: [
+        "JavaScript (ES6+)",
+        "Typescript",
+        "React (Hooks, Context API, Redux, Router)",
+        "Vue",
+        "Tanstack Query",
+        "Node.js (Express)",
+        "JQuery",
+        "HTML5",
+        "CSS",
+        "TailwindCSS",
+        "Bootstrap",
+        "MaterialUI",
+        "Git",
+        "REST",
+        "PostgreSQL",
+        "MongoDB",
+        "Shopify Plus",
+        "Liquid",
+        "GraphQL",
+        "A/B Testing",
+        "Storybook UI",
+      ],
+    },
+    {
+      type: "tag-list",
+      title: "Hobbies & Interests",
+      icon: "cubes",
+      items: [
+        "DJ",
+        "Technology",
+        "Building PCs",
+        "Gaming",
+        "Board Games",
+        "Cat Owner",
+        "Sports",
+        "Journaling",
+        "Cooking",
+        "Escape Rooms",
+      ],
+    },
+  ],
+};

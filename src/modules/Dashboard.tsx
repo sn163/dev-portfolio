@@ -1,8 +1,7 @@
 import Home from "../components/Home";
 import About from "../components/About";
-import Blog from "../components/Blog.jsx";
-import Contact from "../components/Contact.jsx";
-import Projects from "../components/Projects";
+import Blog from "../components/Blog";
+import Contact from "../components/Contact";
 import Resume from "../components/Resume";
 import NavHeader from "../components/NavHeader";
 import { Routes, Route } from "react-router-dom";
@@ -15,9 +14,8 @@ export default function Dashboard() {
         <Route path="about" element={<About />} />
         <Route path="blog" element={<Blog />} />
         <Route path="contact" element={<Contact />} />
-        <Route path="projects" element={<Projects />} />
         <Route path="resume" element={<Resume />} />
-        <Route path="/" component={<Home />} />
+        <Route path="/" element={<Home />} />
       </Routes>
     </div>
   );
