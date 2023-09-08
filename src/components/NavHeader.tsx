@@ -20,6 +20,9 @@ export default function NavHeader() {
             <LinkContainer to="/resume">
               <Nav.Link>Resume</Nav.Link>
             </LinkContainer>
+            <LinkContainer to="/projects">
+              <Nav.Link>Projects</Nav.Link>
+            </LinkContainer>
             <LinkContainer to="/contact">
               <Nav.Link>Contact</Nav.Link>
             </LinkContainer>
