@@ -25,20 +25,23 @@ code {
   background-color: #1a1a1a;
 }
 
-.navbar-brand {
-  color: #ffffff !important;
-  font-weight: 700;
-  font-family: "Space Mono", monospace;
-}
-.navbar-brand.active {
-  color: #ff4d59 !important;
-}
-
 .navbar-nav .nav-link {
   margin: auto, 0;
   color: #ffffff !important;
   font-weight: 700;
+  font-size: 17px;
   font-family: "Space Mono", monospace;
+}
+.navbar-nav .nav-link:nth-child(n + 1):nth-child(-n + 5):after {
+  content: " | ";
+  color: white;
+  font-size: 100%;
+  margin: 0 0.5rem;
+  font-weight: 400;
+}
+
+.nav-link:hover {
+  color: #ff4d59 !important;
 }
 
 .nav-link.active {
@@ -47,4 +50,9 @@ code {
 
 .pageContainer {
   z-index: 0;
+}
+
+.logo {
+  min-width: 50px;
+  height: 50px;
 }
