@@ -1,5 +1,6 @@
 @import "~bootstrap/scss/bootstrap";
 @import "theme";
+@import url("http://fonts.googleapis.com/css?family=Oswald:400,300,700");
 
 .App {
   text-align: center;
@@ -17,7 +18,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #1a1a1a;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
