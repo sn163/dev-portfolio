@@ -1,5 +1,6 @@
 import type { ISourceOptions } from "tsparticles-engine";
-
+// options.events.onHover.enable = false
+// particles.links.enable = false
 const home: ISourceOptions = {
   fpsLimit: 120,
   interactivity: {

@@ -1,23 +1,41 @@
+import { useEffect, useState } from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
+import { useLocation } from "react-router-dom";
 
 export default function NavHeader() {
+  const [pathname, setPathname] = useState("/");
+  const [hover, setHover] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    setPathname(location.pathname);
+  }, [location]);
+
   return (
     <>
-      <Navbar
-        className="min-w-fit h-auto"
-        style={{ backgroundColor: "#272727" }}
-      >
+      <Navbar className="min-w-fit h-16" style={{ backgroundColor: "#272727" }}>
         <Container>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav
               activeKey="/"
-              variant="underline"
-              className="w-full h-auto justify-content-end"
+              className="w-full h-auto items-center justify-content-end"
             >
               <LinkContainer to="/">
-                <Navbar.Brand className=" my-auto ">Sonny Nguyen</Navbar.Brand>
+                <Navbar.Brand>
+                  <img
+                    onMouseEnter={() => setHover(true)}
+                    onMouseLeave={() => setHover(false)}
+                    src={
+                      hover || pathname === "/"
+                        ? "https://i.imgur.com/0tu5wvE.png"
+                        : "https://i.imgur.com/TnOadfu.png"
+                    }
+                    alt="portfolio logo"
+                    className="items-center w-16"
+                  />
+                </Navbar.Brand>
               </LinkContainer>
               <LinkContainer to="/about">
                 <Nav.Link>About</Nav.Link>
