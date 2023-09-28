@@ -1,3 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("http://fonts.googleapis.com/css?family=Oswald:400,300,700");
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -10,4 +15,36 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.tsparticles {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: #1a1a1a;
+}
+
+.navbar-brand {
+  color: #ffffff !important;
+  font-weight: 700;
+  font-family: "Space Mono", monospace;
+}
+.navbar-brand.active {
+  color: #ff4d59 !important;
+}
+
+.navbar-nav .nav-link {
+  margin: auto, 0;
+  color: #ffffff !important;
+  font-weight: 700;
+  font-family: "Space Mono", monospace;
+}
+
+.nav-link.active {
+  color: #ff4d59 !important;
+}
+
+.pageContainer {
+  z-index: 0;
 }
