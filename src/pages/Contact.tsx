@@ -1,29 +1,11 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { Container, Button, Form } from "react-bootstrap";
 import emailjs from "@emailjs/browser";
 import { useFormik } from "formik";
 import * as yup from "yup";
-import ReCAPTCHA from "react-google-recaptcha";
-import axios from "axios";
 
 export default function Contact() {
   const [sendStatus, setSendStatus] = useState("SEND");
-  const [message, setMessage] = useState("");
-  const [error, setError] = useState("");
-  const captchaRef = useRef<ReCAPTCHA>(null);
-  const siteKey: string = process.env.REACT_APP_SITE_KEY as string;
-
-  const verifyToken = async (token: string) => {
-    try {
-      const response = await axios.post(`http://localhost:4000/verify-token`, {
-        secret: process.env.REACT_APP_SECRET_KEY,
-        token,
-      });
-      return response.data;
-    } catch (error) {
-      console.log("error ", error);
-    }
-  };
 
   const formik = useFormik({
     initialValues: {
@@ -41,18 +23,6 @@ export default function Contact() {
     }),
     onSubmit: async (values, { setSubmitting, resetForm }) => {
       setSendStatus("SENDING...");
-
-      const token = captchaRef.current?.getValue();
-      captchaRef.current?.reset();
-
-      if (token) {
-        const valid_token = await verifyToken(token);
-        if (valid_token.success) {
-          setMessage("Hurray!! you have submitted the form");
-        } else {
-          setError("Sorry!! Token invalid");
-        }
-      }
 
       const templateId = "template_ykuqq3v";
       const serviceId = "service_elh2eah";
@@ -135,9 +105,6 @@ export default function Contact() {
               * Message field is required
             </Form.Control.Feedback>
           </Form.Group>
-          <ReCAPTCHA sitekey={siteKey} ref={captchaRef} />
-          {error && <p className="textError">Error!! {error}</p>}
-          {message && <p className="textSuccess">Success!! {message}</p>}
           <div className="flex justify-center items-center">
             <Button
               disabled={formik.isSubmitting}
