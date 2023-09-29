@@ -27,7 +27,7 @@ const home: ISourceOptions = {
   },
   particles: {
     color: {
-      value: "#ff4d59",
+      value: ["#ff4d59", "#8199ff", "#ff4d59", "#8199ff"],
     },
     links: {
       color: "#ff4d59",
@@ -51,7 +51,7 @@ const home: ISourceOptions = {
         enable: true,
         area: 800,
       },
-      value: 100,
+      value: 80,
     },
     opacity: {
       value: 0.5,
@@ -84,7 +84,7 @@ const page: ISourceOptions = {
   },
   particles: {
     color: {
-      value: "#ff4d59",
+      value: ["#ff4d59", "#8199ff", "#ff4d59", "#8199ff"],
     },
     links: {
       color: "#ff4d59",
@@ -100,7 +100,7 @@ const page: ISourceOptions = {
         default: "bounce",
       },
       random: false,
-      speed: 0.1,
+      speed: 0.2,
       straight: false,
     },
     number: {
@@ -108,7 +108,7 @@ const page: ISourceOptions = {
         enable: true,
         area: 800,
       },
-      value: 100,
+      value: 50,
     },
     opacity: {
       value: 0.5,
@@ -117,7 +117,7 @@ const page: ISourceOptions = {
       type: "circle",
     },
     size: {
-      value: { min: 1, max: 3 },
+      value: { min: 1, max: 2 },
     },
   },
   detectRetina: true,

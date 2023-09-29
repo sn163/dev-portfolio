@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 import { useLocation } from "react-router-dom";
+import { ReactComponent as LogoActive } from "../logo-active.svg";
+import { ReactComponent as Logo } from "../logo.svg";
 
 export default function NavHeader() {
   const [pathname, setPathname] = useState("/");
@@ -14,27 +16,25 @@ export default function NavHeader() {
 
   return (
     <>
-      <Navbar className="min-w-fit h-16" style={{ backgroundColor: "#272727" }}>
+      <Navbar className="min-w-fit h-16">
         <Container>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav
               activeKey="/"
-              className="w-full h-auto items-center justify-content-end"
+              className="w-full h-14 items-center justify-content-end"
             >
               <LinkContainer to="/">
                 <Navbar.Brand>
-                  <img
-                    onMouseEnter={() => setHover(true)}
-                    onMouseLeave={() => setHover(false)}
-                    src={
-                      hover || pathname === "/"
-                        ? "https://i.imgur.com/0tu5wvE.png"
-                        : "https://i.imgur.com/TnOadfu.png"
-                    }
-                    alt="portfolio logo"
-                    className="items-center w-16"
-                  />
+                  {hover || pathname === "/" ? (
+                    <LogoActive
+                      onMouseEnter={() => setHover(true)}
+                      onMouseLeave={() => setHover(false)}
+                      className="items-center w-16 h-16"
+                    />
+                  ) : (
+                    <Logo className="items-center w-16 h-16" />
+                  )}
                 </Navbar.Brand>
               </LinkContainer>
               <LinkContainer to="/about">
