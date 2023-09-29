@@ -15,10 +15,10 @@ export default function Dashboard() {
       <Routes>
         <Route
           element={
-            <div>
+            <>
               <ParticlesModule type="page" />
               <Outlet />
-            </div>
+            </>
           }
         >
           <Route path="about" element={<About />} />
@@ -27,7 +27,16 @@ export default function Dashboard() {
           <Route path="projects" element={<Projects />} />
           <Route path="resume" element={<Resume />} />
         </Route>
-        <Route path="/" element={<Home />} />
+        <Route
+          element={
+            <div>
+              <ParticlesModule type="home" />
+              <Outlet />
+            </div>
+          }
+        >
+          <Route path="/" element={<Home />} />
+        </Route>
       </Routes>
     </div>
   );

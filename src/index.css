@@ -3,13 +3,11 @@
 @tailwind utilities;
 @import url("http://fonts.googleapis.com/css?family=Oswald:400,300,700");
 
+html,
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+  overflow: hidden;
 }
 
 code {
@@ -23,6 +21,15 @@ code {
   height: 100%;
   z-index: -1;
   background-color: #1a1a1a;
+}
+
+.banner {
+  font-size: 170px;
+  font-family: "Space Mono", monospace;
+}
+
+.navbar {
+  background-color: #272727 !important;
 }
 
 .navbar-nav .nav-link {
@@ -49,10 +56,37 @@ code {
 }
 
 .pageContainer {
-  z-index: 0;
+  height: 100%;
+  z-index: 1;
 }
 
 .logo {
   min-width: 50px;
   height: 50px;
+}
+
+#dashboard {
+  width: 100%;
+  min-height: 100vw;
+}
+
+.btn-outline {
+  border-color: #ff4d59 !important;
+  color: #ff4d59 !important;
+  font-weight: 700;
+  font-size: 17px;
+  font-family: "Space Mono", monospace;
+  background-color: #1a1a1a !important;
+  --box-shadow-color: #ff4d59;
+  box-shadow: 0 0 20px var(--box-shadow-color);
+}
+
+.btn-outline:hover {
+  background-color: #ff4d59 !important;
+  color: #1a1a1a !important;
+}
+
+.contact-form {
+  background-color: #272727;
+  margin: 0, auto;
 }
