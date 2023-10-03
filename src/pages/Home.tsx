@@ -8,7 +8,11 @@ export default function Home() {
       <div className="banner flex flex-col">
         <Photo className="p-16" />
         <div className="flex items-center justify-center">
-          <Button size="lg" className="btn-outline shadow-5 shadow-danger px-5">
+          <Button
+            size="lg"
+            href="#/resume"
+            className="btn-outline shadow-5 shadow-danger px-5"
+          >
             ABOUT ME
           </Button>
         </div>
