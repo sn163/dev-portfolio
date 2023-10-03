@@ -16,7 +16,7 @@ export default function NavHeader() {
 
   return (
     <>
-      <Navbar className="min-w-fit h-16">
+      <Navbar className="min-w-fit h-16" sticky="top">
         <Container>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
