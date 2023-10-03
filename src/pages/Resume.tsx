@@ -87,22 +87,22 @@ export default function Resume() {
     <Container className="pageContainer">
       <div className="resume-content max-w-xxl p-16 space-y-10 my-6 rounded min-h-fit">
         <div className="flex space-x-32 px-1 text-light">
-          <h2 className="h4 resume-header">Career</h2>
+          <h2 className="h4 resume-header">CAREER</h2>
           <div className="space-y-5">{jobsList}</div>
         </div>
         {divider}
         <div className="flex space-x-32 px-1 text-light">
-          <h2 className="h4 resume-header">Projects</h2>
+          <h2 className="h4 resume-header">PROJECTS</h2>
           <div className="space-y-4">{projectsList}</div>
         </div>
         {divider}
-        <div className="flex space-x-32 px-1 text-light">
-          <h2 className="h4 resume-header">Projects</h2>
+        <div className="flex space-x-36 px-1 text-light">
+          <h2 className="h4 resume-header">ACHIEVEMENTS</h2>
           <div className="space-y-5">{achievementsList}</div>
         </div>
         {divider}
         <div className="flex space-x-32 px-1 text-light">
-          <h2 className="h4 resume-header">Skills</h2>
+          <h2 className="h4 resume-header">SKILLS</h2>
           <div>
             <ListGroup horizontal className="m-2 flex-wrap">
               {skillsList}
@@ -111,7 +111,7 @@ export default function Resume() {
         </div>
         {divider}
         <div className="flex space-x-32 my-4 px-1 text-light">
-          <h2 className="h4 underline resume-header">Education</h2>
+          <h2 className="h4 underline resume-header">EDUCATION</h2>
           <div className="space-y-2">{schools}</div>
         </div>
       </div>
