@@ -6,8 +6,8 @@ export default function Resume() {
   const id = useId();
   const { jobs, education, projects, achievements, skills } = cvData;
 
-  const jobsList = jobs.map((x, i) => {
-    const bulletpoints = x.description.map((x) => (
+  const jobsList = jobs.map((x) => {
+    const bulletpoints = x.description.map((x, i) => (
       <li className="my-1" key={`jobs-${id}-${i}`}>
         {x}
       </li>
@@ -25,8 +25,8 @@ export default function Resume() {
     );
   });
 
-  const projectsList = projects.map((x, i) => {
-    const bulletpoints = x.description.map((x) => (
+  const projectsList = projects.map((x) => {
+    const bulletpoints = x.description.map((x, i) => (
       <li className="my-1" key={`projects-${id}-${i}`}>
         {x}
       </li>
@@ -65,14 +65,12 @@ export default function Resume() {
   const schools = education.map((x) => {
     return (
       <>
-        <div className="mb-4">
-          <h3 className="h2">{x.school_name}</h3>
-          <div className="flex min-w-full w-full space-x-1">
-            <span className="italic">{x.description}</span>
-            {x.major && <span className="major italic">{x.major}</span>}
-          </div>
-          <span className="mb-2">{x.location}</span>
+        <h3 className="h2">{x.school_name}</h3>
+        <div className="flex min-w-full w-full space-x-1">
+          <span className="italic">{x.description}</span>
+          {x.major && <span className="major italic">{x.major}</span>}
         </div>
+        <span className="mb-2">{x.location}</span>
       </>
     );
   });
@@ -84,25 +82,25 @@ export default function Resume() {
   ));
 
   return (
-    <Container className="pageContainer">
+    <Container id="resume" className="s-resume target-section">
       <div className="resume-content max-w-xxl p-16 space-y-10 my-6 rounded min-h-fit">
-        <div className="flex space-x-32 px-1 text-light">
-          <h2 className="h4 resume-header">CAREER</h2>
-          <div className="space-y-5">{jobsList}</div>
+        <div className="flex space-x-24 px-1 text-light">
+          <h2 className="h4 resume-header mt-2">CAREER</h2>
+          <div className="space-y-4">{jobsList}</div>
         </div>
         {divider}
-        <div className="flex space-x-32 px-1 text-light">
-          <h2 className="h4 resume-header">PROJECTS</h2>
+        <div className="flex space-x-24 px-1 text-light">
+          <h2 className="h4 resume-header mt-2">PROJECTS</h2>
           <div className="space-y-4">{projectsList}</div>
         </div>
         {divider}
-        <div className="flex space-x-36 px-1 text-light">
-          <h2 className="h4 resume-header">ACHIEVEMENTS</h2>
-          <div className="space-y-5">{achievementsList}</div>
+        <div className="flex space-x-24 px-1 text-light">
+          <h2 className="h4 resume-header mt-2">ACHIEVEMENTS</h2>
+          <div className="space-y-4">{achievementsList}</div>
         </div>
         {divider}
-        <div className="flex space-x-32 px-1 text-light">
-          <h2 className="h4 resume-header">SKILLS</h2>
+        <div className="flex space-x-24 px-1 text-light">
+          <h2 className="h4 resume-header mt-2">SKILLS</h2>
           <div>
             <ListGroup horizontal className="m-2 flex-wrap">
               {skillsList}
@@ -110,8 +108,8 @@ export default function Resume() {
           </div>
         </div>
         {divider}
-        <div className="flex space-x-32 my-4 px-1 text-light">
-          <h2 className="h4 underline resume-header">EDUCATION</h2>
+        <div className="flex space-x-24 px-1 text-light">
+          <h2 className="h4 resume-header mt-2">EDUCATION</h2>
           <div className="space-y-2">{schools}</div>
         </div>
       </div>

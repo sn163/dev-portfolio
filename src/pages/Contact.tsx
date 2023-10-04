@@ -47,7 +47,7 @@ export default function Contact() {
   });
 
   return (
-    <Container className="pageContainer" fluid>
+    <Container id="contact" className="s-contact target-section" fluid>
       <div className="flex w-full h-full items-start justify-center">
         <Form
           noValidate

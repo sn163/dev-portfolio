@@ -1,4 +1,3 @@
-import "./assets/App.scss";
 import "./assets/theme.scss";
 
 import Dashboard from "./modules/Dashboard";

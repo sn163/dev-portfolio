@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
-import { LinkContainer } from "react-router-bootstrap";
 import { useLocation } from "react-router-dom";
 import { ReactComponent as LogoActive } from "../logo-active.svg";
 import { ReactComponent as Logo } from "../logo.svg";
@@ -16,42 +15,33 @@ export default function NavHeader() {
 
   return (
     <>
-      <Navbar className="min-w-fit h-16" sticky="top">
+      <Navbar collapseOnSelect expand="md" sticky="top">
         <Container>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav
-              activeKey="/"
-              className="w-full h-14 items-center justify-content-end"
-            >
-              <LinkContainer to="/">
+          <Navbar.Toggle
+            className="ml-auto"
+            aria-controls="responsive-navbar-nav"
+          />
+          <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav className="items-center container-fluid">
+              <Nav.Link href="#home">
                 <Navbar.Brand>
-                  {hover || pathname === "/" ? (
+                  {hover || pathname === "home" ? (
                     <LogoActive
                       onMouseEnter={() => setHover(true)}
                       onMouseLeave={() => setHover(false)}
-                      className="items-center w-16 h-16"
+                      className="hover:scale-125 ease-in-out duration-500 hover:animate-pulse"
                     />
                   ) : (
-                    <Logo className="items-center w-16 h-16" />
+                    <Logo className="hover:scale-125 ease-in-out duration-500 hover:animate-pulse" />
                   )}
                 </Navbar.Brand>
-              </LinkContainer>
-              <LinkContainer to="/about">
-                <Nav.Link>About</Nav.Link>
-              </LinkContainer>
-              <LinkContainer to="/blog">
-                <Nav.Link>Blog</Nav.Link>
-              </LinkContainer>
-              <LinkContainer to="/resume">
-                <Nav.Link>Resume</Nav.Link>
-              </LinkContainer>
-              <LinkContainer to="/projects">
-                <Nav.Link>Projects</Nav.Link>
-              </LinkContainer>
-              <LinkContainer to="/contact">
-                <Nav.Link>Contact</Nav.Link>
-              </LinkContainer>
+              </Nav.Link>
+              <Nav.Link href="#about" className={`ml-auto ${pathname === "about" ? "l-active" : ""}`}>
+                About
+              </Nav.Link>
+              <Nav.Link href="#resume" className={pathname === "resume" ? "l-active" : ""}>Resume</Nav.Link>
+              <Nav.Link href="#work" className={pathname === "work" ? "l-active" : ""}>Work</Nav.Link>
+              <Nav.Link href="#contact" className={pathname === "contact" ? "l-active" : ""}>Contact</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
