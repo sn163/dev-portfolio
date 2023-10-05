@@ -3,6 +3,7 @@ import type { ISourceOptions } from "tsparticles-engine";
 // particles.links.enable = false
 const home: ISourceOptions = {
   fpsLimit: 120,
+  fullScreen: { enable: false, zIndex: -1 },
   interactivity: {
     events: {
       onClick: {
@@ -27,7 +28,7 @@ const home: ISourceOptions = {
   },
   particles: {
     color: {
-      value: ["#ff4d59", "#8199ff", "#ff4d59", "#8199ff"],
+      value: ["#ff4d59", "#ffffff", "#ff4d59", "#ffffff"],
     },
     links: {
       color: "#ff4d59",
@@ -68,6 +69,7 @@ const home: ISourceOptions = {
 
 const page: ISourceOptions = {
   fpsLimit: 120,
+  fullScreen: { enable: false, zIndex: -1 },
   interactivity: {
     events: {
       onClick: {
@@ -84,7 +86,7 @@ const page: ISourceOptions = {
   },
   particles: {
     color: {
-      value: ["#ff4d59", "#8199ff", "#ff4d59", "#8199ff"],
+      value: ["#ff4d59", "#ffffff", "#ff4d59", "#ffffff"],
     },
     links: {
       color: "#ff4d59",
@@ -108,7 +110,7 @@ const page: ISourceOptions = {
         enable: true,
         area: 800,
       },
-      value: 50,
+      value: 100,
     },
     opacity: {
       value: 0.5,
