@@ -1,8 +1,9 @@
-import { Button, Container } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import { ReactComponent as Photo } from "../profile_pic.svg";
 import { ReactComponent as Scroll } from "../arrow-circle-down.svg";
 //import { ReactComponent as Photo } from "../portfolio_photo2.svg";
 import { TypeAnimation } from "react-type-animation";
+import { ParticlesModule } from "../modules/Particles/ParticlesModule";
 
 export default function home() {
   return (
@@ -39,13 +40,14 @@ export default function home() {
       </div>
       <div className="flex items-center justify-center">
         <a
-          href="#resume"
+          href="#about"
           className="s-hero__scroll-link hover:motion-reduce:animate-bounce flex items-center space-x-5"
         >
           <Scroll className="scroll-arrow" />
           <span className="scroll-text">View More</span>
         </a>
       </div>
+      <ParticlesModule type="page" />
     </Container>
   );
 }

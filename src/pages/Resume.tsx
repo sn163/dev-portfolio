@@ -16,8 +16,8 @@ export default function Resume() {
     return (
       <>
         <h3 className="h2">{x.company}</h3>
-        <div className="flex min-w-full w-full mt-2 space-x-1">
-          <span className="italic">{x.title}</span>
+        <div className="flex min-w-full w-full items-center mt-2 space-x-1">
+          <span className="sub-title">{x.title}</span>
           <span className="resume-date">{x.date}</span>
         </div>
         <ul>{bulletpoints}</ul>
@@ -36,7 +36,7 @@ export default function Resume() {
       <>
         <h3 className="h2">{x.project_title}</h3>
         <div className="flex min-w-full w-full mt-2 space-x-1">
-          <span className="italic">{x.subtitle}</span>
+          <span className="sub-title">{x.subtitle}</span>
         </div>
         <ul>{bulletpoints}</ul>
       </>
@@ -55,8 +55,9 @@ export default function Resume() {
   });
   const divider = (
     <hr
+      className="mx-32"
       style={{
-        background: "grey",
+        background: "#d0d1d1",
         height: "2.5px",
         border: "none",
       }}
@@ -67,8 +68,8 @@ export default function Resume() {
       <>
         <h3 className="h2">{x.school_name}</h3>
         <div className="flex min-w-full w-full space-x-1">
-          <span className="italic">{x.description}</span>
-          {x.major && <span className="major italic">{x.major}</span>}
+          <span className="sub-title">{x.description}</span>
+          {x.major && <span className="major sub-title">{x.major}</span>}
         </div>
         <span className="mb-2">{x.location}</span>
       </>
@@ -82,37 +83,45 @@ export default function Resume() {
   ));
 
   return (
-    <Container id="resume" className="s-resume target-section">
-      <div className="resume-content max-w-xxl p-16 space-y-10 my-6 rounded min-h-fit">
-        <div className="flex space-x-24 px-1 text-light">
-          <h2 className="h4 resume-header mt-2">CAREER</h2>
-          <div className="space-y-4">{jobsList}</div>
-        </div>
+    <Container id="resume" className="s-resume" fluid>
+      <div className="flex flex-col items-center">
+        <h2 className="section-title-dark">RESUME</h2>
+        <div className="section-title-bar" />
+      </div>
+      <ListGroup className="resume-content mx-32 py-20 space-y-20">
+        <ListGroup.Item className="flex justify-between mx-32 text-dark">
+          <h2 className="h5 resume-header mt-2 mx-24">CAREER</h2>
+          <div className="space-y-6 mx-18">{jobsList}</div>
+        </ListGroup.Item>
         {divider}
-        <div className="flex space-x-24 px-1 text-light">
-          <h2 className="h4 resume-header mt-2">PROJECTS</h2>
-          <div className="space-y-4">{projectsList}</div>
-        </div>
+
+        <ListGroup.Item className="flex justify-between mx-32 text-dark">
+          <h2 className="h5 resume-header mt-2 mx-24">PROJECTS</h2>
+          <div className="space-y-6 mx-18">{projectsList}</div>
+        </ListGroup.Item>
         {divider}
-        <div className="flex space-x-24 px-1 text-light">
-          <h2 className="h4 resume-header mt-2">ACHIEVEMENTS</h2>
-          <div className="space-y-4">{achievementsList}</div>
-        </div>
+
+        <ListGroup.Item className="flex justify-between mx-32 text-dark">
+          <h2 className="h5 resume-header mt-2 mx-24">ACHIEVEMENTS</h2>
+          <div className="space-y-8 mx-18">{achievementsList}</div>
+        </ListGroup.Item>
         {divider}
-        <div className="flex space-x-24 px-1 text-light">
-          <h2 className="h4 resume-header mt-2">SKILLS</h2>
-          <div>
-            <ListGroup horizontal className="m-2 flex-wrap">
+
+        <ListGroup.Item className="flex justify-between mx-32 text-dark">
+          <h2 className="h5 resume-header mt-2 mx-24">SKILLS</h2>
+          <div className="ml-18">
+            <ListGroup horizontal className="m-2 flex-wrap skill-group">
               {skillsList}
             </ListGroup>
           </div>
-        </div>
+        </ListGroup.Item>
         {divider}
-        <div className="flex space-x-24 px-1 text-light">
-          <h2 className="h4 resume-header mt-2">EDUCATION</h2>
-          <div className="space-y-2">{schools}</div>
-        </div>
-      </div>
+
+        <ListGroup.Item className="flex justify-between mx-32 text-dark">
+          <h2 className="h5 resume-header mt-2 mx-24">EDUCATION</h2>
+          <div className="space-y-2 mx-18 min-w-full">{schools}</div>
+        </ListGroup.Item>
+      </ListGroup>
     </Container>
   );
 }

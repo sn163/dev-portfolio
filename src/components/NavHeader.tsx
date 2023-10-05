@@ -36,12 +36,30 @@ export default function NavHeader() {
                   )}
                 </Navbar.Brand>
               </Nav.Link>
-              <Nav.Link href="#about" className={`ml-auto ${pathname === "about" ? "l-active" : ""}`}>
+              <Nav.Link
+                href="#about"
+                className={`ml-auto ${pathname === "about" ? "l-active" : ""}`}
+              >
                 About
               </Nav.Link>
-              <Nav.Link href="#resume" className={pathname === "resume" ? "l-active" : ""}>Resume</Nav.Link>
-              <Nav.Link href="#work" className={pathname === "work" ? "l-active" : ""}>Work</Nav.Link>
-              <Nav.Link href="#contact" className={pathname === "contact" ? "l-active" : ""}>Contact</Nav.Link>
+              <Nav.Link
+                href="#resume"
+                className={pathname === "resume" ? "l-active" : ""}
+              >
+                Resume
+              </Nav.Link>
+              <Nav.Link
+                href="#work"
+                className={pathname === "work" ? "l-active" : ""}
+              >
+                Work
+              </Nav.Link>
+              <Nav.Link
+                href="#contact"
+                className={pathname === "contact" ? "l-active" : ""}
+              >
+                Contact
+              </Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>

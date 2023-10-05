@@ -28,7 +28,7 @@ export const ParticlesModule = ({ type }: ParticlesModuleProps) => {
   );
   return (
     <Particles
-      className="tsparticles"
+      id="tparticles"
       init={particlesInit}
       loaded={particlesLoaded}
       options={type === "home" ? options.home : options.page}

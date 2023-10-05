@@ -3,6 +3,7 @@
 @tailwind utilities;
 @import url("http://fonts.googleapis.com/css?family=Oswald:400,300,700");
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400&display=swap");
 
 :root {
   --font-1: "Inter", sans-serif;
@@ -29,6 +30,8 @@ body::-webkit-scrollbar {
 
 main {
   display: block;
+
+  z-index: -2;
 }
 
 h1 {
@@ -41,17 +44,19 @@ code {
     monospace;
 }
 
-.tsparticles {
+#tparticles {
   position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
   width: 100%;
   height: 100%;
-  z-index: -1;
-  background-color: #272727;
+  background-color: #1e1e1e;
 }
 
 .banner {
   font-size: 170px;
-  font-family: "Inter", sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 .navbar {
@@ -66,7 +71,7 @@ code {
   color: #dedede !important;
   font-weight: 500;
   font-size: 17px;
-  font-family: "Inter", sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 .navbar-nav .nav-link .navbar-brand {
@@ -104,7 +109,6 @@ code {
 }
 
 .s-hero {
-  z-index: 1;
   width: 100%;
   height: 100vh;
   min-height: calc(25.5 * var(2rem));
@@ -126,16 +130,126 @@ code {
 }
 
 .s-resume {
-  padding-bottom: var(--vspace-4);
+  padding: 5vh 0 9.5vh 0;
+  background-color: #fbfcfa;
+  width: 100%;
+  height: 100%;
+  min-height: calc(25.5 * var(2rem));
+  overflow: hidden;
+  scroll-margin-top: 4rem;
+}
+
+.s-resume .resume-content .list-group-item {
+  background-color: #fbfcfa;
+  font-family: "Raleway", sans-serif;
+  letter-spacing: 0.5px;
+  border: none;
+  display: flex;
+}
+
+.sub-title {
+  font-family: "IBM Plex Serif", serif !important;
+  font-size: 18px;
+  font-style: italic;
+}
+
+.skill-group .list-group-item {
+  font-family: "Raleway", sans-serif;
+  letter-spacing: 0.5px;
+  color: #fbfcfa;
+  background-color: #ff4d59 !important;
 }
 
 .s-about {
+  background-color: #272727;
+  width: 100%;
+  height: 100vh;
+  min-height: calc(25.5 * var(2rem));
+  overflow: hidden;
+  margin: 0;
+  padding: 5vh 0 10vh 0;
+  scroll-margin-top: 4rem;
+}
+
+.about-me-container {
+  background-color: #fbfcfa;
+}
+
+.s-about .about-me {
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  color: #dedede;
+}
+
+.connect-btn {
+  font-family: "Space Mono", monospace !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  color: #272727 !important;
+  background-color: #ff4d59 !important;
+  border: none;
+}
+
+.connect-txt {
+  font-family: "Raleway", sans-serif;
+  font-size: 25px;
+  letter-spacing: 0.5px;
+  font-weight: 700 !important;
+}
+
+.connect-txt span a {
+  display: inline-block;
+  color: #ff4d59;
+  font-weight: 700 !important;
+  text-decoration: none;
+}
+
+.section-title-light {
+  font-family: "Raleway", sans-serif;
+  letter-spacing: 0.6px;
+  font-weight: 700;
+  text-align: center;
+  font-size: 50px;
+  color: #dedede;
+  min-width: 13rem;
+}
+
+.section-title-bar {
+  height: 4px;
+  background: #ff4d59;
+  width: 100px;
+}
+
+.section-title-dark {
+  font-family: "Raleway", sans-serif;
+  letter-spacing: 0.6px;
+  font-weight: 700;
+  text-align: center;
+  font-size: 50px;
+  color: #272727;
+  min-width: 13rem;
 }
 
 .s-work {
+  background-color: #272727;
+  width: 100%;
+  height: 100vh;
+  min-height: calc(25.5 * var(2rem));
+  overflow: hidden;
+  margin: 0;
+  padding: 5vh 0 10vh 0;
+  scroll-margin-top: 4rem;
 }
 
 .s-contact {
+  background-color: #fbfcfa;
+  width: 100%;
+  height: 100vh;
+  min-height: calc(25.5 * var(2rem));
+  overflow: hidden;
+  padding: 5vh 0 10vh 0;
+  scroll-margin-top: 4rem;
 }
 
 .logo {
@@ -149,40 +263,19 @@ code {
   min-height: 100vh;
 }
 
-.btn-outline {
-  border-color: #ff4d59 !important;
-  color: white !important;
-  font-weight: 700;
-  font-size: 17px;
-  font-family: "Inter", sans-serif;
-  background-color: #272727 !important;
-  --box-shadow-color: #ff4d59;
-  box-shadow: 0 0 20px var(--box-shadow-color);
-}
-
-.btn-outline:hover {
-  background-color: #ff4d59 !important;
-  color: #1a1a1a !important;
-}
-
 .contact-form {
   background-color: #272727;
   margin: 0, auto;
 }
 
-.resume-content {
-  background-color: #272727;
-  font-family: "Inter", sans-serif;
-}
-
 .resume-date {
   font-family: var(--font-1);
   font-size: calc(var(--text-size) * 0.8889);
-  font-size: var(--text-sm);
   font-style: normal;
   color: grey;
   text-transform: uppercase;
   letter-spacing: 0.12em;
+  padding-top: 2.7px;
 }
 
 .resume-date::before {
@@ -190,6 +283,24 @@ code {
   color: var(--color-text);
   margin-right: 0.5rem;
   margin-left: 0.5rem;
+}
+
+.s-footer {
+  background-color: #1a1a1a;
+}
+
+.s-footer .footer-text {
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  color: #fbfcfa;
+}
+
+.footer-year {
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  color: #ff4d59;
 }
 
 /* ------------------------------------------------------------------- 
@@ -209,7 +320,7 @@ code {
 }
 
 .s-hero__content-social a {
-  color: white;
+  color: #fbfcfa;
   margin-right: var(--vspace-0_75);
 }
 
@@ -235,12 +346,12 @@ code {
 
 .s-hero__scroll-link {
   display: flex;
-  font-family: "Inter", sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 400;
   font-size: 15px;
   text-transform: uppercase;
   letter-spacing: 0.4em;
-  color: white;
+  color: #fbfcfa;
   text-decoration: none;
 }
 
@@ -250,10 +361,10 @@ code {
 }
 
 .s-hero__scroll-link .scroll-text {
-  color: white !important;
+  color: #fbfcfa !important;
   font-weight: 500;
   font-size: 17px;
-  font-family: "Inter", sans-serif;
+  font-family: "Raleway", sans-serif;
   background-color: #272727 !important;
   text-decoration: none;
 }
@@ -263,7 +374,7 @@ code {
   display: flex;
   width: 0;
   height: 1px;
-  background-color: white;
+  background-color: #fbfcfa;
   transition: all 0.3s ease-in-out;
 }
 
@@ -283,9 +394,6 @@ code {
 
 ul li {
   list-style-type: disc !important;
-}
-
-.s-hero {
 }
 
 /* ------------------------------------------------------------------- 
