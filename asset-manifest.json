@@ -1,20 +1,32 @@
 {
   "files": {
-    "main.css": "/static/css/main.a7e363a2.css",
-    "main.js": "/static/js/main.7ff2c6fc.js",
+    "main.css": "/static/css/main.73854972.css",
+    "main.js": "/static/js/main.19b3d6d3.js",
     "static/js/787.3bd53682.chunk.js": "/static/js/787.3bd53682.chunk.js",
-    "static/media/portfolio-pic.svg": "/static/media/portfolio-pic.2478deb8bc2114c0a526cfa39e6ca768.svg",
+    "static/media/portfolio-pic.svg": "/static/media/portfolio-pic.60bd8dcd70b3238c052dba07c034c64d.svg",
+    "static/media/overvue.svg": "/static/media/overvue.a3f2f8686a7c1b1952d87cd40014894d.svg",
     "static/media/profile_pic.svg": "/static/media/profile_pic.5f67d97218bb8fe3ada7e97a53245a75.svg",
+    "static/media/sonny_nguyen_cv.pdf": "/static/media/sonny_nguyen_cv.d6a78b5a71d9cbf9b68b.pdf",
     "static/media/logo-active.svg": "/static/media/logo-active.8919d44bd80b6e9c8dcd5de36f851d3c.svg",
     "static/media/logo.svg": "/static/media/logo.92fbacc2b495cc85d832ed07b92b56ef.svg",
+    "static/media/linkedin.svg": "/static/media/linkedin.65466fb421bfcbc1b404d1b0d3608202.svg",
+    "static/media/react.svg": "/static/media/react.f57b349b4d9df56c9b48c916a8d5adfb.svg",
     "static/media/arrow-circle-down.svg": "/static/media/arrow-circle-down.91e0957149b58b6c950bcdcbbd780c7c.svg",
+    "static/media/node-js.svg": "/static/media/node-js.a7f2ccf30eed3e5878a2ba1e6be108a2.svg",
+    "static/media/github.svg": "/static/media/github.f025d0e5a06e113f5f7c7a711d85f75c.svg",
+    "static/media/typescript.svg": "/static/media/typescript.da47f77824fab48dafd99485194e6bae.svg",
     "index.html": "/index.html",
-    "main.a7e363a2.css.map": "/static/css/main.a7e363a2.css.map",
-    "main.7ff2c6fc.js.map": "/static/js/main.7ff2c6fc.js.map",
+    "static/media/iphone.svg": "/static/media/iphone.ae08e58177e8bc1e61e704cb10f5655f.svg",
+    "static/media/location.svg": "/static/media/location.41909dc04d2c25ddd1bc62916edecf3c.svg",
+    "static/media/javascript.svg": "/static/media/javascript.7bb08cdbe94fc2dfc1b51be8c2dae551.svg",
+    "static/media/email.svg": "/static/media/email.4a4a015b7c7759875e9f98575482972c.svg",
+    "static/media/vue.svg": "/static/media/vue.2b520303788d88b4e0c3776cd07cd61f.svg",
+    "main.73854972.css.map": "/static/css/main.73854972.css.map",
+    "main.19b3d6d3.js.map": "/static/js/main.19b3d6d3.js.map",
     "787.3bd53682.chunk.js.map": "/static/js/787.3bd53682.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a7e363a2.css",
-    "static/js/main.7ff2c6fc.js"
+    "static/css/main.73854972.css",
+    "static/js/main.19b3d6d3.js"
   ]
 }
