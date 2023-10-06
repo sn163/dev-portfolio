@@ -16,12 +16,15 @@
 html {
   scroll-behavior: smooth;
   /* height of sticky header */
-  scroll-padding-top: 5.5rem;
+  scroll-padding-top: 4rem;
   margin: 0;
 }
 
 body {
   margin: 0;
+  overflow-y: scroll;
+  position: relative;
+  height: 100%;
 }
 
 body::-webkit-scrollbar {
@@ -30,7 +33,6 @@ body::-webkit-scrollbar {
 
 main {
   display: block;
-
   z-index: -2;
 }
 
@@ -65,6 +67,7 @@ code {
   top: 0;
   z-index: 1;
   width: 100%;
+  border-bottom: 2px solid #ff4d59;
 }
 
 .navbar-nav .nav-link {
@@ -72,6 +75,10 @@ code {
   font-weight: 500;
   font-size: 17px;
   font-family: "Raleway", sans-serif;
+}
+
+.navbar-nav .nav-link.nav-link.active-scroll-spy {
+  color: #ff4d59 !important;
 }
 
 .navbar-nav .nav-link .navbar-brand {
@@ -105,7 +112,12 @@ code {
 
 .profile-img {
   width: 350px;
+  min-width: 350px;
   height: 350px;
+}
+
+.portfolio-img {
+  min-width: 350px;
 }
 
 .s-hero {
@@ -130,7 +142,7 @@ code {
 }
 
 .s-resume {
-  padding: 5vh 0 9.5vh 0;
+  padding-top: 5vh;
   background-color: #fbfcfa;
   width: 100%;
   height: 100%;
@@ -171,13 +183,65 @@ code {
   scroll-margin-top: 4rem;
 }
 
+.skills-icon-group .list-group-item {
+  margin: 0;
+  background-color: #fbfcfa;
+}
+
+.skills-icon {
+  width: 65px;
+  height: 65px;
+}
+
 .about-me-container {
   background-color: #fbfcfa;
 }
 
+.project-container {
+  background-color: #fbfcfa;
+  border: 2px solid #ff4d59;
+  border-radius: 0.25rem;
+}
+.overvue-text-container {
+  background-color: #1e1e1e;
+}
+.overvue-title {
+  font-family: "Space Mono", monospace;
+  font-size: 35px;
+  letter-spacing: 0.5px;
+  color: #fbfcfa;
+}
+
+.overvue-title a {
+  font-family: "Space Mono", monospace;
+  font-size: 35px;
+  letter-spacing: 0.5px;
+  color: #fbfcfa;
+  text-decoration: none;
+}
+
+.overvue-title a:hover {
+  color: #4cb883;
+}
+
+.overvue-title a span {
+  font-family: "Space Mono", monospace;
+  font-size: 35px;
+  letter-spacing: 0.5px;
+  color: #4cb883;
+  text-decoration: none;
+}
+
+.overvue-subtitle {
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  color: #fbfcfa;
+}
+
 .s-about .about-me {
   font-family: "Raleway", sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   letter-spacing: 0.5px;
   color: #dedede;
 }
@@ -193,7 +257,7 @@ code {
 
 .connect-txt {
   font-family: "Raleway", sans-serif;
-  font-size: 25px;
+  font-size: 20px;
   letter-spacing: 0.5px;
   font-weight: 700 !important;
 }
@@ -231,6 +295,16 @@ code {
   min-width: 13rem;
 }
 
+.btn-outline {
+  background-color: #ff4d59 !important;
+  border: 2px solid #ff4d59 !important;
+}
+
+.btn-outline:hover {
+  color: #ff4d59 !important;
+  background-color: #fbfcfa !important;
+}
+
 .s-work {
   background-color: #272727;
   width: 100%;
@@ -238,17 +312,16 @@ code {
   min-height: calc(25.5 * var(2rem));
   overflow: hidden;
   margin: 0;
-  padding: 5vh 0 10vh 0;
+  padding-top: 5vh;
   scroll-margin-top: 4rem;
 }
 
 .s-contact {
-  background-color: #fbfcfa;
   width: 100%;
-  height: 100vh;
+  height: 79vh;
   min-height: calc(25.5 * var(2rem));
   overflow: hidden;
-  padding: 5vh 0 10vh 0;
+  padding-top: 5vh;
   scroll-margin-top: 4rem;
 }
 
@@ -266,6 +339,38 @@ code {
 .contact-form {
   background-color: #272727;
   margin: 0, auto;
+}
+
+.contact-icons-group .list-group-item {
+  background-color: #272727;
+  padding: 15px;
+  color: #fbfcfa;
+  border: 1px solid #ff4d59;
+  font-family: "Raleway", sans-serif;
+  letter-spacing: 0.6px;
+  min-width: 10rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.contact-links {
+  text-decoration: none;
+  color: #fbfcfa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-links:hover {
+  color: #ff4d59;
+}
+
+.contact-icons {
+  width: 35px;
+  height: 35px;
+  margin-right: 8px;
+  padding-right: 3px;
 }
 
 .resume-date {
@@ -287,6 +392,7 @@ code {
 
 .s-footer {
   background-color: #1a1a1a;
+  border-top: 1px solid #ff4d59;
 }
 
 .s-footer .footer-text {
@@ -365,7 +471,7 @@ code {
   font-weight: 500;
   font-size: 17px;
   font-family: "Raleway", sans-serif;
-  background-color: #272727 !important;
+  background-color: #1e1e1e !important;
   text-decoration: none;
 }
 
@@ -394,17 +500,4 @@ code {
 
 ul li {
   list-style-type: disc !important;
-}
-
-/* ------------------------------------------------------------------- 
-* responsive:
-* resume
-* ------------------------------------------------------------------- */
-@media screen and (max-width: 800px) {
-  .s-resume {
-    padding-top: var(--vspace-4);
-  }
-  .s-resume__section .column:first-child {
-    text-align: center;
-  }
 }

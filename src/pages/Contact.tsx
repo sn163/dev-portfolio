@@ -1,11 +1,11 @@
 import { useState } from "react";
-import { Container, Button, Form } from "react-bootstrap";
+import { Button, Form } from "react-bootstrap";
 import emailjs from "@emailjs/browser";
 import { useFormik } from "formik";
 import * as yup from "yup";
 
 export default function Contact() {
-  const [sendStatus, setSendStatus] = useState("SEND");
+  const [sendStatus, setSendStatus] = useState("SUBMIT");
 
   const formik = useFormik({
     initialValues: {
@@ -31,7 +31,7 @@ export default function Contact() {
         (result) => {
           setSendStatus("SENT!");
           alert(
-            `Thank you for your message. I'll get back to you as soon as I can!`
+            `Thank you for your message. I'll get back to you as soon as I can!`,
           );
           setSubmitting(false);
           resetForm();
@@ -41,22 +41,22 @@ export default function Contact() {
           setSendStatus("SEND");
           setSubmitting(false);
           console.log("Email failed to send", error.text);
-        }
+        },
       );
     },
   });
 
   return (
-    <Container id="contact" className="s-contact" fluid>
+    <section id="contact" className="s-contact container-fluid">
       <div className="flex flex-col items-center">
-        <h2 className="section-title-dark">CONTACT</h2>
+        <h2 className="section-title-light">CONTACT</h2>
         <div className="section-title-bar" />
       </div>
-      <div className="flex w-full h-full items-start justify-center">
+      <div className="flex h-full w-full items-start justify-center">
         <Form
           noValidate
           onSubmit={formik.handleSubmit}
-          className="contact-form flex flex-col w-full max-w-4xl my-20 p-10 rounded-xl space-y-2"
+          className="contact-form my-20 flex w-full max-w-4xl flex-col space-y-2 rounded-xl p-10"
         >
           <div className="flex space-x-8">
             <Form.Group className="mb-3 w-full" controlId="from_name">
@@ -109,7 +109,7 @@ export default function Contact() {
               * Message field is required
             </Form.Control.Feedback>
           </Form.Group>
-          <div className="flex justify-center items-center">
+          <div className="flex items-center justify-center">
             <Button
               disabled={formik.isSubmitting}
               size="lg"
@@ -121,6 +121,6 @@ export default function Contact() {
           </div>
         </Form>
       </div>
-    </Container>
+    </section>
   );
 }
