@@ -24,7 +24,7 @@ export const ParticlesModule = ({ type }: ParticlesModuleProps) => {
     async (container: Container | undefined) => {
       await console.log(container);
     },
-    []
+    [],
   );
   return (
     <Particles

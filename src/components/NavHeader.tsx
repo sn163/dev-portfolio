@@ -1,17 +1,34 @@
 import { useEffect, useState } from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
-import { useLocation } from "react-router-dom";
 import { ReactComponent as LogoActive } from "../logo-active.svg";
 import { ReactComponent as Logo } from "../logo.svg";
 
 export default function NavHeader() {
-  const [pathname, setPathname] = useState("/");
-  const [hover, setHover] = useState(false);
-  const location = useLocation();
+  const [activeSection, setActiveSection] = useState("/");
 
   useEffect(() => {
-    setPathname(location.pathname);
-  }, [location]);
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      const sections = document.querySelectorAll("section");
+
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+
+        if (
+          scrollPosition >= sectionTop - 90 && // Adjust the offset as needed
+          scrollPosition < sectionTop + sectionHeight - 50 // Adjust the offset as needed
+        ) {
+          setActiveSection(section.id);
+        }
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <>
@@ -22,41 +39,39 @@ export default function NavHeader() {
             aria-controls="responsive-navbar-nav"
           />
           <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="items-center container-fluid">
+            <Nav className="container-fluid items-center">
               <Nav.Link href="#home">
                 <Navbar.Brand>
-                  {hover || pathname === "home" ? (
-                    <LogoActive
-                      onMouseEnter={() => setHover(true)}
-                      onMouseLeave={() => setHover(false)}
-                      className="hover:scale-125 ease-in-out duration-500 hover:animate-pulse"
-                    />
+                  {activeSection === "home" || activeSection === "/" ? (
+                    <LogoActive className="duration-500 ease-in-out hover:scale-125 hover:animate-pulse" />
                   ) : (
-                    <Logo className="hover:scale-125 ease-in-out duration-500 hover:animate-pulse" />
+                    <Logo className="duration-500 ease-in-out hover:scale-125 hover:animate-pulse" />
                   )}
                 </Navbar.Brand>
               </Nav.Link>
               <Nav.Link
                 href="#about"
-                className={`ml-auto ${pathname === "about" ? "l-active" : ""}`}
+                className={`ml-auto ${
+                  activeSection === "about" ? "l-active" : ""
+                }`}
               >
                 About
               </Nav.Link>
               <Nav.Link
                 href="#resume"
-                className={pathname === "resume" ? "l-active" : ""}
+                className={activeSection === "resume" ? "l-active" : ""}
               >
                 Resume
               </Nav.Link>
               <Nav.Link
                 href="#work"
-                className={pathname === "work" ? "l-active" : ""}
+                className={activeSection === "work" ? "l-active" : ""}
               >
                 Work
               </Nav.Link>
               <Nav.Link
                 href="#contact"
-                className={pathname === "contact" ? "l-active" : ""}
+                className={activeSection === "contact" ? "l-active" : ""}
               >
                 Contact
               </Nav.Link>

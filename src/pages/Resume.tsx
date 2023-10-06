@@ -1,6 +1,7 @@
-import { Container, ListGroup } from "react-bootstrap";
+import { ListGroup } from "react-bootstrap";
 import { cvData } from "../components/data/cvData";
 import { useId } from "react";
+import resume from "../assets/sonny_nguyen_cv.pdf";
 
 export default function Resume() {
   const id = useId();
@@ -16,7 +17,7 @@ export default function Resume() {
     return (
       <>
         <h3 className="h2">{x.company}</h3>
-        <div className="flex min-w-full w-full items-center mt-2 space-x-1">
+        <div className="mt-2 flex space-x-1">
           <span className="sub-title">{x.title}</span>
           <span className="resume-date">{x.date}</span>
         </div>
@@ -35,7 +36,7 @@ export default function Resume() {
     return (
       <>
         <h3 className="h2">{x.project_title}</h3>
-        <div className="flex min-w-full w-full mt-2 space-x-1">
+        <div className="mt-2 flex space-x-1">
           <span className="sub-title">{x.subtitle}</span>
         </div>
         <ul>{bulletpoints}</ul>
@@ -55,7 +56,7 @@ export default function Resume() {
   });
   const divider = (
     <hr
-      className="mx-32"
+      className="mx-3"
       style={{
         background: "#d0d1d1",
         height: "2.5px",
@@ -67,7 +68,7 @@ export default function Resume() {
     return (
       <>
         <h3 className="h2">{x.school_name}</h3>
-        <div className="flex min-w-full w-full space-x-1">
+        <div className="flex space-x-1">
           <span className="sub-title">{x.description}</span>
           {x.major && <span className="major sub-title">{x.major}</span>}
         </div>
@@ -77,51 +78,71 @@ export default function Resume() {
   });
 
   const skillsList = skills.map((x, i) => (
-    <ListGroup.Item key={`skills-${id}-${i}`} className="m-1 py-1 rounded">
+    <ListGroup.Item key={`skills-${id}-${i}`} className="m-1 rounded py-1">
       {x}
     </ListGroup.Item>
   ));
 
   return (
-    <Container id="resume" className="s-resume" fluid>
+    <section id="resume" className="s-resume container-fluid">
       <div className="flex flex-col items-center">
         <h2 className="section-title-dark">RESUME</h2>
         <div className="section-title-bar" />
+        <div className="mt-10 flex space-x-4">
+          <a
+            href={resume}
+            className="btn btn-outline text-light"
+            rel="noreferrer"
+            target="_blank"
+          >
+            VIEW ONLINE
+          </a>
+          <a
+            href={resume}
+            className="btn btn-outline text-light"
+            download="sonny_nguyen_resume.pdf"
+          >
+            DOWNLOAD PDF
+          </a>
+        </div>
       </div>
-      <ListGroup className="resume-content mx-32 py-20 space-y-20">
-        <ListGroup.Item className="flex justify-between mx-32 text-dark">
-          <h2 className="h5 resume-header mt-2 mx-24">CAREER</h2>
-          <div className="space-y-6 mx-18">{jobsList}</div>
+
+      <ListGroup className="resume-content mx-32 flex justify-center space-y-20 p-20">
+        <ListGroup.Item className="text-dark flex justify-start gap-2">
+          <div className="resume-header mt-2 flex justify-start">CAREER</div>
+          <div className="space-y-6">{jobsList}</div>
         </ListGroup.Item>
         {divider}
 
-        <ListGroup.Item className="flex justify-between mx-32 text-dark">
-          <h2 className="h5 resume-header mt-2 mx-24">PROJECTS</h2>
-          <div className="space-y-6 mx-18">{projectsList}</div>
+        <ListGroup.Item className="text-dark flex justify-start  gap-2">
+          <div className="resume-header mt-2 flex justify-start">PROJECTS</div>
+          <div className="space-y-6">{projectsList}</div>
         </ListGroup.Item>
         {divider}
 
-        <ListGroup.Item className="flex justify-between mx-32 text-dark">
-          <h2 className="h5 resume-header mt-2 mx-24">ACHIEVEMENTS</h2>
-          <div className="space-y-8 mx-18">{achievementsList}</div>
+        <ListGroup.Item className="text-dark flex justify-start gap-2">
+          <div className="resume-header mt-2 flex justify-start">
+            ACHIEVEMENTS
+          </div>
+          <div className="w-full space-y-8">{achievementsList}</div>
         </ListGroup.Item>
         {divider}
 
-        <ListGroup.Item className="flex justify-between mx-32 text-dark">
-          <h2 className="h5 resume-header mt-2 mx-24">SKILLS</h2>
-          <div className="ml-18">
-            <ListGroup horizontal className="m-2 flex-wrap skill-group">
+        <ListGroup.Item className="text-dark flex justify-start gap-2">
+          <div className="resume-header mt-2 flex justify-start">SKILLS</div>
+          <div>
+            <ListGroup horizontal className="skill-group my-2 flex-wrap">
               {skillsList}
             </ListGroup>
           </div>
         </ListGroup.Item>
         {divider}
 
-        <ListGroup.Item className="flex justify-between mx-32 text-dark">
-          <h2 className="h5 resume-header mt-2 mx-24">EDUCATION</h2>
-          <div className="space-y-2 mx-18 min-w-full">{schools}</div>
+        <ListGroup.Item className="text-dark flex justify-start gap-2">
+          <div className="resume-header mt-2 flex justify-start">EDUCATION</div>
+          <div className="mx-18 min-w-full space-y-2">{schools}</div>
         </ListGroup.Item>
       </ListGroup>
-    </Container>
+    </section>
   );
 }
