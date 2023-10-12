@@ -47,7 +47,7 @@ export default function Contact() {
   });
 
   return (
-    <section id="contact" className="s-contact container-fluid">
+    <section id="contact" className="s-contact cover container-fluid">
       <div className="flex flex-col items-center">
         <h2 className="section-title-light">CONTACT</h2>
         <div className="section-title-bar" />
