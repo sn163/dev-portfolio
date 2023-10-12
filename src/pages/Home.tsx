@@ -2,7 +2,6 @@ import { ReactComponent as Photo } from "../profile_pic.svg";
 import { ReactComponent as Scroll } from "../arrow-circle-down.svg";
 //import { ReactComponent as Photo } from "../portfolio_photo2.svg";
 import { TypeAnimation } from "react-type-animation";
-import { ParticlesModule } from "../modules/Particles/ParticlesModule";
 
 export default function home() {
   return (
@@ -45,7 +44,6 @@ export default function home() {
           <span className="scroll-text">View More</span>
         </a>
       </div>
-      <ParticlesModule type="page" />
     </section>
   );
 }
