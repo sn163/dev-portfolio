@@ -1,13 +1,12 @@
 import { ReactComponent as Photo } from "../profile_pic.svg";
 import { ReactComponent as Scroll } from "../arrow-circle-down.svg";
-//import { ReactComponent as Photo } from "../portfolio_photo2.svg";
 import { TypeAnimation } from "react-type-animation";
 
 export default function home() {
   return (
     <section
       id="home"
-      className="s-hero container-fluid flex flex-col items-center justify-between"
+      className="s-hero cover container-fluid flex flex-col items-center justify-between"
     >
       <div className="flex items-center space-x-32">
         <div className="hero-typewriter">

@@ -1,10 +1,10 @@
 import { ListGroup } from "react-bootstrap";
 import { ReactComponent as Photo } from "../portfolio-pic.svg";
-import { ReactComponent as JavascriptIcon } from "../assets/javascript.svg";
-import { ReactComponent as TypescriptIcon } from "../assets/typescript.svg";
-import { ReactComponent as VueIcon } from "../assets/vue.svg";
-import { ReactComponent as ReactIcon } from "../assets/react.svg";
-import { ReactComponent as NodeIcon } from "../assets/node-js.svg";
+import { ReactComponent as JavascriptIcon } from "../assets/icons/javascript.svg";
+import { ReactComponent as TypescriptIcon } from "../assets/icons/typescript.svg";
+import { ReactComponent as VueIcon } from "../assets/icons/vue.svg";
+import { ReactComponent as ReactIcon } from "../assets/icons/react.svg";
+import { ReactComponent as NodeIcon } from "../assets/icons/node-js.svg";
 
 export default function About() {
   const aboutMe =

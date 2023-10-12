@@ -1,9 +1,9 @@
 import { ListGroup } from "react-bootstrap";
-import { ReactComponent as Github } from "../assets/github.svg";
-import { ReactComponent as Linkedin } from "../assets/linkedin.svg";
-import { ReactComponent as Email } from "../assets/email.svg";
-import { ReactComponent as Iphone } from "../assets/iphone.svg";
-import { ReactComponent as Location } from "../assets/location.svg";
+import { ReactComponent as Github } from "../assets/icons/github.svg";
+import { ReactComponent as Linkedin } from "../assets/icons/linkedin.svg";
+import { ReactComponent as Email } from "../assets/icons/email.svg";
+import { ReactComponent as Iphone } from "../assets/icons/iphone.svg";
+import { ReactComponent as Location } from "../assets/icons/location.svg";
 
 export default function Footer() {
   return (

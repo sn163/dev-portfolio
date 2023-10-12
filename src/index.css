@@ -25,17 +25,21 @@ body {
   overflow-y: scroll;
   position: relative;
   height: 100%;
-  background-color: #1e1e1e;
 }
 
 body::-webkit-scrollbar {
   display: none;
 }
 
+.cover {
+  background-image: url(/src/assets/imgs/hero-img.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 main {
   display: block;
   z-index: -2;
-  background-color: #1e1e1e;
 }
 
 h1 {
@@ -325,6 +329,7 @@ code {
   overflow: hidden;
   padding-top: 5vh;
   scroll-margin-top: 4rem;
+  background-color: #1a1a1a !important;
 }
 
 .logo {
@@ -473,7 +478,6 @@ code {
   font-weight: 500;
   font-size: 17px;
   font-family: "Raleway", sans-serif;
-  background-color: #1e1e1e !important;
   text-decoration: none;
 }
 

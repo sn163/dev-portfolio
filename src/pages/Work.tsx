@@ -1,4 +1,4 @@
-import { ReactComponent as Overvue } from "../assets/overvue.svg";
+import { ReactComponent as Overvue } from "../assets/icons/overvue.svg";
 
 export default function Work() {
   return (
@@ -31,7 +31,7 @@ export default function Work() {
             rel="noreferrer"
             className="p-2"
           >
-            <Overvue className="w-full " />
+            <Overvue className="w-full" />
           </a>
         </div>
       </div>
