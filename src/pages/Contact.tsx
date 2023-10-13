@@ -57,6 +57,7 @@ export default function Contact() {
           noValidate
           onSubmit={formik.handleSubmit}
           className="contact-form my-20 flex w-full max-w-4xl flex-col space-y-2 rounded-xl p-10"
+          data-netlify="true"
         >
           <div className="flex space-x-8">
             <Form.Group className="mb-3 w-full" controlId="from_name">

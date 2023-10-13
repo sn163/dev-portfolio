@@ -1,5 +1,3 @@
-import { ReactComponent as Overvue } from "../assets/icons/overvue.svg";
-
 export default function Work() {
   return (
     <section id="work" className="s-work container-fluid">
@@ -11,7 +9,6 @@ export default function Work() {
         <div className="project-container mx-20 my-24 flex flex-col items-center justify-center p-0">
           <div className="overvue-text-container flex w-full flex-col items-center justify-center p-4">
             <div className="overvue-title">
-              {" "}
               <a
                 href="https://www.overvue.org/"
                 target="_blank"
@@ -31,7 +28,7 @@ export default function Work() {
             rel="noreferrer"
             className="p-2"
           >
-            <Overvue className="w-full" />
+            <div className="overvue-project-img"></div>
           </a>
         </div>
       </div>
