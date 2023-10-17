@@ -19,6 +19,13 @@
     "isolatedModules": true,
     "jsx": "react-jsx"
   },
+  // Don't emit TS declaration files.
+  "noEmit": true,
+  // The input module resolution system, "bundler" mode support an hybrid of CommonJS and ESM.
+  // If it's not a requirement for your project, you can use "nodenext" instead.
+  "moduleResolution": "bundler",
+  // Allow using ".ts" and ".tsx" file extensions in import paths.
+  "allowImportingTsExtensions": true,
   "include": ["src/**/*", "index.d.ts"],
   "exclude": ["node_modules", "build/**/*"]
 }

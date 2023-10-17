@@ -8,7 +8,7 @@ export default function home() {
       id="home"
       className="s-hero cover container-fluid flex flex-col items-center justify-between"
     >
-      <div className="flex items-center space-x-32">
+      <div className="flex items-center justify-between">
         <div className="hero-typewriter">
           <div className="text-light hero-text">
             Hi, I&apos;m <span style={{ color: "#ff4d59" }}>Sonny</span>

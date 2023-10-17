@@ -1,0 +1,20 @@
+@import "~bootstrap/scss/bootstrap";
+
+$primary-dark: #272727;
+$secondary-dark: #1a1a1a;
+$primary-red: #ff4d59;
+
+$theme-colors: (
+  "primary-dark": $primary-dark,
+  "secondary-dark": $secondary-dark,
+  "primary-red": $primary-red,
+);
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);

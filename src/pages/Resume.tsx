@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import { ListGroup } from "react-bootstrap";
+import ListGroup from "react-bootstrap/ListGroup";
 import { cvData } from "../components/data/cvData";
 import resume from "../assets/sonny_nguyen_cv.pdf";
 import uuid from "react-uuid";
