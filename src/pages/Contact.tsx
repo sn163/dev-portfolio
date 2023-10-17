@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Button, Form } from "react-bootstrap";
+import Button from "react-bootstrap/Button";
+import Form from "react-bootstrap/Form";
 import emailjs from "@emailjs/browser";
 import { useFormik } from "formik";
 import * as yup from "yup";
@@ -56,7 +57,7 @@ export default function Contact() {
         <Form
           noValidate
           onSubmit={formik.handleSubmit}
-          className="contact-form my-20 flex w-full max-w-4xl flex-col space-y-2 rounded-xl p-10"
+          className="contact-form my-10 flex w-full max-w-4xl flex-col space-y-2 rounded-xl p-10"
           data-netlify="true"
         >
           <div className="flex space-x-8">

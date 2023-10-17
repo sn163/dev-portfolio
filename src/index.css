@@ -62,10 +62,9 @@ code {
   background-color: #1e1e1e;
 }
 
-.banner {
-  font-size: 170px;
-  font-family: "Raleway", sans-serif;
-}
+/* ------------------------------------------------------------------- 
+## nav
+------------------------------------------------------------------- */
 
 .navbar {
   background-color: #1a1a1a !important;
@@ -81,10 +80,7 @@ code {
   font-weight: 500;
   font-size: 17px;
   font-family: "Raleway", sans-serif;
-}
-
-.navbar-nav .nav-link.nav-link.active-scroll-spy {
-  color: #ff4d59 !important;
+  scroll-behavior: smooth;
 }
 
 .navbar-nav .nav-link .navbar-brand {
@@ -116,15 +112,9 @@ code {
   color: #ff4d59 !important;
 }
 
-.profile-img {
-  width: 350px;
-  min-width: 350px;
-  height: 350px;
-}
-
-.portfolio-img {
-  min-width: 350px;
-}
+/* ------------------------------------------------------------------- 
+## hero
+------------------------------------------------------------------- */
 
 .s-hero {
   width: 100%;
@@ -137,15 +127,62 @@ code {
 }
 
 .hero-typewriter {
-  min-width: 650px;
+  min-width: 700px;
   font-size: 35px;
   font-family: "Space Mono", monospace;
+}
+
+.banner {
+  font-size: 170px;
+  font-family: "Raleway", sans-serif;
 }
 
 .hero-text {
   font-size: 35px;
   font-family: "Space Mono", monospace;
 }
+
+.profile-img {
+  width: 375px;
+  min-width: 300px;
+  height: 350px;
+}
+
+/* ------------------------------------------------------------------- 
+## about
+------------------------------------------------------------------- */
+.s-about {
+  background-color: #272727;
+  width: 100%;
+  height: 100vh;
+  min-height: calc(25.5 * var(2rem));
+  overflow: hidden;
+  margin: 0;
+  padding: 5vh 0 10vh 0;
+  scroll-margin-top: 4rem;
+}
+
+.about-me-container {
+  background-color: #fbfcfa;
+  max-width: 1000px;
+}
+
+.s-about .about-me {
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  color: #dedede;
+  max-width: 500px;
+}
+
+.portfolio-img {
+  min-width: 350px;
+  height: 500px;
+}
+
+/* ------------------------------------------------------------------- 
+## resume
+------------------------------------------------------------------- */
 
 .s-resume {
   padding-top: 5vh;
@@ -165,6 +202,23 @@ code {
   border: none;
 }
 
+.resume-date {
+  font-family: var(--font-1);
+  font-size: calc(var(--text-size) * 0.8889);
+  font-style: normal;
+  color: grey;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  padding-top: 2.7px;
+}
+
+.resume-date::before {
+  content: "\2022";
+  color: var(--color-text);
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+}
+
 .sub-title {
   font-family: "IBM Plex Serif", serif !important;
   font-size: 18px;
@@ -178,17 +232,6 @@ code {
   background-color: #ff4d59 !important;
 }
 
-.s-about {
-  background-color: #272727;
-  width: 100%;
-  height: 100vh;
-  min-height: calc(25.5 * var(2rem));
-  overflow: hidden;
-  margin: 0;
-  padding: 5vh 0 10vh 0;
-  scroll-margin-top: 4rem;
-}
-
 .skills-icon-group .list-group-item {
   margin: 0;
   background-color: #fbfcfa;
@@ -197,10 +240,6 @@ code {
 .skills-icon {
   width: 65px;
   height: 65px;
-}
-
-.about-me-container {
-  background-color: #fbfcfa;
 }
 
 .project-container {
@@ -243,13 +282,6 @@ code {
   font-size: 20px;
   letter-spacing: 0.5px;
   color: #fbfcfa;
-}
-
-.s-about .about-me {
-  font-family: "Raleway", sans-serif;
-  font-size: 16px;
-  letter-spacing: 0.5px;
-  color: #dedede;
 }
 
 .connect-btn {
@@ -310,7 +342,9 @@ code {
   color: #ff4d59 !important;
   background-color: #fbfcfa !important;
 }
-
+/* ------------------------------------------------------------------- 
+## work/projects
+------------------------------------------------------------------- */
 .s-work {
   background-color: #272727;
   width: 100%;
@@ -331,7 +365,9 @@ code {
   background-repeat: no-repeat;
   background-size: cover;
 }
-
+/* ------------------------------------------------------------------- 
+## contact
+------------------------------------------------------------------- */
 .s-contact {
   width: 100%;
   height: 79vh;
@@ -390,23 +426,6 @@ code {
   padding-right: 3px;
 }
 
-.resume-date {
-  font-family: var(--font-1);
-  font-size: calc(var(--text-size) * 0.8889);
-  font-style: normal;
-  color: grey;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  padding-top: 2.7px;
-}
-
-.resume-date::before {
-  content: "\2022";
-  color: var(--color-text);
-  margin-right: 0.5rem;
-  margin-left: 0.5rem;
-}
-
 .s-footer {
   background-color: #1a1a1a;
   border-top: 1px solid #ff4d59;
@@ -427,8 +446,8 @@ code {
 }
 
 /* ------------------------------------------------------------------- 
- * ## hero social
- * ------------------------------------------------------------------- */
+ ## hero social
+ ------------------------------------------------------------------ */
 .s-hero__content-social {
   display: -ms-inline-flexbox;
   display: -webkit-inline-box;
@@ -457,8 +476,8 @@ code {
 }
 
 /* ------------------------------------------------------------------- 
-* ## hero scrolldown
-* ------------------------------------------------------------------- */
+## hero scrolldown
+------------------------------------------------------------------- */
 .s-hero__scroll {
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);

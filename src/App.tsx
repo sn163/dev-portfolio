@@ -1,4 +1,4 @@
-import "./assets/theme.scss";
+import "./theme.scss";
 
 import Dashboard from "./modules/Dashboard";
 

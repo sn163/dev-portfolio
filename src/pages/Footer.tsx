@@ -1,4 +1,4 @@
-import { ListGroup } from "react-bootstrap";
+import  ListGroup  from "react-bootstrap/ListGroup";
 import { ReactComponent as Github } from "../assets/icons/github.svg";
 import { ReactComponent as Linkedin } from "../assets/icons/linkedin.svg";
 import { ReactComponent as Email } from "../assets/icons/email.svg";
