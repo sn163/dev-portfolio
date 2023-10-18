@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
-import { ReactComponent as LogoActive } from "../logo-active.svg";
-import { ReactComponent as Logo } from "../logo.svg";
+import LazySvg from "../assets/LazySvg";
 
 export default function NavHeader() {
   const [activeSection, setActiveSection] = useState("/");
@@ -43,9 +42,15 @@ export default function NavHeader() {
               <Nav.Link href="#home">
                 <Navbar.Brand>
                   {activeSection === "home" || activeSection === "/" ? (
-                    <LogoActive className="duration-500 ease-in-out hover:scale-125 hover:animate-pulse" />
+                    <LazySvg
+                      svgName="LogoActiveSVG"
+                      classProps="duration-500 ease-in-out hover:scale-125 hover:animate-pulse"
+                    />
                   ) : (
-                    <Logo className="duration-500 ease-in-out hover:scale-125 hover:animate-pulse" />
+                    <LazySvg
+                      svgName="LogoSVG"
+                      classProps="duration-500 ease-in-out hover:scale-125 hover:animate-pulse"
+                    />
                   )}
                 </Navbar.Brand>
               </Nav.Link>

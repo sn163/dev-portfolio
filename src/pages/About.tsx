@@ -1,10 +1,5 @@
 import ListGroup from "react-bootstrap/ListGroup";
-import { ReactComponent as Photo } from "../portfolio-pic.svg";
-import { ReactComponent as JavascriptIcon } from "../assets/icons/javascript.svg";
-import { ReactComponent as TypescriptIcon } from "../assets/icons/typescript.svg";
-import { ReactComponent as VueIcon } from "../assets/icons/vue.svg";
-import { ReactComponent as ReactIcon } from "../assets/icons/react.svg";
-import { ReactComponent as NodeIcon } from "../assets/icons/node-js.svg";
+import LazySvg from "../assets/LazySvg";
 
 export default function About() {
   const aboutMe =
@@ -21,7 +16,7 @@ export default function About() {
       </div>
       <div className="about-me-container m-auto flex items-center rounded-lg">
         <div className="flex flex-col items-center">
-          <Photo className="portfolio-img" />
+          <LazySvg svgName="PortfolioSVG" classProps="portfolio-img" />
           <span className="connect-txt text-center">
             Let&apos;s{" "}
             <span className="">
@@ -36,19 +31,19 @@ export default function About() {
           <div className="about-me text-dark my-10 px-1">{aboutMe}</div>
           <ListGroup className="skills-icon-group" horizontal>
             <ListGroup.Item>
-              <JavascriptIcon className="skills-icon" />
+              <LazySvg svgName="JavascriptSVG" classProps="skills-icon" />
             </ListGroup.Item>
             <ListGroup.Item>
-              <TypescriptIcon className="skills-icon" />
+              <LazySvg svgName="TypescriptSVG" classProps="skills-icon" />
             </ListGroup.Item>
             <ListGroup.Item>
-              <ReactIcon className="skills-icon" />
+              <LazySvg svgName="ReactSVG" classProps="skills-icon" />
             </ListGroup.Item>
             <ListGroup.Item>
-              <VueIcon className="skills-icon" />
+              <LazySvg svgName="VueSVG" classProps="skills-icon" />
             </ListGroup.Item>
             <ListGroup.Item>
-              <NodeIcon className="skills-icon" />
+              <LazySvg svgName="NodeSVG" classProps="skills-icon" />
             </ListGroup.Item>
           </ListGroup>
         </div>

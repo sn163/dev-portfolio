@@ -1,5 +1,4 @@
-import { ReactComponent as Photo } from "../profile_pic.svg";
-import { ReactComponent as Scroll } from "../arrow-circle-down.svg";
+import LazySvg from "../assets/LazySvg";
 import { TypeAnimation } from "react-type-animation";
 
 export default function home() {
@@ -31,7 +30,10 @@ export default function home() {
           />
         </div>
         <div className="banner">
-          <Photo className="profile-img img-fluid rounded" />
+          <LazySvg
+            svgName="ProfileSVG"
+            classProps="profile-img img-fluid rounded"
+          />
         </div>
       </div>
       <div className="flex items-center justify-center">
@@ -39,7 +41,7 @@ export default function home() {
           href="#about"
           className="s-hero__scroll-link flex items-center space-x-5 hover:motion-reduce:animate-bounce"
         >
-          <Scroll className="scroll-arrow" />
+          <LazySvg svgName="ScrollSVG" classProps="scroll-arrow" />
           <span className="scroll-text">View More</span>
         </a>
       </div>

@@ -1,9 +1,5 @@
 import ListGroup from "react-bootstrap/ListGroup";
-import { ReactComponent as Github } from "../assets/icons/github.svg";
-import { ReactComponent as Linkedin } from "../assets/icons/linkedin.svg";
-import { ReactComponent as Email } from "../assets/icons/email.svg";
-import { ReactComponent as Iphone } from "../assets/icons/iphone.svg";
-import { ReactComponent as Location } from "../assets/icons/location.svg";
+import LazySvg from "../assets/LazySvg";
 
 export default function Footer() {
   return (
@@ -13,13 +9,16 @@ export default function Footer() {
     >
       <ListGroup horizontal className="contact-icons-group my-4">
         <ListGroup.Item>
-          <Location className="contact-icons" /> Los Angeles, CA
+          <LazySvg svgName="LocationSVG" classProps="contact-icons" />
+          Los Angeles, CA
         </ListGroup.Item>
         <ListGroup.Item>
-          <Iphone className="contact-icons" /> 626-863-5972
+          <LazySvg svgName="IphoneSVG" classProps="contact-icons" />
+          626-863-5972
         </ListGroup.Item>
         <ListGroup.Item>
-          <Email className="contact-icons" /> sonnynguyen163@gmail.com
+          <LazySvg svgName="EmailSVG" classProps="contact-icons" />
+          sonnynguyen163@gmail.com
         </ListGroup.Item>
         <ListGroup.Item>
           <a
@@ -28,7 +27,8 @@ export default function Footer() {
             target="_blank"
             rel="noreferrer"
           >
-            <Linkedin className="contact-icons" /> LinkedIn
+            <LazySvg svgName="LinkedinSVG" classProps="contact-icons" />{" "}
+            LinkedIn
           </a>
         </ListGroup.Item>
         <ListGroup.Item>
@@ -38,7 +38,8 @@ export default function Footer() {
             target="_blank"
             rel="noreferrer"
           >
-            <Github className="contact-icons" /> Github
+            <LazySvg svgName="GithubSVG" classProps="contact-icons" />
+            Github
           </a>
         </ListGroup.Item>
       </ListGroup>
