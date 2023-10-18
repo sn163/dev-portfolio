@@ -1056,6 +1056,11 @@ code {
   scroll-margin-top: 4rem;
 }
 
+.s-resume .resume-content .list-group {
+  display: flex;
+  flex-direction: row;
+}
+
 .s-resume .resume-content .list-group-item {
   background-color: #fbfcfa;
   font-family: "Raleway", sans-serif;
@@ -1085,6 +1090,11 @@ code {
   font-family: "IBM Plex Serif", serif !important;
   font-size: 18px;
   font-style: italic;
+}
+
+.skill-group .list-group {
+  display: flex !important;
+  flex-direction: row !important;
 }
 
 .skill-group .list-group-item {
@@ -1260,6 +1270,11 @@ code {
 .contact-form {
   background-color: #272727;
   margin: 0, auto;
+}
+
+.contact-icons-group .list-group {
+  display: flex !important;
+  flex-direction: row !important;
 }
 
 .contact-icons-group .list-group-item {
