@@ -7,7 +7,7 @@ export default function Footer() {
       id="footer"
       className="s-footer container-fluid flex flex-col items-center justify-center pb-4 pt-2"
     >
-      <ListGroup horizontal className="contact-icons-group my-4">
+      <ListGroup horizontal={true} className="contact-icons-group my-4">
         <ListGroup.Item>
           <LazySvg svgName="LocationSVG" classProps="contact-icons" />
           Los Angeles, CA

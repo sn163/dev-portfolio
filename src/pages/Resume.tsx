@@ -139,7 +139,7 @@ export default function Resume() {
         >
           <div className="resume-header mt-2 flex justify-start">SKILLS</div>
           <div>
-            <ListGroup horizontal className="skill-group my-2 flex-wrap">
+            <ListGroup horizontal={true} className="skill-group my-2 flex-wrap">
               {skillsList}
             </ListGroup>
           </div>
