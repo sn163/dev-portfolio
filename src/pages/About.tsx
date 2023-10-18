@@ -29,7 +29,7 @@ export default function About() {
         </div>
         <div className="item-center flex flex-col justify-center py-4">
           <div className="about-me text-dark my-10 px-1">{aboutMe}</div>
-          <ListGroup className="skills-icon-group" horizontal>
+          <ListGroup className="skills-icon-group" horizontal={true}>
             <ListGroup.Item>
               <LazySvg svgName="JavascriptSVG" classProps="skills-icon" />
             </ListGroup.Item>
