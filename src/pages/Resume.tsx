@@ -1,5 +1,3 @@
-import { Fragment } from "react";
-import ListGroup from "react-bootstrap/ListGroup";
 import { cvData } from "../components/data/cvData";
 import resume from "../assets/sonny_nguyen_cv.pdf";
 import uuid from "react-uuid";
@@ -14,15 +12,23 @@ export default function Resume() {
       </li>
     ));
 
+    const resumeTitle = x.link ? (
+      <a href={x.link} target="_blank" rel="noreferrer">
+        {x.company}
+      </a>
+    ) : (
+      x.company
+    );
+
     return (
-      <Fragment key={uuid()}>
-        <h3 className="h2">{x.company}</h3>
-        <div className="mt-2 flex space-x-1">
+      <div key={uuid()}>
+        <h3 className="resume-title">{resumeTitle}</h3>
+        <div className="mb-4 mt-2 flex space-x-1">
           <span className="sub-title">{x.title}</span>
           <span className="resume-date">{x.date}</span>
         </div>
-        <ul>{bulletpoints}</ul>
-      </Fragment>
+        <ul className="mx-5 list-disc space-y-2">{bulletpoints}</ul>
+      </div>
     );
   });
 
@@ -34,24 +40,22 @@ export default function Resume() {
     ));
 
     return (
-      <Fragment key={uuid()}>
-        <h3 className="h2">{x.project_title}</h3>
-        <div className="mt-2 flex space-x-1">
+      <div key={uuid()}>
+        <h3 className="resume-title">{x.project_title}</h3>
+        <div className="mb-4 mt-2">
           <span className="sub-title">{x.subtitle}</span>
         </div>
-        <ul>{bulletpoints}</ul>
-      </Fragment>
+        <ul className="mx-5 list-disc space-y-2">{bulletpoints}</ul>
+      </div>
     );
   });
 
   const achievementsList = achievements.map((x) => {
     return (
-      <Fragment key={uuid()}>
-        <div className="mb-4">
-          <h3 className="h2">{x.title}</h3>
-          <span>{x.description}</span>
-        </div>
-      </Fragment>
+      <div key={uuid()}>
+        <h3 className="resume-title mb-3">{x.title}</h3>
+        <span>{x.description}</span>
+      </div>
     );
   });
   const divider = (
@@ -66,93 +70,82 @@ export default function Resume() {
   );
   const schoolsList = education.map((x) => {
     return (
-      <Fragment key={uuid()}>
-        <h3 className="h2">{x.school_name}</h3>
-        <div className="flex space-x-1">
+      <div key={uuid()}>
+        <h3 className="resume-title">{x.school_name}</h3>
+        <div className="mb-2 mt-2">
           <span className="sub-title">{x.description}</span>
           {x.major && <span className="major sub-title">{x.major}</span>}
         </div>
         <span className="mb-2">{x.location}</span>
-      </Fragment>
+      </div>
     );
   });
 
   const skillsList = skills.map((x) => (
-    <ListGroup.Item key={`skills-${uuid()}`} className="m-1 rounded py-1">
+    <li key={`skills-${uuid()}`} className="skill-list-item">
       {x}
-    </ListGroup.Item>
+    </li>
   ));
 
   return (
     <section id="resume" className="s-resume container-fluid">
-      <div className="flex flex-col items-center">
+      <div className="mt-12 flex flex-col items-center">
         <h2 className="section-title-dark">RESUME</h2>
         <div className="section-title-bar" />
         <div className="mt-10 flex space-x-4">
-          <a
-            href={resume}
-            className="btn btn-outline text-light"
-            rel="noreferrer"
-            target="_blank"
-          >
+          <a href={resume} className="btn" rel="noreferrer" target="_blank">
             VIEW ONLINE
           </a>
-          <a
-            href={resume}
-            className="btn btn-outline text-light"
-            download="sonny_nguyen_resume.pdf"
-          >
+          <a href={resume} className="btn" download="sonny_nguyen_resume.pdf">
             DOWNLOAD PDF
           </a>
         </div>
       </div>
-      <ListGroup className="resume-content mx-32 flex justify-center space-y-20 p-20">
-        <ListGroup.Item
+      <ul className="resume-content m-auto flex flex-col justify-center space-y-20 px-12 py-20">
+        <li
           key={`career-section-${uuid()}`}
-          className="text-dark flex justify-start gap-2"
+          className="resume-content-item flex justify-start gap-2"
         >
           <div className="resume-header mt-2 flex justify-start">CAREER</div>
           <div className="space-y-6">{jobsList}</div>
-        </ListGroup.Item>
+        </li>
         {divider}
-        <ListGroup.Item
+        <li
           key={`projects-section-${uuid()}`}
-          className="text-dark flex justify-start gap-2"
+          className="resume-content-item flex justify-start gap-2"
         >
           <div className="resume-header mt-2 flex justify-start">PROJECTS</div>
           <div className="space-y-6">{projectsList}</div>
-        </ListGroup.Item>
+        </li>
         {divider}
-        <ListGroup.Item
+        <li
           key={`achievements-section-${uuid()}`}
-          className="text-dark flex justify-start gap-2"
+          className="resume-content-item flex justify-start gap-2"
         >
           <div className="resume-header mt-2 flex justify-start">
             ACHIEVEMENTS
           </div>
-          <div className="w-full space-y-8">{achievementsList}</div>
-        </ListGroup.Item>
+          <div className="space-y-6">{achievementsList}</div>
+        </li>
         {divider}
-        <ListGroup.Item
+        <li
           key={`skills-section-${uuid()}`}
-          className="text-dark flex justify-start gap-2"
+          className="flex justify-start gap-2"
         >
           <div className="resume-header mt-2 flex justify-start">SKILLS</div>
           <div>
-            <ListGroup horizontal={true} className="skill-group my-2 flex-wrap">
-              {skillsList}
-            </ListGroup>
+            <ul className="skill-list my-2 flex-wrap">{skillsList}</ul>
           </div>
-        </ListGroup.Item>
+        </li>
         {divider}
-        <ListGroup.Item
+        <li
           key={`education-section-${uuid()}`}
-          className="text-dark flex justify-start gap-2"
+          className="resume-content-item flex justify-start gap-2"
         >
           <div className="resume-header mt-2 flex justify-start">EDUCATION</div>
-          <div className="mx-18 min-w-full space-y-2">{schoolsList}</div>
-        </ListGroup.Item>
-      </ListGroup>
+          <div className="space-y-6">{schoolsList}</div>
+        </li>
+      </ul>
     </section>
   );
 }

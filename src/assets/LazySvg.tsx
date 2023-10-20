@@ -1,7 +1,7 @@
 import { lazy, Suspense } from "react";
-import Spinner from "react-bootstrap/Spinner";
-
 const PortfolioSVG = lazy(() => import(`../svg-components/PortfolioPic`));
+const AboutSVG = lazy(() => import(`../svg-components/AboutPic`));
+const ContactSVG = lazy(() => import(`../svg-components/ContactPic`));
 const JavascriptSVG = lazy(() => import(`../svg-components/Javascript`));
 const TypescriptSVG = lazy(() => import(`../svg-components/Typescript`));
 const VueSVG = lazy(() => import(`../svg-components/Vue`));
@@ -14,11 +14,12 @@ const IphoneSVG = lazy(() => import(`../svg-components/Iphone`));
 const LocationSVG = lazy(() => import(`../svg-components/Location`));
 const LogoActiveSVG = lazy(() => import(`../svg-components/LogoActive`));
 const LogoSVG = lazy(() => import(`../svg-components/Logo`));
-const ProfileSVG = lazy(() => import(`../svg-components/ProfilePic`));
 const ScrollSVG = lazy(() => import(`../svg-components/ArrowCircleDown`));
 
 type SvgNames =
   | "PortfolioSVG"
+  | "AboutSVG"
+  | "ContactSVG"
   | "JavascriptSVG"
   | "TypescriptSVG"
   | "VueSVG"
@@ -31,11 +32,12 @@ type SvgNames =
   | "LocationSVG"
   | "LogoActiveSVG"
   | "LogoSVG"
-  | "ProfileSVG"
   | "ScrollSVG";
 
 const svgComponentsMap = {
   PortfolioSVG,
+  AboutSVG,
+  ContactSVG,
   JavascriptSVG,
   TypescriptSVG,
   VueSVG,
@@ -48,7 +50,6 @@ const svgComponentsMap = {
   LocationSVG,
   LogoActiveSVG,
   LogoSVG,
-  ProfileSVG,
   ScrollSVG,
 };
 
@@ -62,9 +63,9 @@ const LazySvg = ({ svgName, classProps }: LazySvgProps) => {
   return (
     <Suspense
       fallback={
-        <Spinner animation="border" size="sm" role="status">
-          <span className="visually-hidden">Loading...</span>
-        </Spinner>
+        <div className="border-black-300 h-10 w-10 animate-spin rounded-full border-8 border-t-red-600">
+          <span className="sr-only">Loading...</span>
+        </div>
       }
     >
       <SvgComponent className={classProps} />
