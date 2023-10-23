@@ -13,13 +13,14 @@ export default function About() {
         <h2 className="section-title-light">ABOUT</h2>
         <div className="section-title-bar" />
       </div>
-      <div
-        className="about-me-container m-auto flex items-center justify-center
-       rounded-lg py-4"
-      >
-        <div className="flex flex-col items-center">
-          <LazySvg svgName="AboutSVG" classProps="about-img" />
-          <span className="connect-txt text-center">
+      <div className="about-me-container mx-auto flex items-stretch space-x-5 shadow-xl">
+        <div className="about-img-container flex h-full w-full">
+          <div className="about-img" />
+        </div>
+
+        <div className="bio-container item-center flex flex-col justify-around py-5">
+          <div className="about-me px-5">{aboutMe}</div>
+          <div className="connect-txt text-center">
             Let&apos;s{" "}
             <span className="">
               <a href="#contact" className="hover:animate-pulse">
@@ -27,11 +28,8 @@ export default function About() {
               </a>
             </span>{" "}
             !
-          </span>
-        </div>
-        <div className="item-center flex flex-col justify-center py-4">
-          <div className="about-me my-10 px-4">{aboutMe}</div>
-          <ul className="skills-icon-list justify-between px-4">
+          </div>
+          <ul className="skills-icon-list justify-between px-8">
             <li>
               <LazySvg svgName="JavascriptSVG" classProps="skills-icon" />
             </li>

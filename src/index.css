@@ -16,7 +16,7 @@
 html {
   scroll-behavior: smooth;
   /* height of sticky header */
-  scroll-padding-top: 9vh;
+  scroll-padding-top: 7vh;
   margin: 0;
 }
 
@@ -83,7 +83,7 @@ code {
   min-width: 550px;
   background-color: #1a1a1a;
   border-bottom: 2px solid #ff4d59;
-  height: 9vh;
+  min-height: 7vh;
 }
 
 .NavigationMenuLink {
@@ -130,21 +130,16 @@ code {
 
 .s-hero {
   width: 100%;
-  height: 91vh;
+  height: 93vh;
   min-height: calc(25.5 * var(2rem));
   overflow: hidden;
-  scroll-margin-top: 9vh;
+  scroll-margin-top: 7vh;
 }
 
 .hero-typewriter {
   min-width: 700px;
   font-size: 35px;
   font-family: "Space Mono", monospace;
-}
-
-.banner {
-  font-size: 170px;
-  font-family: "Raleway", sans-serif;
 }
 
 .hero-text {
@@ -164,34 +159,52 @@ code {
 .s-about {
   background-color: #272727;
   width: 100%;
-  height: 91vh;
+  height: 93vh;
   min-height: calc(25.5 * var(2rem));
   overflow: hidden;
   margin: 0;
-  scroll-margin-top: 9vh;
+  scroll-margin-top: 7vh;
 }
 
 .about-me-container {
   background-color: #1d1d1d;
-  max-width: 1000px;
+  height: 500px;
+  min-height: 300px;
+  max-width: 950px;
+  border: none;
 }
 
 .s-about .about-me {
   font-family: "Raleway", sans-serif;
-  font-size: 16px;
+  font-size: 15px;
   letter-spacing: 0.5px;
   color: #dedede;
   background-color: #1d1d1d;
   max-width: 600px;
-  border-radius: 10px;
 }
 
+.bio-container {
+  height: 500px;
+  min-height: 300px;
+}
+
+.about-img-container {
+  padding: 1.5px 0px;
+  margin: 0;
+}
 .about-img {
+  min-height: 250px;
   min-width: 350px;
+  background: url(src/assets/about-pic.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .portfolio-img {
-  min-width: 350px;
-  height: 500px;
+  min-width: 325px;
+  min-height: 325px;
+  background-image: url(src/assets/portfolio-pic.webp);
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .skills-icon-list {
@@ -227,7 +240,7 @@ code {
   height: 100%;
   min-height: calc(25.5 * var(2rem));
   overflow: hidden;
-  scroll-margin-top: 9vh;
+  scroll-margin-top: 7vh;
 }
 
 .resume-title {
@@ -243,6 +256,7 @@ code {
 .s-resume .resume-content .resume-content-item {
   background-color: #fbfcfa;
   font-family: "Raleway", sans-serif;
+  font-size: 15px;
   letter-spacing: 0.5px;
   display: flex;
   border: none;
@@ -252,10 +266,11 @@ code {
   font-family: var(--font-1);
   font-size: calc(var(--text-size) * 0.8889);
   font-style: normal;
-  color: grey;
+  font-size: 14px;
+  color: #acacac;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  padding-top: 2.7px;
+  padding-top: 5px;
 }
 
 .resume-date::before {
@@ -284,13 +299,8 @@ code {
   background-color: #ff4d59;
 }
 
-.project-container {
-  background-color: #fbfcfa;
-  border: 2px solid #ff4d59;
-  border-radius: 0.25rem;
-}
 .overvue-text-container {
-  background-color: #1e1e1e;
+  background-color: #1a1a1a;
 }
 .overvue-title {
   font-family: "Space Mono", monospace;
@@ -382,37 +392,38 @@ code {
 .s-work {
   background-color: #272727;
   width: 100%;
-  height: 91vh;
+  height: 93vh;
   min-height: calc(25.5 * var(2rem));
   overflow: hidden;
   margin: 0;
-  scroll-margin-top: 9vh;
+  scroll-margin-top: 7vh;
 }
 
 .overvue-project-img {
   background-image: url(./assets/imgs/overvue.webp);
-  width: 100%;
-  height: 100%;
-  min-height: 450px;
-  min-width: 750px;
+  min-width: 780px;
+  min-height: 400px;
   background-repeat: no-repeat;
   background-size: cover;
+  border: 1.5px solid #ff4d59;
 }
 /* ------------------------------------------------------------------- 
 ## contact
 ------------------------------------------------------------------- */
 .s-contact {
   width: 100%;
-  height: 76vh;
+  height: 82vh;
   min-height: calc(25.5 * var(2rem));
   overflow: hidden;
-  scroll-margin-top: 9vh;
-  background-color: #1a1a1a !important;
+  scroll-margin-top: 7vh;
 }
 
 .contact-img {
   min-width: 70px;
   height: 70px;
+  background-image: url(/src/assets/contact-pic.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .logo {
@@ -427,9 +438,9 @@ code {
 }
 
 .contact-form {
-  background-color: #272727;
+  background-color: #1a1a1a;
   margin: 0, auto;
-  min-width: 750px;
+  min-width: 600px;
   min-height: 350px;
 }
 
@@ -445,7 +456,13 @@ code {
 }
 
 .contact-msg-input {
-  min-height: 200px;
+  min-height: 180px;
+}
+
+.contact-input-group {
+  background-color: #272727;
+  padding: 30px;
+  border-radius: 0 0 0.375rem 0.375rem;
 }
 /* ------------------------------------------------------------------- 
  ## footer
@@ -453,19 +470,19 @@ code {
 .s-footer {
   background-color: #1a1a1a;
   border-top: 1px solid #ff4d59;
-  height: 15vh;
+  height: 11vh;
 }
 
 .s-footer .footer-text {
   font-family: "Raleway", sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   letter-spacing: 0.5px;
   color: #fbfcfa;
 }
 
 .footer-year {
   font-family: "Raleway", sans-serif;
-  font-size: 20px;
+  font-size: 18px;
   letter-spacing: 0.5px;
   color: #ff4d59;
 }
@@ -475,9 +492,10 @@ code {
 
 .contact-icons-group li {
   background-color: #272727;
-  padding: 15px;
+  padding: 7px 15px;
   color: #fbfcfa;
   border: 1px solid #ff4d59;
+  font-size: 12px;
   font-family: "Raleway", sans-serif;
   letter-spacing: 0.6px;
   min-width: 10rem;
@@ -485,7 +503,14 @@ code {
   justify-content: space-around;
   align-items: center;
 }
-
+.contact-github {
+  width: 35px;
+  height: 35px;
+}
+.contact-linkedin {
+  width: 41px;
+  height: 41px;
+}
 .contact-links {
   text-decoration: none;
   color: #fbfcfa;
@@ -499,45 +524,10 @@ code {
 }
 
 .contact-icons {
-  width: 35px;
-  height: 35px;
+  width: 25px;
+  height: 25px;
   margin-right: 8px;
-  padding-right: 3px;
 }
-
-/* ------------------------------------------------------------------- 
- ## hero social
- ------------------------------------------------------------------ */
-.s-hero__content-social {
-  display: -ms-inline-flexbox;
-  display: -webkit-inline-box;
-  display: inline-flex;
-  -ms-flex-flow: row wrap;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  flex-flow: row wrap;
-  font-size: 2.6rem;
-  line-height: 1;
-  margin-top: var(--vspace-0_5);
-}
-
-.s-hero__content-social a {
-  color: #fbfcfa;
-  margin-right: var(--vspace-0_75);
-}
-
-.s-hero__content-social a:hover,
-.s-hero__content-social a:focus {
-  color: var(--color-2-light);
-}
-
-.s-hero__content-social a:last-child {
-  margin-right: 0;
-}
-
-/* ------------------------------------------------------------------- 
-## hero scrolldown
-------------------------------------------------------------------- */
 .s-hero__scroll {
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);

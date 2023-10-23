@@ -2,7 +2,6 @@ import { useState } from "react";
 import emailjs from "@emailjs/browser";
 import { Field, Form, ErrorMessage, Formik } from "formik";
 import * as yup from "yup";
-import LazySvg from "../assets/LazySvg";
 
 export default function Contact() {
   const [sendStatus, setSendStatus] = useState("SUBMIT");
@@ -22,7 +21,7 @@ export default function Contact() {
         <h2 className="section-title-light">CONTACT</h2>
         <div className="section-title-bar" />
       </div>
-      <div className="flex h-full w-full items-start justify-center">
+      <div className="contact-container flex items-start justify-center">
         <Formik
           initialValues={{
             from_name: "",
@@ -64,73 +63,78 @@ export default function Contact() {
             <Form
               noValidate
               onSubmit={props.handleSubmit}
-              className="contact-form my-10 flex flex-col rounded-xl p-10"
+              className="contact-form my-10 flex flex-col  rounded-md shadow-xl"
               data-netlify="true"
             >
-              <div className="contact-form-header mb-6 flex items-center justify-start">
-                <LazySvg svgName="ContactSVG" classProps="contact-img" />
-                <div className="">
+              <div className="contact-form-header flex items-center justify-start gap-6 p-4">
+                <div className="contact-img" />
+                <div>
                   <div>Have any questions? Want to work together?</div>{" "}
                   <div>I&apos;d love to hear from you!</div>
                 </div>
               </div>
-              <div className="flex w-full gap-6">
-                <div className="contact-info-input flex w-full flex-col">
-                  <label className="text-light" htmlFor="from_name">
-                    Name
+              <div className="contact-input-group flex flex-col">
+                <div className="flex w-full gap-6">
+                  <div className="contact-info-input flex w-full flex-col">
+                    <label className="text-light" htmlFor="from_name">
+                      Name
+                    </label>
+                    <Field
+                      id="from_name"
+                      name="from_name"
+                      type="text"
+                      className="my-2 rounded px-2 py-1"
+                      value={props.values.from_name}
+                      onChange={props.handleChange}
+                    />
+                    <ErrorMessage name="from_name">
+                      {(msg) => <span className="text-red ml-3">{msg}</span>}
+                    </ErrorMessage>
+                  </div>
+                  <div className="contact-info-input flex w-full flex-col">
+                    <label className="text-light" htmlFor="email">
+                      Email
+                    </label>
+                    <Field
+                      id="email"
+                      name="email"
+                      type="email"
+                      className="my-2 rounded px-2 py-1"
+                      value={props.values.email}
+                      onChange={props.handleChange}
+                    />
+                    <ErrorMessage name="email">
+                      {(msg) => <span className="text-red ml-3">{msg}</span>}
+                    </ErrorMessage>
+                  </div>
+                </div>
+                <div className="contact-msg-input flex w-full flex-col">
+                  <label className="text-light" htmlFor="message">
+                    Message
                   </label>
                   <Field
-                    id="from_name"
-                    name="from_name"
-                    type="text"
-                    className="my-2 h-8 rounded"
-                    value={props.values.from_name}
+                    id="message"
+                    name="message"
+                    as="textarea"
+                    className="my-2 resize-y rounded p-2.5"
+                    rows={4}
+                    value={props.values.message}
                     onChange={props.handleChange}
                   />
-                  <ErrorMessage name="from_name">
+                  <ErrorMessage name="message">
                     {(msg) => <span className="text-red ml-3">{msg}</span>}
                   </ErrorMessage>
                 </div>
-                <div className="contact-info-input flex w-full flex-col">
-                  <label className="text-light" htmlFor="email">
-                    Email
-                  </label>
-                  <Field
-                    id="email"
-                    name="email"
-                    type="email"
-                    className="my-2 h-8 rounded"
-                    value={props.values.email}
-                    onChange={props.handleChange}
-                  />
-                  <ErrorMessage name="email">
-                    {(msg) => <span className="text-red ml-3">{msg}</span>}
-                  </ErrorMessage>
-                </div>
+                <button
+                  disabled={props.isSubmitting}
+                  className={`${
+                    props.isSubmitting ? "animate-spin" : ""
+                  } btn mx-auto`}
+                  type="submit"
+                >
+                  {sendStatus}
+                </button>
               </div>
-              <div className="contact-msg-input flex w-full flex-col">
-                <label className="text-light" htmlFor="message">
-                  Message
-                </label>
-                <Field
-                  id="message"
-                  name="message"
-                  type="textarea"
-                  className="my-2 h-32 w-full rounded"
-                  value={props.values.message}
-                  onChange={props.handleChange}
-                />
-                <ErrorMessage name="message">
-                  {(msg) => <span className="text-red ml-3">{msg}</span>}
-                </ErrorMessage>
-              </div>
-              <button
-                disabled={props.isSubmitting}
-                className="btn mx-auto my-0"
-                type="submit"
-              >
-                {sendStatus}
-              </button>
             </Form>
           )}
         </Formik>

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import LazySvg from "../assets/LazySvg";
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
+import { ReactComponent as ActiveLogo } from "../assets/logo-active.svg";
+import { ReactComponent as Logo } from "../assets/logo.svg";
 
 export default function NavHeader() {
   const [activeSection, setActiveSection] = useState("/");
@@ -31,13 +32,8 @@ export default function NavHeader() {
 
   return (
     <>
-      <NavigationMenu.Root className="NavigationMenuRoot sticky top-0 flex w-screen list-none items-center justify-center">
-        {/* <Navbar.Toggle
-            className="ml-auto"
-            aria-controls="responsive-navbar-nav"
-          />
-          <Navbar.Collapse id="responsive-navbar-nav"> */}
-        <NavigationMenu.List className="NavigationMenuList flex w-screen list-none items-center justify-center px-20 ">
+      <NavigationMenu.Root className="NavigationMenuRoot sticky top-0 flex w-screen items-center justify-center shadow-sm shadow-red-500">
+        <NavigationMenu.List className="NavigationMenuList flex w-screen items-center px-20">
           <NavigationMenu.Item className="NavigationMenuItem mr-auto">
             <NavigationMenu.Link
               className="NavigationMenuLink"
@@ -45,15 +41,9 @@ export default function NavHeader() {
               href="#home"
             >
               {activeSection === "home" || activeSection === "/" ? (
-                <LazySvg
-                  svgName="LogoActiveSVG"
-                  classProps="duration-500 ease-in-out hover:scale-125 hover:animate-pulse"
-                />
+                <ActiveLogo className="p-2 duration-500 ease-in-out hover:scale-125 hover:animate-pulse" />
               ) : (
-                <LazySvg
-                  svgName="LogoSVG"
-                  classProps="duration-500 ease-in-out hover:scale-125 hover:animate-pulse"
-                />
+                <Logo className="p-2 duration-500 ease-in-out hover:scale-125 hover:animate-pulse" />
               )}
             </NavigationMenu.Link>
           </NavigationMenu.Item>
@@ -94,7 +84,6 @@ export default function NavHeader() {
             </NavigationMenu.Link>
           </NavigationMenu.Item>
         </NavigationMenu.List>
-        {/* </Navbar.Collapse> */}
       </NavigationMenu.Root>
     </>
   );
