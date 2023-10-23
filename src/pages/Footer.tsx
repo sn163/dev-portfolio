@@ -4,9 +4,9 @@ export default function Footer() {
   return (
     <section
       id="footer"
-      className="s-footer container-fluid flex flex-col items-center justify-center pb-4 pt-2"
+      className="s-footer container-fluid flex flex-col items-center justify-center gap-1"
     >
-      <ul className="contact-icons-group my-4">
+      <ul className="contact-icons-group my-1">
         <li>
           <LazySvg svgName="LocationSVG" classProps="contact-icons" />
           Los Angeles, CA

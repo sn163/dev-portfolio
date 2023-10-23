@@ -1,7 +1,4 @@
 import { lazy, Suspense } from "react";
-const PortfolioSVG = lazy(() => import(`../svg-components/PortfolioPic`));
-const AboutSVG = lazy(() => import(`../svg-components/AboutPic`));
-const ContactSVG = lazy(() => import(`../svg-components/ContactPic`));
 const JavascriptSVG = lazy(() => import(`../svg-components/Javascript`));
 const TypescriptSVG = lazy(() => import(`../svg-components/Typescript`));
 const VueSVG = lazy(() => import(`../svg-components/Vue`));
@@ -12,14 +9,9 @@ const LinkedinSVG = lazy(() => import(`../svg-components/Linkedin`));
 const EmailSVG = lazy(() => import(`../svg-components/Email`));
 const IphoneSVG = lazy(() => import(`../svg-components/Iphone`));
 const LocationSVG = lazy(() => import(`../svg-components/Location`));
-const LogoActiveSVG = lazy(() => import(`../svg-components/LogoActive`));
-const LogoSVG = lazy(() => import(`../svg-components/Logo`));
 const ScrollSVG = lazy(() => import(`../svg-components/ArrowCircleDown`));
 
 type SvgNames =
-  | "PortfolioSVG"
-  | "AboutSVG"
-  | "ContactSVG"
   | "JavascriptSVG"
   | "TypescriptSVG"
   | "VueSVG"
@@ -30,14 +22,9 @@ type SvgNames =
   | "EmailSVG"
   | "IphoneSVG"
   | "LocationSVG"
-  | "LogoActiveSVG"
-  | "LogoSVG"
   | "ScrollSVG";
 
 const svgComponentsMap = {
-  PortfolioSVG,
-  AboutSVG,
-  ContactSVG,
   JavascriptSVG,
   TypescriptSVG,
   VueSVG,
@@ -48,8 +35,6 @@ const svgComponentsMap = {
   EmailSVG,
   IphoneSVG,
   LocationSVG,
-  LogoActiveSVG,
-  LogoSVG,
   ScrollSVG,
 };
 
