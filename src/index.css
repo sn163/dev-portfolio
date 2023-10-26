@@ -5,6 +5,30 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400&display=swap");
 
+@layer utilities {
+  .text-red {
+    color: #ff4d59;
+    font-size: 16px;
+    font-family: "Raleway", sans-serif;
+  }
+
+  .text-light {
+    color: #dedede;
+    font-size: 17px;
+    font-family: "Raleway", sans-serif;
+  }
+  .text-dark {
+    color: #1d1d1d;
+    font-size: 16px;
+    font-family: "Raleway", sans-serif;
+  }
+
+  .text-dark-grey {
+    color: #272727;
+    font-size: 17px;
+    font-family: "Raleway", sans-serif;
+  }
+}
 :root {
   --font-1: "Inter", sans-serif;
   --font-2: "IBM Plex Serif", serif;
@@ -63,17 +87,6 @@ code {
   border: 2px solid #cc3d47;
 }
 
-.text-red {
-  color: #ff4d59;
-  font-size: 15px;
-  font-family: "Raleway", sans-serif;
-}
-
-.text-light {
-  color: #dedede;
-  font-size: 17px;
-  font-family: "Raleway", sans-serif;
-}
 /* ------------------------------------------------------------------- 
 ## nav
 ------------------------------------------------------------------- */
@@ -89,7 +102,7 @@ code {
 .NavigationMenuLink {
   color: #dedede;
   font-weight: 500;
-  font-size: 17px;
+  font-size: 18px;
   font-family: "Raleway", sans-serif;
   scroll-behavior: smooth;
   outline: none;
@@ -168,15 +181,15 @@ code {
 
 .about-me-container {
   background-color: #1d1d1d;
-  height: 500px;
-  min-height: 300px;
-  max-width: 950px;
+  height: 700px;
+  min-height: 500px;
+  max-width: 1050px;
   border: none;
 }
 
 .s-about .about-me {
   font-family: "Raleway", sans-serif;
-  font-size: 15px;
+  font-size: 17px;
   letter-spacing: 0.5px;
   color: #dedede;
   background-color: #1d1d1d;
@@ -184,8 +197,8 @@ code {
 }
 
 .bio-container {
-  height: 500px;
-  min-height: 300px;
+  height: 700px;
+  min-height: 500px;
 }
 
 .about-img-container {
@@ -194,7 +207,7 @@ code {
 }
 .about-img {
   min-height: 250px;
-  min-width: 350px;
+  min-width: 450px;
   background: url(src/assets/about-pic.webp);
   background-repeat: no-repeat;
   background-size: cover;
@@ -245,7 +258,7 @@ code {
 
 .resume-title {
   font-family: "Raleway", sans-serif;
-  font-size: 30px;
+  font-size: 32px;
   color: #ff4d59;
 }
 
@@ -256,7 +269,7 @@ code {
 .s-resume .resume-content .resume-content-item {
   background-color: #fbfcfa;
   font-family: "Raleway", sans-serif;
-  font-size: 15px;
+  font-size: 17px;
   letter-spacing: 0.5px;
   display: flex;
   border: none;
@@ -266,7 +279,7 @@ code {
   font-family: var(--font-1);
   font-size: calc(var(--text-size) * 0.8889);
   font-style: normal;
-  font-size: 14px;
+  font-size: 16px;
   color: #acacac;
   text-transform: uppercase;
   letter-spacing: 0.12em;
@@ -282,7 +295,7 @@ code {
 
 .sub-title {
   font-family: "IBM Plex Serif", serif;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 300;
   font-style: italic;
 }
@@ -292,9 +305,9 @@ code {
 }
 
 .skill-list-item {
-  @apply m-1 rounded-md p-2 font-bold text-white;
+  @apply m-1 rounded-md px-3 py-2 font-bold text-white;
   font-family: "Raleway", sans-serif;
-  font-size: 15px;
+  font-size: 18px;
   letter-spacing: 0.5px;
   background-color: #ff4d59;
 }
@@ -446,7 +459,7 @@ code {
 
 .contact-form-header {
   font-family: "Raleway", sans-serif;
-  font-size: 16px;
+  font-size: 17px;
   letter-spacing: 0.5px;
   color: #dedede;
 }
@@ -475,7 +488,7 @@ code {
 
 .s-footer .footer-text {
   font-family: "Raleway", sans-serif;
-  font-size: 16px;
+  font-size: 17px;
   letter-spacing: 0.5px;
   color: #fbfcfa;
 }
@@ -540,7 +553,7 @@ code {
   display: flex;
   font-family: "Raleway", sans-serif;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 16px;
   text-transform: uppercase;
   letter-spacing: 0.4em;
   color: #fbfcfa;

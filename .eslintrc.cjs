@@ -13,6 +13,7 @@ module.exports = {
     },
   },
   plugins: ["@typescript-eslint", "react", "jsx-a11y"],
+  rules: { "@typescript-eslint/no-var-requires": 0 },
   extends: [
     "eslint:recommended",
     "plugin:jsx-a11y/recommended",

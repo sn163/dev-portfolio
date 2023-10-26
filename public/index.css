@@ -1,14 +1,6 @@
-@import url("https://fonts.googleapis.com/css?family=Oswald:400,300,700");
-
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap");
-
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400&display=swap");
-
 /*
 ! tailwindcss v3.3.3 | MIT License | https://tailwindcss.com
-*/
-
-/*
+*//*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
 2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
 */
@@ -16,14 +8,10 @@
 *,
 ::before,
 ::after {
-  box-sizing: border-box;
-  /* 1 */
-  border-width: 0;
-  /* 2 */
-  border-style: solid;
-  /* 2 */
-  border-color: #e5e7eb;
-  /* 2 */
+  box-sizing: border-box; /* 1 */
+  border-width: 0; /* 2 */
+  border-style: solid; /* 2 */
+  border-color: #e5e7eb; /* 2 */
 }
 
 ::before,
@@ -41,20 +29,12 @@
 */
 
 html {
-  line-height: 1.5;
-  /* 1 */
-  -webkit-text-size-adjust: 100%;
-  /* 2 */
-  /* 3 */
-  tab-size: 4;
-  /* 3 */
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  /* 4 */
-  -webkit-font-feature-settings: normal;
-          font-feature-settings: normal;
-  /* 5 */
-  font-variation-settings: normal;
-  /* 6 */
+  line-height: 1.5; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */ /* 3 */
+  tab-size: 4; /* 3 */
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 4 */
+  font-feature-settings: normal; /* 5 */
+  font-variation-settings: normal; /* 6 */
 }
 
 /*
@@ -63,10 +43,8 @@ html {
 */
 
 body {
-  margin: 0;
-  /* 1 */
-  line-height: inherit;
-  /* 2 */
+  margin: 0; /* 1 */
+  line-height: inherit; /* 2 */
 }
 
 /*
@@ -76,12 +54,9 @@ body {
 */
 
 hr {
-  height: 0;
-  /* 1 */
-  color: inherit;
-  /* 2 */
-  border-top-width: 1px;
-  /* 3 */
+  height: 0; /* 1 */
+  color: inherit; /* 2 */
+  border-top-width: 1px; /* 3 */
 }
 
 /*
@@ -134,10 +109,8 @@ code,
 kbd,
 samp,
 pre {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  /* 1 */
-  font-size: 1em;
-  /* 2 */
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; /* 1 */
+  font-size: 1em; /* 2 */
 }
 
 /*
@@ -175,12 +148,9 @@ sup {
 */
 
 table {
-  text-indent: 0;
-  /* 1 */
-  border-color: inherit;
-  /* 2 */
-  border-collapse: collapse;
-  /* 3 */
+  text-indent: 0; /* 1 */
+  border-color: inherit; /* 2 */
+  border-collapse: collapse; /* 3 */
 }
 
 /*
@@ -194,25 +164,15 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: inherit;
-  /* 1 */
-  -webkit-font-feature-settings: inherit;
-          font-feature-settings: inherit;
-  /* 1 */
-  font-variation-settings: inherit;
-  /* 1 */
-  font-size: 100%;
-  /* 1 */
-  font-weight: inherit;
-  /* 1 */
-  line-height: inherit;
-  /* 1 */
-  color: inherit;
-  /* 1 */
-  margin: 0;
-  /* 2 */
-  padding: 0;
-  /* 3 */
+  font-family: inherit; /* 1 */
+  font-feature-settings: inherit; /* 1 */
+  font-variation-settings: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  font-weight: inherit; /* 1 */
+  line-height: inherit; /* 1 */
+  color: inherit; /* 1 */
+  margin: 0; /* 2 */
+  padding: 0; /* 3 */
 }
 
 /*
@@ -233,12 +193,9 @@ button,
 [type='button'],
 [type='reset'],
 [type='submit'] {
-  -webkit-appearance: button;
-  /* 1 */
-  background-color: transparent;
-  /* 2 */
-  background-image: none;
-  /* 2 */
+  -webkit-appearance: button; /* 1 */
+  background-color: transparent; /* 2 */
+  background-image: none; /* 2 */
 }
 
 /*
@@ -280,10 +237,8 @@ Correct the cursor style of increment and decrement buttons in Safari.
 */
 
 [type='search'] {
-  -webkit-appearance: textfield;
-  /* 1 */
-  outline-offset: -2px;
-  /* 2 */
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
 }
 
 /*
@@ -300,10 +255,8 @@ Remove the inner padding in Chrome and Safari on macOS.
 */
 
 ::-webkit-file-upload-button {
-  -webkit-appearance: button;
-  /* 1 */
-  font: inherit;
-  /* 2 */
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
 }
 
 /*
@@ -354,7 +307,6 @@ menu {
 /*
 Reset default styling for dialogs.
 */
-
 dialog {
   padding: 0;
 }
@@ -372,19 +324,10 @@ textarea {
 2. Set the default placeholder color to the user's configured gray 400 color.
 */
 
-input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
-  opacity: 1;
-  /* 1 */
-  color: #9ca3af;
-  /* 2 */
-}
-
 input::placeholder,
 textarea::placeholder {
-  opacity: 1;
-  /* 1 */
-  color: #9ca3af;
-  /* 2 */
+  opacity: 1; /* 1 */
+  color: #9ca3af; /* 2 */
 }
 
 /*
@@ -399,7 +342,6 @@ button,
 /*
 Make sure disabled buttons don't get the pointer cursor.
 */
-
 :disabled {
   cursor: default;
 }
@@ -418,10 +360,8 @@ audio,
 iframe,
 embed,
 object {
-  display: block;
-  /* 1 */
-  vertical-align: middle;
-  /* 2 */
+  display: block; /* 1 */
+  vertical-align: middle; /* 2 */
 }
 
 /*
@@ -435,12 +375,11 @@ video {
 }
 
 /* Make elements with the HTML hidden attribute stay hidden by default */
-
 [hidden] {
   display: none;
 }
 
-*, ::before, ::after{
+*, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
   --tw-translate-x: 0;
@@ -490,7 +429,7 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-::-webkit-backdrop{
+::backdrop {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
   --tw-translate-x: 0;
@@ -539,58 +478,7 @@ video {
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
 }
-
-::backdrop{
-  --tw-border-spacing-x: 0;
-  --tw-border-spacing-y: 0;
-  --tw-translate-x: 0;
-  --tw-translate-y: 0;
-  --tw-rotate: 0;
-  --tw-skew-x: 0;
-  --tw-skew-y: 0;
-  --tw-scale-x: 1;
-  --tw-scale-y: 1;
-  --tw-pan-x:  ;
-  --tw-pan-y:  ;
-  --tw-pinch-zoom:  ;
-  --tw-scroll-snap-strictness: proximity;
-  --tw-gradient-from-position:  ;
-  --tw-gradient-via-position:  ;
-  --tw-gradient-to-position:  ;
-  --tw-ordinal:  ;
-  --tw-slashed-zero:  ;
-  --tw-numeric-figure:  ;
-  --tw-numeric-spacing:  ;
-  --tw-numeric-fraction:  ;
-  --tw-ring-inset:  ;
-  --tw-ring-offset-width: 0px;
-  --tw-ring-offset-color: #fff;
-  --tw-ring-color: rgb(59 130 246 / 0.5);
-  --tw-ring-offset-shadow: 0 0 #0000;
-  --tw-ring-shadow: 0 0 #0000;
-  --tw-shadow: 0 0 #0000;
-  --tw-shadow-colored: 0 0 #0000;
-  --tw-blur:  ;
-  --tw-brightness:  ;
-  --tw-contrast:  ;
-  --tw-grayscale:  ;
-  --tw-hue-rotate:  ;
-  --tw-invert:  ;
-  --tw-saturate:  ;
-  --tw-sepia:  ;
-  --tw-drop-shadow:  ;
-  --tw-backdrop-blur:  ;
-  --tw-backdrop-brightness:  ;
-  --tw-backdrop-contrast:  ;
-  --tw-backdrop-grayscale:  ;
-  --tw-backdrop-hue-rotate:  ;
-  --tw-backdrop-invert:  ;
-  --tw-backdrop-opacity:  ;
-  --tw-backdrop-saturate:  ;
-  --tw-backdrop-sepia:  ;
-}
-
-.sr-only{
+.sr-only {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -601,407 +489,317 @@ video {
   white-space: nowrap;
   border-width: 0;
 }
-
-.sticky{
-  position: -webkit-sticky;
+.sticky {
   position: sticky;
 }
-
-.top-0{
+.top-0 {
   top: 0px;
 }
-
-.m-auto{
+.m-auto {
   margin: auto;
 }
-
-.mx-20{
+.mx-20 {
   margin-left: 5rem;
   margin-right: 5rem;
 }
-
-.mx-3{
+.mx-3 {
   margin-left: 0.75rem;
   margin-right: 0.75rem;
 }
-
-.mx-5{
+.mx-5 {
   margin-left: 1.25rem;
   margin-right: 1.25rem;
 }
-
-.mx-auto{
+.mx-auto {
   margin-left: auto;
   margin-right: auto;
 }
-
-.my-1{
+.my-1 {
   margin-top: 0.25rem;
   margin-bottom: 0.25rem;
 }
-
-.my-10{
+.my-10 {
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
 }
-
-.my-12{
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-}
-
-.my-16{
+.my-16 {
   margin-top: 4rem;
   margin-bottom: 4rem;
 }
-
-.my-2{
+.my-2 {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
-
-.my-4{
+.my-4 {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
-
-.mb-2{
+.mb-2 {
   margin-bottom: 0.5rem;
 }
-
-.mb-20{
+.mb-20 {
   margin-bottom: 5rem;
 }
-
-.mb-3{
+.mb-3 {
   margin-bottom: 0.75rem;
 }
-
-.mb-4{
+.mb-4 {
   margin-bottom: 1rem;
 }
-
-.ml-3{
+.ml-3 {
   margin-left: 0.75rem;
 }
-
-.ml-auto{
+.ml-auto {
   margin-left: auto;
 }
-
-.mr-auto{
+.mr-auto {
   margin-right: auto;
 }
-
-.mt-1{
+.mt-1 {
   margin-top: 0.25rem;
 }
-
-.mt-10{
+.mt-10 {
   margin-top: 2.5rem;
 }
-
-.mt-12{
+.mt-12 {
   margin-top: 3rem;
 }
-
-.mt-2{
+.mt-2 {
   margin-top: 0.5rem;
 }
-
-.inline-block{
+.inline-block {
   display: inline-block;
 }
-
-.flex{
+.flex {
   display: flex;
 }
-
-.h-10{
+.h-10 {
   height: 2.5rem;
 }
-
-.h-full{
+.h-full {
   height: 100%;
 }
-
-.w-10{
+.w-10 {
   width: 2.5rem;
 }
-
-.w-full{
+.w-full {
   width: 100%;
 }
-
-.w-screen{
+.w-screen {
   width: 100vw;
 }
+@keyframes spin {
 
-@-webkit-keyframes spin{
-  to{
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+  to {
+    transform: rotate(360deg);
   }
 }
-
-@keyframes spin{
-  to{
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
+.animate-spin {
+  animation: spin 1s linear infinite;
 }
-
-.animate-spin{
-  -webkit-animation: spin 1s linear infinite;
-          animation: spin 1s linear infinite;
-}
-
-.resize-y{
+.resize-y {
   resize: vertical;
 }
-
-.resize{
+.resize {
   resize: both;
 }
-
-.list-disc{
+.list-disc {
   list-style-type: disc;
 }
-
-.flex-col{
+.flex-col {
   flex-direction: column;
 }
-
-.flex-wrap{
+.flex-wrap {
   flex-wrap: wrap;
 }
-
-.items-start{
+.items-start {
   align-items: flex-start;
 }
-
-.items-center{
+.items-center {
   align-items: center;
 }
-
-.items-stretch{
-  align-items: stretch;
-}
-
-.justify-start{
+.justify-start {
   justify-content: flex-start;
 }
-
-.justify-center{
+.justify-center {
   justify-content: center;
 }
-
-.justify-between{
+.justify-between {
   justify-content: space-between;
 }
-
-.justify-around{
+.justify-around {
   justify-content: space-around;
 }
-
-.gap-1{
+.gap-1 {
   gap: 0.25rem;
 }
-
-.gap-2{
+.gap-2 {
   gap: 0.5rem;
 }
-
-.gap-6{
+.gap-6 {
   gap: 1.5rem;
 }
-
-.space-x-1 > :not([hidden]) ~ :not([hidden]){
+.space-x-1 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(0.25rem * var(--tw-space-x-reverse));
   margin-left: calc(0.25rem * calc(1 - var(--tw-space-x-reverse)));
 }
-
-.space-x-4 > :not([hidden]) ~ :not([hidden]){
+.space-x-4 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(1rem * var(--tw-space-x-reverse));
   margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
 }
-
-.space-x-5 > :not([hidden]) ~ :not([hidden]){
+.space-x-5 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(1.25rem * var(--tw-space-x-reverse));
   margin-left: calc(1.25rem * calc(1 - var(--tw-space-x-reverse)));
 }
-
-.space-y-2 > :not([hidden]) ~ :not([hidden]){
+.space-y-2 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
 }
-
-.space-y-20 > :not([hidden]) ~ :not([hidden]){
+.space-y-20 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(5rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(5rem * var(--tw-space-y-reverse));
 }
-
-.space-y-6 > :not([hidden]) ~ :not([hidden]){
+.space-y-6 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
 }
-
-.rounded{
+.rounded {
   border-radius: 0.25rem;
 }
-
-.rounded-full{
+.rounded-full {
   border-radius: 9999px;
 }
-
-.rounded-lg{
+.rounded-lg {
   border-radius: 0.5rem;
 }
-
-.rounded-md{
+.rounded-md {
   border-radius: 0.375rem;
 }
-
-.border{
+.border {
   border-width: 1px;
 }
-
-.border-8{
+.border-8 {
   border-width: 8px;
 }
-
-.border-t-red-600{
+.border-t-red-600 {
   --tw-border-opacity: 1;
   border-top-color: rgb(220 38 38 / var(--tw-border-opacity));
 }
-
-.p-0{
+.p-0 {
   padding: 0px;
 }
-
-.p-2{
+.p-2 {
   padding: 0.5rem;
 }
-
-.p-2\.5{
+.p-2\.5 {
   padding: 0.625rem;
 }
-
-.p-4{
+.p-4 {
   padding: 1rem;
 }
-
-.px-12{
+.px-12 {
   padding-left: 3rem;
   padding-right: 3rem;
 }
-
-.px-2{
+.px-2 {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }
-
-.px-20{
+.px-20 {
   padding-left: 5rem;
   padding-right: 5rem;
 }
-
-.px-32{
+.px-32 {
   padding-left: 8rem;
   padding-right: 8rem;
 }
-
-.px-5{
+.px-5 {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
 }
-
-.px-6{
+.px-6 {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 }
-
-.px-8{
+.px-8 {
   padding-left: 2rem;
   padding-right: 2rem;
 }
-
-.py-1{
+.py-1 {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
 }
-
-.py-20{
+.py-20 {
   padding-top: 5rem;
   padding-bottom: 5rem;
 }
-
-.py-4{
+.py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
-
-.py-5{
+.py-5 {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
 }
-
-.pb-20{
+.pb-20 {
   padding-bottom: 5rem;
 }
-
-.text-center{
+.text-center {
   text-align: center;
 }
-
-.text-white{
+.text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
-
-.shadow{
+.shadow {
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
-
-.shadow-lg{
+.shadow-lg {
   --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
-
-.shadow-sm{
+.shadow-sm {
   --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
-
-.shadow-xl{
+.shadow-xl {
   --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
-
-.shadow-red-500{
+.shadow-red-500 {
   --tw-shadow-color: #ef4444;
   --tw-shadow: var(--tw-shadow-colored);
 }
-
-.duration-500{
+.duration-500 {
   transition-duration: 500ms;
 }
-
-.ease-in-out{
+.ease-in-out {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+.text-red {
+    color: #ff4d59;
+    font-size: 16px;
+    font-family: "Raleway", sans-serif;
+  }
+.text-light {
+    color: #dedede;
+    font-size: 17px;
+    font-family: "Raleway", sans-serif;
+  }
+@import url("https://fonts.googleapis.com/css?family=Oswald:400,300,700");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400&display=swap");
 :root {
   --font-1: "Inter", sans-serif;
   --font-2: "IBM Plex Serif", serif;
@@ -1049,7 +847,7 @@ code {
     monospace;
 }
 
-.btn{
+.btn {
   border-radius: 0.375rem;
   padding-left: 1rem;
   padding-right: 1rem;
@@ -1067,22 +865,9 @@ code {
   border: 2px solid #cc3d47;
 }
 
-.text-red {
-  color: #ff4d59;
-  font-size: 15px;
-  font-family: "Raleway", sans-serif;
-}
-
-.text-light {
-  color: #dedede;
-  font-size: 17px;
-  font-family: "Raleway", sans-serif;
-}
-
 /* ------------------------------------------------------------------- 
 ## nav
 ------------------------------------------------------------------- */
-
 .NavigationMenuRoot {
   display: flex;
   z-index: 1;
@@ -1095,7 +880,7 @@ code {
 .NavigationMenuLink {
   color: #dedede;
   font-weight: 500;
-  font-size: 17px;
+  font-size: 18px;
   font-family: "Raleway", sans-serif;
   scroll-behavior: smooth;
   outline: none;
@@ -1108,11 +893,9 @@ code {
 .NavigationMenuLink[data-active] {
   color: #ff4d59;
 }
-
 .NavigationMenuLink:hover {
   color: #ff4d59;
 }
-
 .NavigationMenuList.NavigationMenuItem:nth-child(n + 2):nth-child(
     -n + 4
   ):after {
@@ -1165,7 +948,6 @@ code {
 /* ------------------------------------------------------------------- 
 ## about
 ------------------------------------------------------------------- */
-
 .s-about {
   background-color: #272727;
   width: 100%;
@@ -1178,15 +960,15 @@ code {
 
 .about-me-container {
   background-color: #1d1d1d;
-  height: 500px;
-  min-height: 300px;
-  max-width: 950px;
+  height: 700px;
+  min-height: 500px;
+  max-width: 1050px;
   border: none;
 }
 
 .s-about .about-me {
   font-family: "Raleway", sans-serif;
-  font-size: 15px;
+  font-size: 17px;
   letter-spacing: 0.5px;
   color: #dedede;
   background-color: #1d1d1d;
@@ -1194,23 +976,21 @@ code {
 }
 
 .bio-container {
-  height: 500px;
-  min-height: 300px;
+  height: 700px;
+  min-height: 500px;
 }
 
 .about-img-container {
   padding: 1.5px 0px;
   margin: 0;
 }
-
 .about-img {
   min-height: 250px;
-  min-width: 350px;
+  min-width: 450px;
   background: url(src/assets/about-pic.webp);
   background-repeat: no-repeat;
   background-size: cover;
 }
-
 .portfolio-img {
   min-width: 325px;
   min-height: 325px;
@@ -1223,7 +1003,6 @@ code {
   display: flex;
   max-width: 600px;
 }
-
 .skills-icon-list li {
   margin: 0;
   display: flex;
@@ -1243,7 +1022,6 @@ code {
   width: 45px;
   height: 45px;
 }
-
 /* ------------------------------------------------------------------- 
 ## resume
 ------------------------------------------------------------------- */
@@ -1259,7 +1037,7 @@ code {
 
 .resume-title {
   font-family: "Raleway", sans-serif;
-  font-size: 30px;
+  font-size: 32px;
   color: #ff4d59;
 }
 
@@ -1267,11 +1045,10 @@ code {
   list-style: disc;
   max-width: 1000px;
 }
-
 .s-resume .resume-content .resume-content-item {
   background-color: #fbfcfa;
   font-family: "Raleway", sans-serif;
-  font-size: 15px;
+  font-size: 17px;
   letter-spacing: 0.5px;
   display: flex;
   border: none;
@@ -1281,7 +1058,7 @@ code {
   font-family: var(--font-1);
   font-size: calc(var(--text-size) * 0.8889);
   font-style: normal;
-  font-size: 14px;
+  font-size: 16px;
   color: #acacac;
   text-transform: uppercase;
   letter-spacing: 0.12em;
@@ -1297,7 +1074,7 @@ code {
 
 .sub-title {
   font-family: "IBM Plex Serif", serif;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 300;
   font-style: italic;
 }
@@ -1306,15 +1083,18 @@ code {
   display: flex;
 }
 
-.skill-list-item{
+.skill-list-item {
   margin: 0.25rem;
   border-radius: 0.375rem;
-  padding: 0.5rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   font-weight: 700;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
   font-family: "Raleway", sans-serif;
-  font-size: 15px;
+  font-size: 18px;
   letter-spacing: 0.5px;
   background-color: #ff4d59;
 }
@@ -1322,7 +1102,6 @@ code {
 .overvue-text-container {
   background-color: #1a1a1a;
 }
-
 .overvue-title {
   font-family: "Space Mono", monospace;
   font-size: 35px;
@@ -1410,7 +1189,6 @@ code {
 /* ------------------------------------------------------------------- 
 ## work/projects
 ------------------------------------------------------------------- */
-
 .s-work {
   background-color: #272727;
   width: 100%;
@@ -1429,11 +1207,9 @@ code {
   background-size: cover;
   border: 1.5px solid #ff4d59;
 }
-
 /* ------------------------------------------------------------------- 
 ## contact
 ------------------------------------------------------------------- */
-
 .s-contact {
   width: 100%;
   height: 82vh;
@@ -1470,7 +1246,7 @@ code {
 
 .contact-form-header {
   font-family: "Raleway", sans-serif;
-  font-size: 16px;
+  font-size: 17px;
   letter-spacing: 0.5px;
   color: #dedede;
 }
@@ -1488,11 +1264,9 @@ code {
   padding: 30px;
   border-radius: 0 0 0.375rem 0.375rem;
 }
-
 /* ------------------------------------------------------------------- 
  ## footer
  ------------------------------------------------------------------ */
-
 .s-footer {
   background-color: #1a1a1a;
   border-top: 1px solid #ff4d59;
@@ -1501,7 +1275,7 @@ code {
 
 .s-footer .footer-text {
   font-family: "Raleway", sans-serif;
-  font-size: 16px;
+  font-size: 17px;
   letter-spacing: 0.5px;
   color: #fbfcfa;
 }
@@ -1512,7 +1286,6 @@ code {
   letter-spacing: 0.5px;
   color: #ff4d59;
 }
-
 .contact-icons-group {
   display: flex;
 }
@@ -1530,17 +1303,14 @@ code {
   justify-content: space-around;
   align-items: center;
 }
-
 .contact-github {
   width: 35px;
   height: 35px;
 }
-
 .contact-linkedin {
   width: 41px;
   height: 41px;
 }
-
 .contact-links {
   text-decoration: none;
   color: #fbfcfa;
@@ -1558,9 +1328,7 @@ code {
   height: 25px;
   margin-right: 8px;
 }
-
 .s-hero__scroll {
-  -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
   position: absolute;
   left: 50%;
@@ -1571,7 +1339,7 @@ code {
   display: flex;
   font-family: "Raleway", sans-serif;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 16px;
   text-transform: uppercase;
   letter-spacing: 0.4em;
   color: #fbfcfa;
@@ -1614,71 +1382,45 @@ code {
   text-decoration-color: #ff4d59;
 }
 
-.hover\:scale-105:hover{
+.hover\:scale-105:hover {
   --tw-scale-x: 1.05;
   --tw-scale-y: 1.05;
-  -webkit-transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-          transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.hover\:scale-125:hover{
+.hover\:scale-125:hover {
   --tw-scale-x: 1.25;
   --tw-scale-y: 1.25;
-  -webkit-transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-          transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-@-webkit-keyframes pulse{
-  50%{
+@keyframes pulse {
+
+  50% {
     opacity: .5;
   }
 }
 
-@keyframes pulse{
-  50%{
-    opacity: .5;
-  }
+.hover\:animate-pulse:hover {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
-.hover\:animate-pulse:hover{
-  -webkit-animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-          animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-}
+@media (prefers-reduced-motion: reduce) {
 
-@media (prefers-reduced-motion: reduce){
-  @-webkit-keyframes bounce{
-    0%, 100%{
-      -webkit-transform: translateY(-25%);
-              transform: translateY(-25%);
-      -webkit-animation-timing-function: cubic-bezier(0.8,0,1,1);
-              animation-timing-function: cubic-bezier(0.8,0,1,1);
+  @keyframes bounce {
+
+    0%, 100% {
+      transform: translateY(-25%);
+      animation-timing-function: cubic-bezier(0.8,0,1,1);
     }
 
-    50%{
-      -webkit-transform: none;
-              transform: none;
-      -webkit-animation-timing-function: cubic-bezier(0,0,0.2,1);
-              animation-timing-function: cubic-bezier(0,0,0.2,1);
-    }
-  }
-  @keyframes bounce{
-    0%, 100%{
-      -webkit-transform: translateY(-25%);
-              transform: translateY(-25%);
-      -webkit-animation-timing-function: cubic-bezier(0.8,0,1,1);
-              animation-timing-function: cubic-bezier(0.8,0,1,1);
-    }
-
-    50%{
-      -webkit-transform: none;
-              transform: none;
-      -webkit-animation-timing-function: cubic-bezier(0,0,0.2,1);
-              animation-timing-function: cubic-bezier(0,0,0.2,1);
+    50% {
+      transform: none;
+      animation-timing-function: cubic-bezier(0,0,0.2,1);
     }
   }
 
-  .hover\:motion-reduce\:animate-bounce:hover{
-    -webkit-animation: bounce 1s infinite;
-            animation: bounce 1s infinite;
+  .hover\:motion-reduce\:animate-bounce:hover {
+    animation: bounce 1s infinite;
   }
 }
