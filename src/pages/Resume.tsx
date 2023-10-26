@@ -88,8 +88,11 @@ export default function Resume() {
   ));
 
   return (
-    <section id="resume" className="s-resume container-fluid">
-      <div className="mt-12 flex flex-col items-center">
+    <section
+      id="resume"
+      className="s-resume container-fluid flex flex-col items-center py-16"
+    >
+      <div className="section-title-container">
         <h2 className="section-title-dark">RESUME</h2>
         <div className="section-title-bar" />
         <div className="mt-10 flex space-x-4">

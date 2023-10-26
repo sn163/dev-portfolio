@@ -2,6 +2,7 @@ import { useState } from "react";
 import emailjs from "@emailjs/browser";
 import { Field, Form, ErrorMessage, Formik } from "formik";
 import * as yup from "yup";
+import { FadeInSection } from "../modules/FadeInSection";
 
 export default function Contact() {
   const [sendStatus, setSendStatus] = useState("SUBMIT");
@@ -16,12 +17,15 @@ export default function Contact() {
   });
 
   return (
-    <section id="contact" className="s-contact cover container-fluid">
-      <div className="mt-12 flex flex-col items-center">
+    <section
+      id="contact"
+      className="s-contact cover container-fluid flex flex-col items-center py-16"
+    >
+      <div className="section-title-container">
         <h2 className="section-title-light">CONTACT</h2>
         <div className="section-title-bar" />
       </div>
-      <div className="contact-container flex items-start justify-center">
+      <FadeInSection classProps="contact-container m-auto flex items-start justify-center">
         <Formik
           initialValues={{
             from_name: "",
@@ -138,7 +142,7 @@ export default function Contact() {
             </Form>
           )}
         </Formik>
-      </div>
+      </FadeInSection>
     </section>
   );
 }
