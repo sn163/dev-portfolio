@@ -1,13 +1,18 @@
+import { FadeInSection } from "../modules/FadeInSection";
+
 export default function Work() {
   return (
-    <section id="work" className="s-work container-fluid">
-      <div className="mt-12 flex flex-col items-center">
+    <section
+      id="work"
+      className="s-work container-fluid flex flex-col items-center py-16"
+    >
+      <div className="section-title-container">
         <h2 className="section-title-light">WORK</h2>
         <div className="section-title-bar" />
       </div>
-      <div className="flex items-center justify-center">
-        <div className="project-container mx-20 my-16 flex flex-col items-center justify-center p-0 shadow-lg ">
-          <div className="overvue-text-container flex w-full flex-col items-center justify-center rounded-md px-6 py-4">
+      <FadeInSection classProps="flex items-center justify-center m-auto">
+        <div className="project-container mx-auto flex flex-wrap items-center justify-center gap-x-16 gap-y-4 p-0 shadow-lg ">
+          <div className="overvue-text-container flex flex-col items-center justify-center rounded-md px-6 py-4">
             <div className="overvue-title">
               <a
                 href="https://www.overvue.org/"
@@ -15,7 +20,7 @@ export default function Work() {
                 rel="noreferrer"
                 className="my-4"
               >
-                Over<span>V</span>ue
+                OverVue
               </a>
             </div>
             <div className="overvue-subtitle mb-4">
@@ -25,8 +30,28 @@ export default function Work() {
               <div className="overvue-project-img rounded-lg duration-500 ease-in-out hover:scale-105 hover:animate-pulse" />
             </a>
           </div>
+          <div className="overvue-text-container flex flex-col items-center justify-center rounded-md px-6 py-4">
+            <div className="sociallite-title">
+              <a
+                href="https://www.mysociallite.com/"
+                target="_blank"
+                rel="noreferrer"
+                className="my-4"
+              >
+                Social Lite
+              </a>
+            </div>
+            <div className="overvue-subtitle mb-4">Event Services Provider</div>
+            <a
+              href="https://www.mysociallite.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <div className="sociallite-project-img rounded-lg duration-500 ease-in-out hover:scale-105 hover:animate-pulse" />
+            </a>
+          </div>
         </div>
-      </div>
+      </FadeInSection>
     </section>
   );
 }

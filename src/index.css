@@ -87,6 +87,22 @@ code {
   border: 2px solid #cc3d47;
 }
 
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(5vh);
+  visibility: hidden;
+  transition:
+    opacity 0.7s ease-in,
+    transform 1.2s ease-out;
+  will-change: opacity, visibility;
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+}
+
 /* ------------------------------------------------------------------- 
 ## nav
 ------------------------------------------------------------------- */
@@ -315,18 +331,11 @@ code {
 .overvue-text-container {
   background-color: #1a1a1a;
 }
-.overvue-title {
-  font-family: "Space Mono", monospace;
-  font-size: 35px;
-  letter-spacing: 0.5px;
-  color: #fbfcfa;
-}
-
 .overvue-title a {
   font-family: "Space Mono", monospace;
   font-size: 35px;
   letter-spacing: 0.5px;
-  color: #fbfcfa;
+  color: #ff4d59;
   text-decoration: none;
 }
 
@@ -334,12 +343,16 @@ code {
   color: #4cb883;
 }
 
-.overvue-title a span {
+.sociallite-title a {
   font-family: "Space Mono", monospace;
   font-size: 35px;
   letter-spacing: 0.5px;
-  color: #4cb883;
+  color: #ff4d59;
   text-decoration: none;
+}
+
+.sociallite-title a:hover {
+  color: #febe03;
 }
 
 .overvue-subtitle {
@@ -371,6 +384,10 @@ code {
   color: #ff4d59;
   font-weight: 700 !important;
   text-decoration: none;
+}
+
+.section-title-container {
+  @apply flex flex-col items-center;
 }
 
 .section-title-light {
@@ -414,8 +431,17 @@ code {
 
 .overvue-project-img {
   background-image: url(./assets/imgs/overvue.webp);
-  min-width: 780px;
-  min-height: 400px;
+  min-width: 570px;
+  min-height: 300px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: 1.5px solid #ff4d59;
+}
+
+.sociallite-project-img {
+  background-image: url(./assets/imgs/sociallite.webp);
+  min-width: 570px;
+  min-height: 300px;
   background-repeat: no-repeat;
   background-size: cover;
   border: 1.5px solid #ff4d59;

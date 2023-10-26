@@ -1,3 +1,4 @@
+import { FadeInSection } from "../modules/FadeInSection";
 import LazySvg from "../assets/LazySvg";
 
 export default function About() {
@@ -7,13 +8,13 @@ export default function About() {
   return (
     <section
       id="about"
-      className="s-about container-fluid flex flex-col items-center justify-center"
+      className="s-about container-fluid flex flex-col items-center py-16"
     >
-      <div className="mt-12 flex flex-col items-center">
+      <div className="section-title-container">
         <h2 className="section-title-light">ABOUT</h2>
         <div className="section-title-bar" />
       </div>
-      <div className="about-me-container m-auto flex space-x-5 shadow-xl">
+      <FadeInSection classProps="about-me-container m-auto flex shadow-xl">
         <div className="about-img-container flex h-full w-full">
           <div className="about-img" />
         </div>
@@ -47,7 +48,7 @@ export default function About() {
             </li>
           </ul>
         </div>
-      </div>
+      </FadeInSection>
     </section>
   );
 }

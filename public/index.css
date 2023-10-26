@@ -498,10 +498,6 @@ video {
 .m-auto {
   margin: auto;
 }
-.mx-20 {
-  margin-left: 5rem;
-  margin-right: 5rem;
-}
 .mx-3 {
   margin-left: 0.75rem;
   margin-right: 0.75rem;
@@ -521,10 +517,6 @@ video {
 .my-10 {
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
-}
-.my-16 {
-  margin-top: 4rem;
-  margin-bottom: 4rem;
 }
 .my-2 {
   margin-top: 0.5rem;
@@ -560,9 +552,6 @@ video {
 }
 .mt-10 {
   margin-top: 2.5rem;
-}
-.mt-12 {
-  margin-top: 3rem;
 }
 .mt-2 {
   margin-top: 0.5rem;
@@ -638,6 +627,12 @@ video {
 }
 .gap-6 {
   gap: 1.5rem;
+}
+.gap-x-16 {
+  column-gap: 4rem;
+}
+.gap-y-4 {
+  row-gap: 1rem;
 }
 .space-x-1 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
@@ -734,6 +729,10 @@ video {
 .py-1 {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
+}
+.py-16 {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 .py-20 {
   padding-top: 5rem;
@@ -863,6 +862,22 @@ code {
 .btn:hover {
   background-color: #cc3d47;
   border: 2px solid #cc3d47;
+}
+
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(5vh);
+  visibility: hidden;
+  transition:
+    opacity 0.7s ease-in,
+    transform 1.2s ease-out;
+  will-change: opacity, visibility;
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
 }
 
 /* ------------------------------------------------------------------- 
@@ -1102,18 +1117,11 @@ code {
 .overvue-text-container {
   background-color: #1a1a1a;
 }
-.overvue-title {
-  font-family: "Space Mono", monospace;
-  font-size: 35px;
-  letter-spacing: 0.5px;
-  color: #fbfcfa;
-}
-
 .overvue-title a {
   font-family: "Space Mono", monospace;
   font-size: 35px;
   letter-spacing: 0.5px;
-  color: #fbfcfa;
+  color: #ff4d59;
   text-decoration: none;
 }
 
@@ -1121,12 +1129,16 @@ code {
   color: #4cb883;
 }
 
-.overvue-title a span {
+.sociallite-title a {
   font-family: "Space Mono", monospace;
   font-size: 35px;
   letter-spacing: 0.5px;
-  color: #4cb883;
+  color: #ff4d59;
   text-decoration: none;
+}
+
+.sociallite-title a:hover {
+  color: #febe03;
 }
 
 .overvue-subtitle {
@@ -1158,6 +1170,12 @@ code {
   color: #ff4d59;
   font-weight: 700 !important;
   text-decoration: none;
+}
+
+.section-title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .section-title-light {
@@ -1201,8 +1219,17 @@ code {
 
 .overvue-project-img {
   background-image: url(./assets/imgs/overvue.webp);
-  min-width: 780px;
-  min-height: 400px;
+  min-width: 570px;
+  min-height: 300px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: 1.5px solid #ff4d59;
+}
+
+.sociallite-project-img {
+  background-image: url(./assets/imgs/sociallite.webp);
+  min-width: 570px;
+  min-height: 300px;
   background-repeat: no-repeat;
   background-size: cover;
   border: 1.5px solid #ff4d59;
