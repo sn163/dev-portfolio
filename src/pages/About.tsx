@@ -7,13 +7,13 @@ export default function About() {
   return (
     <section
       id="about"
-      className="s-about container-fluid flex-col items-center justify-center"
+      className="s-about container-fluid flex flex-col items-center justify-center"
     >
-      <div className="my-12 flex flex-col items-center">
+      <div className="mt-12 flex flex-col items-center">
         <h2 className="section-title-light">ABOUT</h2>
         <div className="section-title-bar" />
       </div>
-      <div className="about-me-container mx-auto flex items-stretch space-x-5 shadow-xl">
+      <div className="about-me-container m-auto flex space-x-5 shadow-xl">
         <div className="about-img-container flex h-full w-full">
           <div className="about-img" />
         </div>
@@ -22,7 +22,7 @@ export default function About() {
           <div className="about-me px-5">{aboutMe}</div>
           <div className="connect-txt text-center">
             Let&apos;s{" "}
-            <span className="">
+            <span>
               <a href="#contact" className="hover:animate-pulse">
                 Connect
               </a>
