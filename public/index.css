@@ -546,11 +546,8 @@ video {
 .justify-center{
   justify-content: center;
 }
-.justify-between{
-  justify-content: space-between;
-}
-.justify-around{
-  justify-content: space-around;
+.justify-evenly{
+  justify-content: space-evenly;
 }
 .gap-1{
   gap: 0.25rem;
@@ -622,6 +619,9 @@ video {
 .p-0{
   padding: 0px;
 }
+.p-10{
+  padding: 2.5rem;
+}
 .p-2{
   padding: 0.5rem;
 }
@@ -647,17 +647,9 @@ video {
   padding-left: 8rem;
   padding-right: 8rem;
 }
-.px-5{
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-}
 .px-6{
   padding-left: 1.5rem;
   padding-right: 1.5rem;
-}
-.px-8{
-  padding-left: 2rem;
-  padding-right: 2rem;
 }
 .py-1{
   padding-top: 0.25rem;
@@ -675,12 +667,11 @@ video {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
-.py-5{
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
-}
 .pb-20{
   padding-bottom: 5rem;
+}
+.pt-2{
+  padding-top: 0.5rem;
 }
 .text-center{
   text-align: center;
@@ -908,9 +899,7 @@ code {
 
 .about-me-container {
   background-color: #1d1d1d;
-  height: 700px;
-  min-height: 500px;
-  max-width: 1050px;
+  height: 600px;
   border: none;
 }
 
@@ -920,12 +909,11 @@ code {
   letter-spacing: 0.5px;
   color: #dedede;
   background-color: #1d1d1d;
-  max-width: 600px;
+  max-width: 500px;
 }
 
 .bio-container {
-  height: 700px;
-  min-height: 500px;
+  height: 600px;
 }
 
 .about-img-container {
@@ -933,11 +921,11 @@ code {
   margin: 0;
 }
 .about-img {
-  min-height: 250px;
-  min-width: 450px;
+  min-height: 100%;
+  min-width: 400px;
   background: url(src/assets/about-pic.webp);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
 }
 .portfolio-img {
   min-width: 325px;
@@ -1034,15 +1022,15 @@ code {
 .skill-list-item{
   margin: 0.25rem;
   border-radius: 0.375rem;
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+  padding-top: 0.375rem;
+  padding-bottom: 0.375rem;
   font-weight: 700;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
   font-family: "Raleway", sans-serif;
-  font-size: 18px;
+  font-size: 17px;
   letter-spacing: 0.5px;
   background-color: #ff4d59;
 }

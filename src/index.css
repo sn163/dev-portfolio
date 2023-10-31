@@ -198,9 +198,7 @@ code {
 
 .about-me-container {
   background-color: #1d1d1d;
-  height: 700px;
-  min-height: 500px;
-  max-width: 1050px;
+  height: 600px;
   border: none;
 }
 
@@ -210,12 +208,11 @@ code {
   letter-spacing: 0.5px;
   color: #dedede;
   background-color: #1d1d1d;
-  max-width: 600px;
+  max-width: 500px;
 }
 
 .bio-container {
-  height: 700px;
-  min-height: 500px;
+  height: 600px;
 }
 
 .about-img-container {
@@ -223,11 +220,11 @@ code {
   margin: 0;
 }
 .about-img {
-  min-height: 250px;
-  min-width: 450px;
+  min-height: 100%;
+  min-width: 400px;
   background: url(src/assets/about-pic.webp);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
 }
 .portfolio-img {
   min-width: 325px;
@@ -322,9 +319,9 @@ code {
 }
 
 .skill-list-item {
-  @apply m-1 rounded-md px-3 py-2 font-bold text-white;
+  @apply m-1 rounded-md px-2.5 py-1.5 font-bold text-white;
   font-family: "Raleway", sans-serif;
-  font-size: 18px;
+  font-size: 17px;
   letter-spacing: 0.5px;
   background-color: #ff4d59;
 }

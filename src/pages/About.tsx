@@ -3,7 +3,7 @@ import LazySvg from "../assets/LazySvg";
 
 export default function About() {
   const aboutMe =
-    "My name is Sonny Nguyen, and I'm a Software Engineer/Developer currently based in Los Angeles, CA. My fervor lies in proficiently building robust and highly scalable full-stack web applications, where I merge visually stunning front-end user interfaces with seamless and dynamic user interactions utilizing a versatile toolkit that encompasses a broad spectrum of programming languages and frameworks. Adding a touch of rhythm to my life, I also have a passion for music as a DJ—a fun fact that underscores my unique blend of analytical thinking and artistic expression, serving as one of the driving forces behind my programming career. Whether it's writing lines of code that power applications or curating a sonic journey, my goal is to continuously push the limits and create remarkable solutions to address urgent issues, empower future communities, and make a positive impact on people's lives.";
+    "My name is Sonny Nguyen, and I'm a Software Engineer currently based in Los Angeles, CA. My fervor lies in proficiently building robust and highly scalable full-stack web applications, where I merge visually stunning front-end user interfaces with seamless and dynamic user interactions utilizing a versatile toolkit that encompasses a broad spectrum of programming languages and frameworks. Adding a touch of rhythm to my life, I also have a passion for music as a DJ—a fun fact that underscores my unique blend of analytical thinking and artistic expression, serving as one of the driving forces behind my programming career. Whether it's writing lines of code that power applications or curating a sonic journey, my goal is to continuously push the limits and create remarkable solutions to address issues, empower future communities, and make positive impacts on people's lives.";
 
   return (
     <section
@@ -19,9 +19,9 @@ export default function About() {
           <div className="about-img" />
         </div>
 
-        <div className="bio-container item-center flex flex-col justify-around py-5">
-          <div className="about-me px-5">{aboutMe}</div>
-          <div className="connect-txt text-center">
+        <div className="bio-container item-center flex flex-col justify-evenly p-10">
+          <div className="about-me">{aboutMe}</div>
+          <div className="connect-txt py-4 text-center">
             Let&apos;s{" "}
             <span>
               <a href="#contact" className="hover:animate-pulse">
@@ -30,7 +30,7 @@ export default function About() {
             </span>{" "}
             !
           </div>
-          <ul className="skills-icon-list justify-between px-8">
+          <ul className="skills-icon-list pt-2">
             <li>
               <LazySvg svgName="JavascriptSVG" classProps="skills-icon" />
             </li>
