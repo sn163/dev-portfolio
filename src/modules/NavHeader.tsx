@@ -39,6 +39,7 @@ export default function NavHeader() {
               className="NavigationMenuLink"
               active={activeSection === "resume"}
               href="#home"
+              aria-label="Home"
             >
               {activeSection === "home" || activeSection === "/" ? (
                 <ActiveLogo className="p-2 duration-500 ease-in-out hover:scale-125 hover:animate-pulse" />

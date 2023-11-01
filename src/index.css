@@ -198,21 +198,26 @@ code {
 
 .about-me-container {
   background-color: #1d1d1d;
-  height: 600px;
+  height: 450px;
+  min-height: 400px;
   border: none;
 }
 
-.s-about .about-me {
+.bio-container {
   font-family: "Raleway", sans-serif;
-  font-size: 17px;
-  letter-spacing: 0.5px;
+  font-size: 16px;
+  letter-spacing: 0.2px;
+  font-weight: 400;
   color: #dedede;
   background-color: #1d1d1d;
-  max-width: 500px;
+  max-width: 625px;
+  height: 450px;
+  min-height: 400px;
 }
 
-.bio-container {
-  height: 600px;
+.bio-container a {
+  font-weight: 800;
+  font-size: 16px;
 }
 
 .about-img-container {
@@ -220,11 +225,11 @@ code {
   margin: 0;
 }
 .about-img {
-  min-height: 100%;
-  min-width: 400px;
+  height: 100%;
+  min-width: 300px;
   background: url(src/assets/about-pic.webp);
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
 }
 .portfolio-img {
   min-width: 325px;
@@ -234,29 +239,6 @@ code {
   background-size: contain;
 }
 
-.skills-icon-list {
-  display: flex;
-  max-width: 600px;
-}
-.skills-icon-list li {
-  margin: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.skills-icon-list li:nth-child(n + 1):nth-child(-n + 4):after {
-  content: " | ";
-  color: #dedede;
-  font-size: 100%;
-  margin: 0 2rem;
-  font-weight: 400;
-}
-
-.skills-icon {
-  width: 45px;
-  height: 45px;
-}
 /* ------------------------------------------------------------------- 
 ## resume
 ------------------------------------------------------------------- */
@@ -321,7 +303,7 @@ code {
 .skill-list-item {
   @apply m-1 rounded-md px-2.5 py-1.5 font-bold text-white;
   font-family: "Raleway", sans-serif;
-  font-size: 17px;
+  font-size: 16px;
   letter-spacing: 0.5px;
   background-color: #ff4d59;
 }
@@ -371,7 +353,7 @@ code {
 
 .connect-txt {
   font-family: "Raleway", sans-serif;
-  font-size: 20px;
+  font-size: 18px;
   color: #dedede;
   letter-spacing: 0.5px;
   font-weight: 700 !important;

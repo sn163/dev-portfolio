@@ -1,10 +1,5 @@
 export { default as Email } from "./Email";
 export { default as Github } from "./Github";
 export { default as Iphone } from "./Iphone";
-export { default as Javascript } from "./Javascript";
 export { default as Linkedin } from "./Linkedin";
 export { default as Location } from "./Location";
-export { default as NodeJs } from "./NodeJs";
-export { default as React } from "./React";
-export { default as Typescript } from "./Typescript";
-export { default as Vue } from "./Vue";
