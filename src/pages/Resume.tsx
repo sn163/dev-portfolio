@@ -97,7 +97,7 @@ export default function Resume() {
         <div className="section-title-bar" />
         <div className="mt-10 flex space-x-4">
           <a href={resume} className="btn" rel="noreferrer" target="_blank">
-            VIEW ONLINE
+            VIEW PDF
           </a>
           <a href={resume} className="btn" download="sonny_nguyen_resume.pdf">
             DOWNLOAD PDF

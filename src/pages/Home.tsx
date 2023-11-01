@@ -34,6 +34,7 @@ export default function Home() {
                 href="https://www.linkedin.com/in/sonny-nguyen163/"
                 target="_blank"
                 rel="noreferrer"
+                aria-label="LinkedIn"
               >
                 <LinkedinSVG className="contact-linkedin shadow" />
               </a>
@@ -44,6 +45,7 @@ export default function Home() {
                 href="https://github.com/sn163"
                 target="_blank"
                 rel="noreferrer"
+                aria-label="GitHub"
               >
                 <GithubSVG className="contact-github shadow" />
               </a>
