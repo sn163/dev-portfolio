@@ -432,6 +432,10 @@ video {
 .m-auto{
   margin: auto;
 }
+.mx-10{
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+}
 .mx-3{
   margin-left: 0.75rem;
   margin-right: 0.75rem;
@@ -499,11 +503,17 @@ video {
 .h-10{
   height: 2.5rem;
 }
+.h-6{
+  height: 1.5rem;
+}
 .h-full{
   height: 100%;
 }
 .w-10{
   width: 2.5rem;
+}
+.w-6{
+  width: 1.5rem;
 }
 .w-full{
   width: 100%;
@@ -816,7 +826,7 @@ code {
 .NavigationMenuRoot {
   display: flex;
   z-index: 1;
-  min-width: 550px;
+  min-width: 364px;
   background-color: #1a1a1a;
   border-bottom: 2px solid #ff4d59;
   min-height: 7vh;
@@ -859,6 +869,98 @@ code {
     margin: 0 2rem;
     font-weight: 400;
   }
+}
+
+.NavigationMenuTrigger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 35px;
+}
+
+.NavigationMenuTrigger[data-state="open"] {
+  background-color: #3a3a3a;
+}
+
+.NavigationMenuContent .NavigationMenuItem {
+  list-style: none;
+}
+
+.NavigationMenuContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #1a1a1a;
+  border: 2px solid #3a3a3a;
+  border-radius: 10px;
+}
+.NavigationMenuContent .NavigationMenuItem {
+  width: 100%;
+}
+.NavigationMenuContent .NavigationMenuLink[data-active] {
+  background-color: #3a3a3a;
+}
+.NavigationMenuContent .NavigationMenuItem:not(:last-child) {
+  border-bottom: 2px solid #3a3a3a;
+}
+
+.NavigationMenuContent .NavigationMenuItem .NavigationMenuLink {
+  display: flex;
+  justify-content: center;
+  padding: 15px 0px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.NavigationMenuViewport {
+  position: relative;
+  transform-origin: top center;
+  margin-top: 6px;
+  width: 100%;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow:
+    hsl(206 22% 7% / 35%) 0px 10px 38px -10px,
+    hsl(206 22% 7% / 20%) 0px 10px 20px -15px;
+  height: var(--radix-navigation-menu-viewport-height);
+  transition:
+    width,
+    height,
+    300ms ease;
+}
+.NavigationMenuViewport[data-state="open"] {
+  animation: fadeIn 500ms ease;
+}
+.NavigationMenuViewport[data-state="closed"] {
+  animation: fadeOut 500ms ease;
+}
+
+.ViewportPosition {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  top: 100%;
+  left: 0;
+  perspective: 2000px;
 }
 
 /* ------------------------------------------------------------------- 
@@ -1027,7 +1129,7 @@ code {
   background-color: #1a1a1a;
 }
 .overvue-title a {
-  font-family: "Space Mono", monospace;
+  font-family: "Raleway", sans-serif;
   font-size: 35px;
   letter-spacing: 0.5px;
   color: #ff4d59;
@@ -1039,7 +1141,7 @@ code {
 }
 
 .sociallite-title a {
-  font-family: "Space Mono", monospace;
+  font-family: "Raleway", sans-serif;
   font-size: 35px;
   letter-spacing: 0.5px;
   color: #ff4d59;
