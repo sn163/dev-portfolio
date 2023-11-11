@@ -101,8 +101,8 @@ export default function NavHeader() {
 
   return (
     <>
-      <NavigationMenu.Root className="NavigationMenuRoot sticky top-0 flex w-screen items-center justify-center shadow-sm shadow-red-500">
-        <NavigationMenu.List className="NavigationMenuList flex w-screen items-center px-20">
+      <NavigationMenu.Root className="NavigationMenuRoot sticky top-0 flex items-center shadow-sm shadow-red-500">
+        <NavigationMenu.List className="NavigationMenuList space-between flex w-screen items-center px-5 md:px-20">
           {isMobile ? (
             navMobile
           ) : (

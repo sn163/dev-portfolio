@@ -19,7 +19,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="s-contact cover container-fluid flex flex-col items-center py-16"
+      className="s-contact cover container-fluid flex h-[82vh] flex-col items-center py-16"
     >
       <div className="section-title-container">
         <h2 className="section-title-light">CONTACT</h2>
