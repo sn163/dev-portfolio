@@ -25,7 +25,7 @@ export default function Resume() {
         <h3 className="resume-title">{resumeTitle}</h3>
         <div className="mb-4 mt-2 flex space-x-1">
           <span className="sub-title">{x.title}</span>
-          <span className="resume-date">{x.date}</span>
+          <span className="resume-date text-base">{x.date}</span>
         </div>
         <ul className="mx-5 list-disc space-y-2">{bulletpoints}</ul>
       </div>
@@ -82,7 +82,7 @@ export default function Resume() {
   });
 
   const skillsList = skills.map((x) => (
-    <li key={`skills-${uuid()}`} className="skill-list-item">
+    <li key={`skills-${uuid()}`} className="skill-list-item text-base">
       {x}
     </li>
   ));
@@ -90,7 +90,7 @@ export default function Resume() {
   return (
     <section
       id="resume"
-      className="s-resume container-fluid flex flex-col items-center py-16"
+      className="s-resume container-fluid flex h-full flex-col items-center py-16"
     >
       <div className="section-title-container">
         <h2 className="section-title-dark">RESUME</h2>

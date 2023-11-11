@@ -4,7 +4,7 @@ export default function Work() {
   return (
     <section
       id="work"
-      className="s-work container-fluid flex flex-col items-center py-16"
+      className="s-work container-fluid flex h-full flex-col items-center py-16 md:h-[93vh]"
     >
       <div className="section-title-container">
         <h2 className="section-title-light">WORK</h2>
