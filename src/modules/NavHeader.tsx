@@ -34,7 +34,7 @@ export default function NavHeader() {
   }, []);
 
   const navMobile = (
-    <>
+    <NavigationMenu.List className="NavigationMenuList space-between flex w-screen items-center px-5">
       <NavigationMenu.Item className="NavigationMenuItem mr-auto">
         <NavigationMenu.Link
           className="NavigationMenuLink"
@@ -96,75 +96,70 @@ export default function NavHeader() {
           </NavigationMenu.Item>
         </NavigationMenu.Content>
       </NavigationMenu.Item>
-    </>
+    </NavigationMenu.List>
   );
-
   return (
-    <>
-      <NavigationMenu.Root className="NavigationMenuRoot sticky top-0 flex items-center shadow-sm shadow-red-500">
-        <NavigationMenu.List className="NavigationMenuList space-between flex w-screen items-center px-5 md:px-20">
-          {isMobile ? (
-            navMobile
-          ) : (
-            <>
-              <NavigationMenu.Item className="NavigationMenuItem mr-auto">
-                <NavigationMenu.Link
-                  className="NavigationMenuLink"
-                  active={activeSection === "home" || activeSection === "/"}
-                  href="#home"
-                  aria-label="Home"
-                >
-                  {activeSection === "home" || activeSection === "/" ? (
-                    <ActiveLogo className="p-2 duration-500 ease-in-out hover:scale-125 hover:animate-pulse" />
-                  ) : (
-                    <Logo className="p-2 duration-500 ease-in-out hover:scale-125 hover:animate-pulse" />
-                  )}
-                </NavigationMenu.Link>
-              </NavigationMenu.Item>
-              <NavigationMenu.Item className="NavigationMenuItem ml-auto">
-                <NavigationMenu.Link
-                  href="#about"
-                  active={activeSection === "about"}
-                  className="NavigationMenuLink"
-                >
-                  About
-                </NavigationMenu.Link>
-              </NavigationMenu.Item>
-              <NavigationMenu.Item className="NavigationMenuItem">
-                <NavigationMenu.Link
-                  href="#resume"
-                  active={activeSection === "resume"}
-                  className="NavigationMenuLink"
-                >
-                  Resume
-                </NavigationMenu.Link>
-              </NavigationMenu.Item>
-              <NavigationMenu.Item className="NavigationMenuItem">
-                <NavigationMenu.Link
-                  href="#work"
-                  active={activeSection === "work"}
-                  className="NavigationMenuLink"
-                >
-                  Work
-                </NavigationMenu.Link>
-              </NavigationMenu.Item>
-              <NavigationMenu.Item className="NavigationMenuItem">
-                <NavigationMenu.Link
-                  href="#contact"
-                  active={activeSection === "contact"}
-                  className="NavigationMenuLink"
-                >
-                  Contact
-                </NavigationMenu.Link>
-              </NavigationMenu.Item>
-            </>
-          )}
+    <NavigationMenu.Root className="NavigationMenuRoot fixed top-0 flex items-center shadow-sm shadow-red-500">
+      {isMobile ? (
+        navMobile
+      ) : (
+        <NavigationMenu.List className="NavigationMenuList space-between flex w-screen items-center px-20">
+          <NavigationMenu.Item className="NavigationMenuItem mr-auto">
+            <NavigationMenu.Link
+              className="NavigationMenuLink"
+              active={activeSection === "home" || activeSection === "/"}
+              href="#home"
+              aria-label="Home"
+            >
+              {activeSection === "home" || activeSection === "/" ? (
+                <ActiveLogo className="p-2 duration-500 ease-in-out hover:scale-125 hover:animate-pulse" />
+              ) : (
+                <Logo className="p-2 duration-500 ease-in-out hover:scale-125 hover:animate-pulse" />
+              )}
+            </NavigationMenu.Link>
+          </NavigationMenu.Item>
+          <NavigationMenu.Item className="NavigationMenuItem ml-auto">
+            <NavigationMenu.Link
+              href="#about"
+              active={activeSection === "about"}
+              className="NavigationMenuLink"
+            >
+              About
+            </NavigationMenu.Link>
+          </NavigationMenu.Item>
+          <NavigationMenu.Item className="NavigationMenuItem">
+            <NavigationMenu.Link
+              href="#resume"
+              active={activeSection === "resume"}
+              className="NavigationMenuLink"
+            >
+              Resume
+            </NavigationMenu.Link>
+          </NavigationMenu.Item>
+          <NavigationMenu.Item className="NavigationMenuItem">
+            <NavigationMenu.Link
+              href="#work"
+              active={activeSection === "work"}
+              className="NavigationMenuLink"
+            >
+              Work
+            </NavigationMenu.Link>
+          </NavigationMenu.Item>
+          <NavigationMenu.Item className="NavigationMenuItem">
+            <NavigationMenu.Link
+              href="#contact"
+              active={activeSection === "contact"}
+              className="NavigationMenuLink"
+            >
+              Contact
+            </NavigationMenu.Link>
+          </NavigationMenu.Item>
         </NavigationMenu.List>
+      )}
 
-        <div className="ViewportPosition">
-          <NavigationMenu.Viewport className="NavigationMenuViewport" />
-        </div>
-      </NavigationMenu.Root>
-    </>
+      <div className="ViewportPosition">
+        <NavigationMenu.Viewport className="NavigationMenuViewport" />
+      </div>
+    </NavigationMenu.Root>
   );
 }
