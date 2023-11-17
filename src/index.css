@@ -38,16 +38,19 @@
   --font-mono: Consolas, "Andale Mono", Courier, "Courier New", monospace;
 }
 
-html,
-body {
-  margin: 0;
+html {
   scroll-behavior: smooth;
   /* height of sticky header */
   scroll-padding-top: 7vh;
-  overflow-y: scroll;
+  margin: 0;
   overflow-x: hidden;
-  position: relative;
   height: 100%;
+}
+
+body {
+  margin: 0;
+  overflow-y: scroll;
+  position: relative;
 }
 
 body::-webkit-scrollbar {
@@ -182,6 +185,7 @@ code {
 }
 .NavigationMenuContent .NavigationMenuLink[data-active] {
   background-color: #3a3a3a;
+  color: #ff4d59;
 }
 .NavigationMenuContent .NavigationMenuItem:not(:last-child) {
   border-bottom: 2px solid #3a3a3a;

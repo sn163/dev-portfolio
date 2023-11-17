@@ -423,8 +423,8 @@ video {
   white-space: nowrap;
   border-width: 0;
 }
-.sticky{
-  position: sticky;
+.fixed{
+  position: fixed;
 }
 .top-0{
   top: 0px;
@@ -464,14 +464,6 @@ video {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
-.my-auto{
-  margin-top: auto;
-  margin-bottom: auto;
-}
-.my-8{
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
 .mb-10{
   margin-bottom: 2.5rem;
 }
@@ -502,12 +494,6 @@ video {
 .mt-2{
   margin-top: 0.5rem;
 }
-.mt-5{
-  margin-top: 1.25rem;
-}
-.mt-8{
-  margin-top: 2rem;
-}
 .mt-7{
   margin-top: 1.75rem;
 }
@@ -534,9 +520,6 @@ video {
 }
 .h-full{
   height: 100%;
-}
-.max-h-\[540px\]{
-  max-height: 540px;
 }
 .w-10{
   width: 2.5rem;
@@ -683,6 +666,10 @@ video {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }
+.px-20{
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
 .px-3{
   padding-left: 0.75rem;
   padding-right: 0.75rem;
@@ -713,9 +700,6 @@ video {
 }
 .pb-10{
   padding-bottom: 2.5rem;
-}
-.pt-10{
-  padding-top: 2.5rem;
 }
 .text-center{
   text-align: center;
@@ -789,16 +773,19 @@ video {
   --font-mono: Consolas, "Andale Mono", Courier, "Courier New", monospace;
 }
 
-html,
-body {
-  margin: 0;
+html {
   scroll-behavior: smooth;
   /* height of sticky header */
   scroll-padding-top: 7vh;
-  overflow-y: scroll;
+  margin: 0;
   overflow-x: hidden;
-  position: relative;
   height: 100%;
+}
+
+body {
+  margin: 0;
+  overflow-y: scroll;
+  position: relative;
 }
 
 body::-webkit-scrollbar {
@@ -941,6 +928,7 @@ code {
 }
 .NavigationMenuContent .NavigationMenuLink[data-active] {
   background-color: #3a3a3a;
+  color: #ff4d59;
 }
 .NavigationMenuContent .NavigationMenuItem:not(:last-child) {
   border-bottom: 2px solid #3a3a3a;
@@ -1523,10 +1511,6 @@ code {
   .md\:flex-row{
     flex-direction: row;
   }
-  .md\:px-20{
-    padding-left: 5rem;
-    padding-right: 5rem;
-  }
   .md\:px-32{
     padding-left: 8rem;
     padding-right: 8rem;
@@ -1541,9 +1525,6 @@ code {
   }
   .md\:pb-20{
     padding-bottom: 5rem;
-  }
-  .md\:pt-0{
-    padding-top: 0px;
   }
   .md\:text-3xl{
     font-size: 1.875rem;
