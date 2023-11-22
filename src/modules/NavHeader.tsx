@@ -19,7 +19,7 @@ export default function NavHeader() {
         const sectionHeight = section.offsetHeight;
 
         if (
-          scrollPosition >= sectionTop - 90 && // Adjust the offset as needed
+          scrollPosition >= sectionTop - 65 && // Adjust the offset as needed
           scrollPosition < sectionTop + sectionHeight - 50 // Adjust the offset as needed
         ) {
           setActiveSection(section.id);
@@ -99,11 +99,11 @@ export default function NavHeader() {
     </NavigationMenu.List>
   );
   return (
-    <NavigationMenu.Root className="NavigationMenuRoot fixed top-0 flex items-center shadow-sm shadow-red-500">
+    <NavigationMenu.Root className="NavigationMenuRoot fixed top-0 h-16 shadow-sm shadow-red-500">
       {isMobile ? (
         navMobile
       ) : (
-        <NavigationMenu.List className="NavigationMenuList space-between flex w-screen items-center px-20">
+        <NavigationMenu.List className="NavigationMenuList space-between flex h-16 w-screen items-center px-20">
           <NavigationMenu.Item className="NavigationMenuItem mr-auto">
             <NavigationMenu.Link
               className="NavigationMenuLink"
