@@ -501,9 +501,6 @@ video {
 .mt-7{
   margin-top: 1.75rem;
 }
-.mt-32{
-  margin-top: 8rem;
-}
 .inline-block{
   display: inline-block;
 }
@@ -524,10 +521,6 @@ video {
 }
 .h-full{
   height: 100%;
-}
-.min-h-fit{
-  min-height: -moz-fit-content;
-  min-height: fit-content;
 }
 .min-h-screen{
   min-height: 100vh;
@@ -1530,9 +1523,6 @@ code {
   .md\:py-5{
     padding-top: 1.25rem;
     padding-bottom: 1.25rem;
-  }
-  .md\:pt-32{
-    padding-top: 8rem;
   }
   .md\:text-3xl{
     font-size: 1.875rem;
