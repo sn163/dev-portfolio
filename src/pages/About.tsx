@@ -53,7 +53,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="s-about container-fluid flex h-full flex-col items-center py-16 md:h-[93vh]"
+      className="s-about container-fluid min-h-screen flex flex-col items-center py-16"
     >
       <div className="section-title-container">
         <h2 className="section-title-light">ABOUT</h2>

@@ -19,7 +19,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="s-contact cover container-fluid flex h-[82vh] flex-col items-center py-16"
+      className="s-contact cover container-fluid flex flex-col items-center py-16"
     >
       <div className="section-title-container">
         <h2 className="section-title-light">CONTACT</h2>
@@ -67,7 +67,7 @@ export default function Contact() {
             <Form
               noValidate
               onSubmit={props.handleSubmit}
-              className="contact-form my-10 flex flex-col  rounded-md shadow-xl"
+              className="contact-form my-10 flex flex-col rounded-md shadow-xl"
               data-netlify="true"
             >
               <div className="contact-form-header flex items-center justify-start gap-6 p-4">

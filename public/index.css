@@ -464,6 +464,10 @@ video {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
+.my-auto{
+  margin-top: auto;
+  margin-bottom: auto;
+}
 .mb-10{
   margin-bottom: 2.5rem;
 }
@@ -497,6 +501,9 @@ video {
 .mt-7{
   margin-top: 1.75rem;
 }
+.mt-32{
+  margin-top: 8rem;
+}
 .inline-block{
   display: inline-block;
 }
@@ -506,20 +513,24 @@ video {
 .h-10{
   height: 2.5rem;
 }
+.h-16{
+  height: 4rem;
+}
 .h-6{
   height: 1.5rem;
-}
-.h-\[82vh\]{
-  height: 82vh;
-}
-.h-\[93vh\]{
-  height: 93vh;
 }
 .h-auto{
   height: auto;
 }
 .h-full{
   height: 100%;
+}
+.min-h-fit{
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+}
+.min-h-screen{
+  min-height: 100vh;
 }
 .w-10{
   width: 2.5rem;
@@ -570,6 +581,9 @@ video {
 }
 .justify-center{
   justify-content: center;
+}
+.justify-between{
+  justify-content: space-between;
 }
 .gap-1{
   gap: 0.25rem;
@@ -765,7 +779,9 @@ video {
 @import url("https://fonts.googleapis.com/css?family=Oswald:400,300,700");
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400&display=swap");
+
 :root {
+  --h-header: 4rem;
   --font-1: "Inter", sans-serif;
   --font-2: "IBM Plex Serif", serif;
   /* monospace
@@ -776,7 +792,7 @@ video {
 html {
   scroll-behavior: smooth;
   /* height of sticky header */
-  scroll-padding-top: 7vh;
+  scroll-padding-top: 4rem;
   margin: 0;
   overflow-x: hidden;
   height: 100%;
@@ -856,7 +872,6 @@ code {
   min-width: 364px;
   background-color: #1a1a1a;
   border-bottom: 2px solid #ff4d59;
-  min-height: 7vh;
 }
 
 .NavigationMenuLink {
@@ -994,9 +1009,8 @@ code {
 
 .s-hero {
   width: 100%;
-  min-height: calc(25.5 * var(2rem));
   overflow: hidden;
-  scroll-margin-top: 7vh;
+  scroll-margin-top: var(--h-header);
 }
 
 .hero-typewriter {
@@ -1020,10 +1034,9 @@ code {
 ------------------------------------------------------------------- */
 .s-about {
   background-color: #272727;
-  min-height: calc(25.5 * var(2rem));
   overflow: hidden;
   margin: 0;
-  scroll-margin-top: 7vh;
+  scroll-margin-top: var(--h-header);
 }
 
 .about-me-container {
@@ -1060,9 +1073,9 @@ code {
 .s-resume {
   background-color: #fbfcfa;
   width: 100%;
-  min-height: calc(25.5 * var(2rem));
+  height: 100%;
   overflow: hidden;
-  scroll-margin-top: 7vh;
+  scroll-margin-top: var(--h-header);
 }
 
 .resume-title {
@@ -1256,10 +1269,9 @@ code {
 .s-work {
   background-color: #272727;
   width: 100%;
-  min-height: calc(25.5 * var(2rem));
   overflow: hidden;
   margin: 0;
-  scroll-margin-top: 7vh;
+  scroll-margin-top: var(--h-header);
 }
 
 .overvue-project-img {
@@ -1284,10 +1296,9 @@ code {
 ------------------------------------------------------------------- */
 .s-contact {
   width: 100%;
-  height: 82vh;
-  min-height: calc(25.5 * var(2rem));
+  min-height: calc(100vh - 11rem);
   overflow: hidden;
-  scroll-margin-top: 7vh;
+  scroll-margin-top: var(--h-header);
 }
 
 .contact-img {
@@ -1342,7 +1353,7 @@ code {
 .s-footer {
   background-color: #1a1a1a;
   border-top: 1px solid #ff4d59;
-  height: 11vh;
+  min-height: 7rem;
 }
 
 .s-footer .footer-text {
@@ -1499,9 +1510,6 @@ code {
   .md\:mt-0{
     margin-top: 0px;
   }
-  .md\:h-\[93vh\]{
-    height: 93vh;
-  }
   .md\:max-h-\[540px\]{
     max-height: 540px;
   }
@@ -1523,8 +1531,8 @@ code {
     padding-top: 1.25rem;
     padding-bottom: 1.25rem;
   }
-  .md\:pb-20{
-    padding-bottom: 5rem;
+  .md\:pt-32{
+    padding-top: 8rem;
   }
   .md\:text-3xl{
     font-size: 1.875rem;
