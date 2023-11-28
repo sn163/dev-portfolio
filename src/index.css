@@ -376,10 +376,28 @@ code {
   background-color: #ff4d59;
 }
 
-.overvue-text-container {
+.project-skill-list-item {
+  @apply m-1 rounded-md px-1.5 py-0.5 font-bold text-white;
+  font-family: "Raleway", sans-serif;
+  letter-spacing: 0.5px;
+  background-color: #ff4d59;
+}
+
+.project-container {
   background-color: #1a1a1a;
+  max-width: 720px;
+  height: 440px;
+  min-height: 240px;
+  min-width: 520px;
+  box-shadow:
+    5px 5px rgba(255, 77, 89, 0.4),
+    10px 10px rgba(255, 77, 89, 0.3),
+    15px 15px rgba(255, 77, 89, 0.2),
+    20px 20px rgba(255, 77, 89, 0.1),
+    25px 25px rgba(255, 77, 89, 0.05);
 }
-.overvue-title a {
+
+.project-title a {
   font-family: "Raleway", sans-serif;
   font-size: 35px;
   letter-spacing: 0.5px;
@@ -387,23 +405,11 @@ code {
   text-decoration: none;
 }
 
-.overvue-title a:hover {
-  color: #4cb883;
+.project-title a:hover {
+  color: rgba(255, 77, 89, 0.8);
 }
 
-.sociallite-title a {
-  font-family: "Raleway", sans-serif;
-  font-size: 35px;
-  letter-spacing: 0.5px;
-  color: #ff4d59;
-  text-decoration: none;
-}
-
-.sociallite-title a:hover {
-  color: #febe03;
-}
-
-.overvue-subtitle {
+.project-subtitle {
   font-family: "Raleway", sans-serif;
   font-size: 20px;
   letter-spacing: 0.5px;
@@ -471,24 +477,6 @@ code {
   overflow: hidden;
   margin: 0;
   scroll-margin-top: var(--h-header);
-}
-
-.overvue-project-img {
-  background-image: url(./assets/imgs/overvue.webp);
-  min-width: 570px;
-  min-height: 300px;
-  background-repeat: no-repeat;
-  background-size: contain;
-  border: 1.5px solid #ff4d59;
-}
-
-.sociallite-project-img {
-  background-image: url(./assets/imgs/sociallite.webp);
-  min-width: 570px;
-  min-height: 300px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border: 1.5px solid #ff4d59;
 }
 /* ------------------------------------------------------------------- 
 ## contact

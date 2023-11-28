@@ -1,19 +1,67 @@
+import uuid from "react-uuid";
 import { FadeInSection } from "../modules/FadeInSection";
 
 export default function Work() {
+  const overVueSkills = [
+    "Vue",
+    "JavaScript",
+    "Node",
+    "HTML",
+    "CSS",
+    "Quasar Framework",
+    "Electron",
+    "Slack OAuth",
+  ];
+  const socialLiteSkills = ["JavaScript", "HTML", "CSS"];
+  const interviewHubSkills = [
+    "React",
+    "JavaScript",
+    "Node",
+    "React Router",
+    "Bootstrap",
+    "WebRTC",
+    "PostgreSQL",
+    "HTML",
+    "CSS",
+  ];
+
+  const projectSkills = (skillsList: string[]) => {
+    return skillsList.map((x) => (
+      <li
+        key={`skills-${uuid()}`}
+        className="project-skill-list-item text-base"
+      >
+        {x}
+      </li>
+    ));
+  };
+
   return (
     <section
       id="work"
-      className="s-work container-fluid flex min-h-screen flex-col items-center py-16 "
+      className="s-work container-fluid flex h-full flex-col items-center px-32 py-16"
     >
       <div className="section-title-container">
         <h2 className="section-title-light">WORK</h2>
         <div className="section-title-bar" />
       </div>
-      <FadeInSection classProps="flex items-center justify-center m-auto">
-        <div className="project-container mx-auto flex flex-wrap items-center justify-center gap-x-16 gap-y-4 p-0 shadow-lg ">
-          <div className="overvue-text-container flex flex-col items-center justify-center rounded-md px-6 py-4">
-            <div className="overvue-title">
+      <FadeInSection classProps="flex flex-col m-auto w-full my-20 space-y-32">
+        <div className="flex items-center justify-around">
+          <div className="project-container  rounded-lg p-6 duration-500 ease-in-out hover:scale-105 hover:animate-pulse">
+            <a href="https://www.overvue.org/" target="_blank" rel="noreferrer">
+              <picture>
+                <source srcSet="/overvue.webp" type="image/webp"></source>
+                <source srcSet="/overvue.jpg" type="image/jpeg"></source>
+                <img
+                  alt="overvue"
+                  src="/overvue.jpg"
+                  className="h-full w-full"
+                />
+              </picture>
+            </a>
+          </div>
+          <div className="max-w-xl">
+            <div className="project-title flex flex-col">
               <a
                 href="https://www.overvue.org/"
                 target="_blank"
@@ -22,16 +70,19 @@ export default function Work() {
               >
                 OverVue
               </a>
+              <div className="project-subtitle mb-4">
+                Prototyping Development Tool for Vue Developers
+              </div>
+              <ul className="skill-list flex-wrap">
+                {projectSkills(overVueSkills)}
+              </ul>
             </div>
-            <div className="overvue-subtitle mb-4">
-              Prototyping Development Tool for Vue Developers
-            </div>
-            <a href="https://www.overvue.org/" target="_blank" rel="noreferrer">
-              <div className="overvue-project-img rounded-lg duration-500 ease-in-out hover:scale-105 hover:animate-pulse" />
-            </a>
           </div>
-          <div className="overvue-text-container flex flex-col items-center justify-center rounded-md px-6 py-4">
-            <div className="sociallite-title">
+        </div>
+
+        <div className="flex w-full items-center justify-around">
+          <div className="max-w-xl">
+            <div className="project-title flex flex-col">
               <a
                 href="https://www.mysociallite.com/"
                 target="_blank"
@@ -40,15 +91,66 @@ export default function Work() {
               >
                 Social Lite
               </a>
+              <div className="project-subtitle mb-4">
+                Event Services Provider
+              </div>
+              <ul className="skill-list flex-wrap">
+                {projectSkills(socialLiteSkills)}
+              </ul>
             </div>
-            <div className="overvue-subtitle mb-4">Event Services Provider</div>
+          </div>
+          <div className="project-container rounded-lg p-6 duration-500 ease-in-out hover:scale-105 hover:animate-pulse">
             <a
               href="https://www.mysociallite.com/"
               target="_blank"
               rel="noreferrer"
             >
-              <div className="sociallite-project-img rounded-lg duration-500 ease-in-out hover:scale-105 hover:animate-pulse" />
+              <picture>
+                <source srcSet="/sociallite.webp" type="image/webp"></source>
+                <source srcSet="/sociallite.jpg" type="image/jpeg"></source>
+                <img
+                  alt="social lite"
+                  src="/sociallite.jpg"
+                  className="h-full w-full"
+                />
+              </picture>
             </a>
+          </div>
+        </div>
+        <div className="flex items-center justify-around">
+          <div className="project-container rounded-lg p-6 duration-500 ease-in-out hover:scale-105 hover:animate-pulse">
+            <a
+              href="https://github.com/tanpeterson/Interview-Hub"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <picture>
+                <source srcSet="/interviewhub.jpg" type="image/jpeg"></source>
+                <img
+                  alt="interview hub"
+                  src="/interviewhub.jpg"
+                  className="h-full w-full"
+                />
+              </picture>
+            </a>
+          </div>
+          <div className="max-w-xl">
+            <div className="project-title flex flex-col">
+              <a
+                href="https://github.com/tanpeterson/Interview-Hub"
+                target="_blank"
+                rel="noreferrer"
+                className="my-4"
+              >
+                InterviewHub
+              </a>
+              <div className="project-subtitle mb-4">
+                Interview Review & Preparation Platform
+              </div>
+              <ul className="skill-list flex-wrap">
+                {projectSkills(interviewHubSkills)}
+              </ul>
+            </div>
           </div>
         </div>
       </FadeInSection>
