@@ -385,16 +385,19 @@ code {
 
 .project-container {
   background-color: #1a1a1a;
-  max-width: 720px;
-  height: 440px;
-  min-height: 240px;
-  min-width: 520px;
   box-shadow:
     5px 5px rgba(255, 77, 89, 0.4),
     10px 10px rgba(255, 77, 89, 0.3),
     15px 15px rgba(255, 77, 89, 0.2),
     20px 20px rgba(255, 77, 89, 0.1),
     25px 25px rgba(255, 77, 89, 0.05);
+}
+
+.project-container img {
+  width: 620px;
+  height: 380px;
+  min-width: 520px;
+  min-height: 280px;
 }
 
 .project-title a {
