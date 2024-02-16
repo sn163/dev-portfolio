@@ -1,7 +1,7 @@
 import { TypeAnimation } from "react-type-animation";
-import { ReactComponent as GithubSVG } from "../assets/github.svg";
-import { ReactComponent as LinkedinSVG } from "../assets/linkedin.svg";
-import { ReactComponent as ScrollSVG } from "../assets/arrow-circle-down.svg";
+import GithubSVG from "../assets/github.svg?react";
+import LinkedinSVG from "../assets/linkedin.svg?react";
+import ScrollSVG from "../assets/arrow-circle-down.svg?react";
 
 export default function Home() {
   return (
