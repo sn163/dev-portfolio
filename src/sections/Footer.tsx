@@ -43,7 +43,7 @@ export default function Footer() {
         </li>
       </ul>
       <span className="footer-text">
-        Sonny Nguyen <span className="footer-year">©2023</span>
+        Sonny Nguyen <span className="footer-year">©2024</span>
       </span>
     </section>
   );
