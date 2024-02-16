@@ -130,7 +130,7 @@ export const cvData = {
     "A/B Testing",
     "WCAG / Accessibility",
     "SEO",
-    "GTM",
-    "GA4",
+    "Google Tag Manager",
+    "Google Analytics 4",
   ],
 };
