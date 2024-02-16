@@ -1,10 +1,10 @@
-import Hero from "../pages/Home";
-import About from "../pages/About";
-import Contact from "../pages/Contact";
-import Resume from "../pages/Resume";
-import Work from "../pages/Work";
+import Hero from "../sections/Home";
+import About from "../sections/About";
+import Contact from "../sections/Contact";
+import Resume from "../sections/Resume";
+import Work from "../sections/Work";
 import NavHeader from "./NavHeader";
-import Footer from "../pages/Footer";
+import Footer from "../sections/Footer";
 
 export default function Dashboard() {
   return (
