@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sections": [
+    {"offset": {"line": 5, "column": 0}, "map": {"version":3,"sources":["/turbopack/[project]/src/app/[[...slug]]/client.tsx"],"sourcesContent":["\"use client\";\n\nimport dynamic from \"next/dynamic\";\n\nconst App = dynamic(() => import(\"../../App\"), { ssr: false });\n\nexport function ClientOnly() {\n  return <App />;\n}\n"],"names":[],"mappings":";;;;;;;;;;;;;;AAAA;;;AAIA,MAAM,MAAM,QAAQ,IAAM;;;;;;IAAuB,KAAK;;KAAhD;AAEC,SAAS;IACd,qBAAO,QAAC;;;;;AACV;MAFgB"}},
+    {"offset": {"line": 42, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
+}

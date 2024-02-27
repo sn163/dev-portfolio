@@ -21,6 +21,7 @@ module.exports = {
     "plugin:react-hooks/recommended",
     "plugin:react/jsx-runtime",
     "plugin:@typescript-eslint/recommended",
+    "next",
   ],
   parser: "@typescript-eslint/parser",
   overrides: [
