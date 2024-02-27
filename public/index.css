@@ -4,7 +4,7 @@
 @import-normalize;
 
 /*
-! tailwindcss v3.3.3 | MIT License | https://tailwindcss.com
+! tailwindcss v3.4.1 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -33,15 +33,18 @@
 4. Use the user's configured `sans` font-family by default.
 5. Use the user's configured `sans` font-feature-settings by default.
 6. Use the user's configured `sans` font-variation-settings by default.
+7. Disable tap highlights on iOS
 */
 
-html {
+html,
+:host {
   line-height: 1.5; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */ /* 3 */
   tab-size: 4; /* 3 */
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 4 */
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 4 */
   font-feature-settings: normal; /* 5 */
   font-variation-settings: normal; /* 6 */
+  -webkit-tap-highlight-color: transparent; /* 7 */
 }
 
 /*
@@ -108,8 +111,10 @@ strong {
 }
 
 /*
-1. Use the user's configured `mono` font family by default.
-2. Correct the odd `em` font sizing in all browsers.
+1. Use the user's configured `mono` font-family by default.
+2. Use the user's configured `mono` font-feature-settings by default.
+3. Use the user's configured `mono` font-variation-settings by default.
+4. Correct the odd `em` font sizing in all browsers.
 */
 
 code,
@@ -117,7 +122,9 @@ kbd,
 samp,
 pre {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; /* 1 */
-  font-size: 1em; /* 2 */
+  font-feature-settings: normal; /* 2 */
+  font-variation-settings: normal; /* 3 */
+  font-size: 1em; /* 4 */
 }
 
 /*
@@ -488,17 +495,6 @@ video {
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
 }
-.sr-only{
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
-}
 .fixed{
   position: fixed;
 }
@@ -587,17 +583,11 @@ video {
 .flex{
   display: flex;
 }
-.h-10{
-  height: 2.5rem;
-}
 .h-16{
   height: 4rem;
 }
 .h-6{
   height: 1.5rem;
-}
-.h-auto{
-  height: auto;
 }
 .h-full{
   height: 100%;
@@ -605,14 +595,8 @@ video {
 .min-h-screen{
   min-height: 100vh;
 }
-.w-10{
-  width: 2.5rem;
-}
 .w-6{
   width: 1.5rem;
-}
-.w-72{
-  width: 18rem;
 }
 .w-full{
   width: 100%;
@@ -719,9 +703,6 @@ video {
 .rounded{
   border-radius: 0.25rem;
 }
-.rounded-full{
-  border-radius: 9999px;
-}
 .rounded-lg{
   border-radius: 0.5rem;
 }
@@ -730,13 +711,6 @@ video {
 }
 .border{
   border-width: 1px;
-}
-.border-8{
-  border-width: 8px;
-}
-.border-t-red-600{
-  --tw-border-opacity: 1;
-  border-top-color: rgb(220 38 38 / var(--tw-border-opacity));
 }
 .p-2{
   padding: 0.5rem;
@@ -1109,6 +1083,12 @@ code {
   border: none;
 }
 
+.about-img {
+  width: 315px;
+  height: 100%;
+  position: relative;
+}
+
 .bio-container {
   background-color: #1d1d1d;
   max-width: 600px;
@@ -1474,8 +1454,6 @@ code {
 }
 
 .contact-icons {
-  width: 25px;
-  height: 25px;
   margin-right: 8px;
 }
 .s-hero__scroll {
@@ -1582,8 +1560,16 @@ code {
     margin-bottom: 5rem;
   }
 
+  .md\:ml-7{
+    margin-left: 1.75rem;
+  }
+
   .md\:mt-0{
     margin-top: 0px;
+  }
+
+  .md\:mt-2{
+    margin-top: 0.5rem;
   }
 
   .md\:max-h-\[540px\]{

@@ -290,6 +290,12 @@ code {
   border: none;
 }
 
+.about-img {
+  width: 315px;
+  height: 100%;
+  position: relative;
+}
+
 .bio-container {
   background-color: #1d1d1d;
   max-width: 600px;
@@ -598,8 +604,6 @@ code {
 }
 
 .contact-icons {
-  width: 25px;
-  height: 25px;
   margin-right: 8px;
 }
 .s-hero__scroll {
