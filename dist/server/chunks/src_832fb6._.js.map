@@ -1,8 +1,0 @@
-{
-  "version": 3,
-  "sections": [
-    {"offset": {"line": 5, "column": 0}, "map": {"version":3,"sources":["/turbopack/[project]/src/index.jsx"],"sourcesContent":["import React from \"react\";\nimport ReactDOM from \"react-dom/client\";\nimport \"./index.css\";\nimport App from \"./App\";\nimport { HashRouter } from \"react-router-dom\";\n\nconst root = ReactDOM.createRoot(document.getElementById(\"root\"));\nroot.render(\n  <React.StrictMode>\n    <HashRouter basename={process.env.NEXT_PUBLIC_BASE_URL}>\n      <App />\n    </HashRouter>\n  </React.StrictMode>,\n);\n"],"names":[],"mappings":";;;;;;;;;;;;;AAMA,MAAM,OAAO,8KAAS,UAAU,CAAC,SAAS,cAAc,CAAC;AACzD,KAAK,MAAM,eACT,mPAAC,2NAAM,UAAU;cACf,cAAA;QAAY,QAAQ;kBAClB,cAAA"}},
-    {"offset": {"line": 37, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}},
-    {"offset": {"line": 42, "column": 0}, "map": {"version":3,"sources":["/turbopack/[project]/src/App.tsx"],"sourcesContent":["\"use client\";\n\nimport Dashboard from \"./pages\";\nimport { useEffect } from \"react\";\nimport emailjs from \"@emailjs/browser\";\n\nexport default function App() {\n  useEffect(() => {\n    emailjs.init(\"wgi6cGen04bpt-EVb\");\n  }, []);\n  return (\n    <main>\n      <Dashboard />\n    </main>\n  );\n}\n"],"names":[],"mappings":";;;;;;;;;;;;;AAAA;;;;;AAMe,SAAS;IACtB,6NAAU;QACR,+KAAQ,IAAI,CAAC;IACf,GAAG,EAAE;IACL,qBACE,mPAAC;kBACC,cAAA,mPAAC;;;;;;;;;;AAGP"}},
-    {"offset": {"line": 76, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
-}
