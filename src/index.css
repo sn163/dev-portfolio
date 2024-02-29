@@ -133,7 +133,7 @@ code {
   border-radius: 4px;
 }
 
-.NavigationMenuLink[data-active] {
+.NavigationMenuLink.active {
   color: #ff4d59;
 }
 .NavigationMenuLink:hover {
