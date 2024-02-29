@@ -1,6 +1,6 @@
 "use client";
 
-import Dashboard from "./app/_components/modules/Dashboard";
+import Dashboard from "./app/Dashboard";
 import { useEffect } from "react";
 import emailjs from "@emailjs/browser";
 
