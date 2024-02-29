@@ -1,8 +1,8 @@
-import locationSVG from "../../_assets/location.svg";
-import iphoneSVG from "../../_assets/iphone.svg";
-import emailSVG from "../../_assets/email.svg";
-import githubSVG from "../../_assets/github.svg";
-import linkedinSVG from "../../_assets/linkedin.svg";
+import locationSVG from "@/public/location.svg";
+import iphoneSVG from "@/public/iphone.svg";
+import emailSVG from "@/public/email.svg";
+import githubSVG from "@/public/github.svg";
+import linkedinSVG from "@/public/linkedin.svg";
 import Image from "next/image";
 
 export default function Footer() {

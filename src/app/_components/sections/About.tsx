@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { FadeInSection } from "../modules/FadeInSection";
-import aboutMePic from "../../_assets/about-pic.webp";
+import aboutMePic from "@/public/about-pic.webp";
 
 export default function About() {
   const aboutMe = (

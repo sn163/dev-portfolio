@@ -69,29 +69,17 @@ const __TURBOPACK__default__export__ = {
 };
 
 })()),
-"[project]/src/app/_assets/imgs/hero-img.webp [app-client] (static)": (({ r: __turbopack_require__, f: __turbopack_require_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, l: __turbopack_load__, j: __turbopack_dynamic__, p: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, g: global, __dirname }) => (() => {
+"[project]/src/app/_assets/imgs/hero-img.webp [app-client] (static)": (() => {{
 
-__turbopack_export_value__("/_next/static/media/hero-img.79ccb9a2.webp");
-})()),
-"[project]/src/app/_assets/imgs/hero-img.webp.mjs/(IMAGE)/[project]/src/app/_assets/imgs/hero-img.webp [app-client] (static) (structured image object, ecmascript)": (({ r: __turbopack_require__, f: __turbopack_require_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, l: __turbopack_load__, j: __turbopack_dynamic__, p: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, g: global, __dirname, k: __turbopack_refresh__ }) => (() => {
-"use strict";
+throw new Error("An error occurred while generating the chunk item [project]/src/app/_assets/imgs/hero-img.webp [app-client] (static)\n\nCaused by:\n- StaticAsset::path: not found\n\nDebug info:\n- An error occurred while generating the chunk item [project]/src/app/_assets/imgs/hero-img.webp [app-client] (static)\n- Execution of EcmascriptChunkItemContent::module_factory failed\n- Execution of <ModuleChunkItem as EcmascriptChunkItem>::content failed\n- Execution of <DevChunkingContext as ChunkingContext>::asset_url failed\n- Execution of <StaticAsset as OutputAsset>::ident failed\n- StaticAsset::path: not found");
 
-__turbopack_esm__({
-    "default": ()=>__TURBOPACK__default__export__
-});
-var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$_assets$2f$imgs$2f$hero$2d$img$2e$webp__$5b$app$2d$client$5d$__$28$static$29$__ = __turbopack_import__("[project]/src/app/_assets/imgs/hero-img.webp [app-client] (static)");
-"__TURBOPACK__ecmascript__hoisting__location__";
-;
-const __TURBOPACK__default__export__ = {
-    src: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$_assets$2f$imgs$2f$hero$2d$img$2e$webp__$5b$app$2d$client$5d$__$28$static$29$__["default"],
-    width: 1366,
-    height: 768,
-    blurDataURL: "data:image/webp;base64,UklGRjYAAABXRUJQVlA4ICoAAACwAQCdASoIAAQAAkA4JZQC7AEO92RQAP732EcKzub1qe2DIyUd/1xYAAA=",
-    blurWidth: 8,
-    blurHeight: 4
-};
+}}),
+"[project]/src/app/_assets/imgs/hero-img.webp.mjs/(IMAGE)/[project]/src/app/_assets/imgs/hero-img.webp [app-client] (static) (structured image object, ecmascript)": (function({ r: __turbopack_require__, f: __turbopack_require_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, l: __turbopack_load__, j: __turbopack_dynamic__, p: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, g: global, __dirname, k: __turbopack_refresh__, m: module, e: exports, t: require }) { !function() {
 
-})()),
+const e = new Error("Could not parse module '[project]/src/app/_assets/imgs/hero-img.webp.mjs'");
+e.code = 'MODULE_UNPARSEABLE';
+throw e;
+}.call(this) }),
 "[project]/src/app/_components/sections/Home.tsx [app-client] (ecmascript)": (({ r: __turbopack_require__, f: __turbopack_require_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, l: __turbopack_load__, j: __turbopack_dynamic__, p: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, g: global, __dirname, k: __turbopack_refresh__ }) => (() => {
 "use strict";
 
@@ -324,29 +312,17 @@ var _c;
 __turbopack_refresh__.register(_c, "FadeInSection");
 
 })()),
-"[project]/src/app/_assets/about-pic.webp [app-client] (static)": (({ r: __turbopack_require__, f: __turbopack_require_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, l: __turbopack_load__, j: __turbopack_dynamic__, p: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, g: global, __dirname }) => (() => {
+"[project]/src/app/_assets/about-pic.webp [app-client] (static)": (() => {{
 
-__turbopack_export_value__("/_next/static/media/about-pic.40660db5.webp");
-})()),
-"[project]/src/app/_assets/about-pic.webp.mjs/(IMAGE)/[project]/src/app/_assets/about-pic.webp [app-client] (static) (structured image object, ecmascript)": (({ r: __turbopack_require__, f: __turbopack_require_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, l: __turbopack_load__, j: __turbopack_dynamic__, p: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, g: global, __dirname, k: __turbopack_refresh__ }) => (() => {
-"use strict";
+throw new Error("An error occurred while generating the chunk item [project]/src/app/_assets/about-pic.webp [app-client] (static)\n\nCaused by:\n- StaticAsset::path: not found\n\nDebug info:\n- An error occurred while generating the chunk item [project]/src/app/_assets/about-pic.webp [app-client] (static)\n- Execution of EcmascriptChunkItemContent::module_factory failed\n- Execution of <ModuleChunkItem as EcmascriptChunkItem>::content failed\n- Execution of <DevChunkingContext as ChunkingContext>::asset_url failed\n- Execution of <StaticAsset as OutputAsset>::ident failed\n- StaticAsset::path: not found");
 
-__turbopack_esm__({
-    "default": ()=>__TURBOPACK__default__export__
-});
-var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$_assets$2f$about$2d$pic$2e$webp__$5b$app$2d$client$5d$__$28$static$29$__ = __turbopack_import__("[project]/src/app/_assets/about-pic.webp [app-client] (static)");
-"__TURBOPACK__ecmascript__hoisting__location__";
-;
-const __TURBOPACK__default__export__ = {
-    src: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$_assets$2f$about$2d$pic$2e$webp__$5b$app$2d$client$5d$__$28$static$29$__["default"],
-    width: 1372,
-    height: 2048,
-    blurDataURL: "data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAADQAQCdASoFAAgAAkA4JYwCdAEUo5ocIAD+lQ+PLfQR1eRaPtWwvtZ6TVbX4EVqRpXJSHyBdFvNgAAA",
-    blurWidth: 5,
-    blurHeight: 8
-};
+}}),
+"[project]/src/app/_assets/about-pic.webp.mjs/(IMAGE)/[project]/src/app/_assets/about-pic.webp [app-client] (static) (structured image object, ecmascript)": (function({ r: __turbopack_require__, f: __turbopack_require_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, l: __turbopack_load__, j: __turbopack_dynamic__, p: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, g: global, __dirname, k: __turbopack_refresh__, m: module, e: exports, t: require }) { !function() {
 
-})()),
+const e = new Error("Could not parse module '[project]/src/app/_assets/about-pic.webp.mjs'");
+e.code = 'MODULE_UNPARSEABLE';
+throw e;
+}.call(this) }),
 "[project]/src/app/_components/sections/About.tsx [app-client] (ecmascript)": (({ r: __turbopack_require__, f: __turbopack_require_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, l: __turbopack_load__, j: __turbopack_dynamic__, p: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, g: global, __dirname, k: __turbopack_refresh__ }) => (() => {
 "use strict";
 
