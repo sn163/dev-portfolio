@@ -2089,7 +2089,6 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$imag
 ;
 function NavHeader() {
     const [activeSection, setActiveSection] = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"]("/");
-    const [hash, setHash] = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"]("/");
     const isMobile = __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$_components$2f$utils$2f$useCheckMobileScreen$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"]();
     __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"](()=>{
         const handleScroll = ()=>{
@@ -2127,7 +2126,7 @@ function NavHeader() {
                         className: "p-4"
                     }, void 0, false, {
                         fileName: "<[project]/src/app/_components/modules/NavHeader.tsx>",
-                        lineNumber: 48,
+                        lineNumber: 46,
                         columnNumber: 13
                     }, this) : /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"](__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                         width: 80,
@@ -2137,17 +2136,17 @@ function NavHeader() {
                         className: "p-4"
                     }, void 0, false, {
                         fileName: "<[project]/src/app/_components/modules/NavHeader.tsx>",
-                        lineNumber: 56,
+                        lineNumber: 54,
                         columnNumber: 13
                     }, this)
                 }, void 0, false, {
                     fileName: "<[project]/src/app/_components/modules/NavHeader.tsx>",
-                    lineNumber: 42,
+                    lineNumber: 40,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "<[project]/src/app/_components/modules/NavHeader.tsx>",
-                lineNumber: 41,
+                lineNumber: 39,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"](__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$radix$2d$ui$2f$react$2d$navigation$2d$menu$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__.Item, {
@@ -2161,12 +2160,12 @@ function NavHeader() {
                             className: "text-light h-6 w-6"
                         }, void 0, false, {
                             fileName: "<[project]/src/app/_components/modules/NavHeader.tsx>",
-                            lineNumber: 72,
+                            lineNumber: 70,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "<[project]/src/app/_components/modules/NavHeader.tsx>",
-                        lineNumber: 67,
+                        lineNumber: 65,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"](__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$radix$2d$ui$2f$react$2d$navigation$2d$menu$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__.Content, {
@@ -2180,12 +2179,12 @@ function NavHeader() {
                                     children: "About"
                                 }, void 0, false, {
                                     fileName: "<[project]/src/app/_components/modules/NavHeader.tsx>",
-                                    lineNumber: 76,
+                                    lineNumber: 74,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "<[project]/src/app/_components/modules/NavHeader.tsx>",
-                                lineNumber: 75,
+                                lineNumber: 73,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"](__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$radix$2d$ui$2f$react$2d$navigation$2d$menu$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__.Item, {
@@ -2196,12 +2195,12 @@ function NavHeader() {
                                     children: "Resume"
                                 }, void 0, false, {
                                     fileName: "<[project]/src/app/_components/modules/NavHeader.tsx>",
-                                    lineNumber: 84,
+                                    lineNumber: 82,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "<[project]/src/app/_components/modules/NavHeader.tsx>",
-                                lineNumber: 83,
+                                lineNumber: 81,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"](__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$radix$2d$ui$2f$react$2d$navigation$2d$menu$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__.Item, {
@@ -2212,12 +2211,12 @@ function NavHeader() {
                                     children: "Work"
                                 }, void 0, false, {
                                     fileName: "<[project]/src/app/_components/modules/NavHeader.tsx>",
-                                    lineNumber: 92,
+                                    lineNumber: 90,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "<[project]/src/app/_components/modules/NavHeader.tsx>",
-                                lineNumber: 91,
+                                lineNumber: 89,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"](__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$radix$2d$ui$2f$react$2d$navigation$2d$menu$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__.Item, {
@@ -2228,30 +2227,30 @@ function NavHeader() {
                                     children: "Contact"
                                 }, void 0, false, {
                                     fileName: "<[project]/src/app/_components/modules/NavHeader.tsx>",
-                                    lineNumber: 100,
+                                    lineNumber: 98,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "<[project]/src/app/_components/modules/NavHeader.tsx>",
-                                lineNumber: 99,
+                                lineNumber: 97,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "<[project]/src/app/_components/modules/NavHeader.tsx>",
-                        lineNumber: 74,
+                        lineNumber: 72,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "<[project]/src/app/_components/modules/NavHeader.tsx>",
-                lineNumber: 66,
+                lineNumber: 64,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "<[project]/src/app/_components/modules/NavHeader.tsx>",
-        lineNumber: 40,
+        lineNumber: 38,
         columnNumber: 5
     }, this);
     return /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"](__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$radix$2d$ui$2f$react$2d$navigation$2d$menu$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__.Root, {
@@ -2274,7 +2273,7 @@ function NavHeader() {
                                 className: "p-2 duration-500 ease-in-out hover:scale-125 hover:animate-pulse"
                             }, void 0, false, {
                                 fileName: "<[project]/src/app/_components/modules/NavHeader.tsx>",
-                                lineNumber: 124,
+                                lineNumber: 122,
                                 columnNumber: 17
                             }, this) : /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"](__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                                 src: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$_assets$2f$logo$2e$svg$2e$mjs$2f28$IMAGE$292f5b$project$5d2f$src$2f$app$2f$_assets$2f$logo$2e$svg__$5b$app$2d$ssr$5d$__$28$static$29$__$28$structured__image__object$2c$__ecmascript$29$__["default"].src,
@@ -2284,17 +2283,17 @@ function NavHeader() {
                                 className: "p-2 duration-500 ease-in-out hover:scale-125 hover:animate-pulse"
                             }, void 0, false, {
                                 fileName: "<[project]/src/app/_components/modules/NavHeader.tsx>",
-                                lineNumber: 132,
+                                lineNumber: 130,
                                 columnNumber: 17
                             }, this)
                         }, void 0, false, {
                             fileName: "<[project]/src/app/_components/modules/NavHeader.tsx>",
-                            lineNumber: 118,
+                            lineNumber: 116,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "<[project]/src/app/_components/modules/NavHeader.tsx>",
-                        lineNumber: 117,
+                        lineNumber: 115,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"](__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$radix$2d$ui$2f$react$2d$navigation$2d$menu$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__.Item, {
@@ -2305,12 +2304,12 @@ function NavHeader() {
                             children: "About"
                         }, void 0, false, {
                             fileName: "<[project]/src/app/_components/modules/NavHeader.tsx>",
-                            lineNumber: 143,
+                            lineNumber: 141,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "<[project]/src/app/_components/modules/NavHeader.tsx>",
-                        lineNumber: 142,
+                        lineNumber: 140,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"](__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$radix$2d$ui$2f$react$2d$navigation$2d$menu$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__.Item, {
@@ -2321,12 +2320,12 @@ function NavHeader() {
                             children: "Resume"
                         }, void 0, false, {
                             fileName: "<[project]/src/app/_components/modules/NavHeader.tsx>",
-                            lineNumber: 151,
+                            lineNumber: 149,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "<[project]/src/app/_components/modules/NavHeader.tsx>",
-                        lineNumber: 150,
+                        lineNumber: 148,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"](__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$radix$2d$ui$2f$react$2d$navigation$2d$menu$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__.Item, {
@@ -2337,12 +2336,12 @@ function NavHeader() {
                             children: "Work"
                         }, void 0, false, {
                             fileName: "<[project]/src/app/_components/modules/NavHeader.tsx>",
-                            lineNumber: 159,
+                            lineNumber: 157,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "<[project]/src/app/_components/modules/NavHeader.tsx>",
-                        lineNumber: 158,
+                        lineNumber: 156,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"](__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$radix$2d$ui$2f$react$2d$navigation$2d$menu$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__.Item, {
@@ -2353,18 +2352,18 @@ function NavHeader() {
                             children: "Contact"
                         }, void 0, false, {
                             fileName: "<[project]/src/app/_components/modules/NavHeader.tsx>",
-                            lineNumber: 167,
+                            lineNumber: 165,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "<[project]/src/app/_components/modules/NavHeader.tsx>",
-                        lineNumber: 166,
+                        lineNumber: 164,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "<[project]/src/app/_components/modules/NavHeader.tsx>",
-                lineNumber: 116,
+                lineNumber: 114,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("div", {
@@ -2373,18 +2372,18 @@ function NavHeader() {
                     className: "NavigationMenuViewport"
                 }, void 0, false, {
                     fileName: "<[project]/src/app/_components/modules/NavHeader.tsx>",
-                    lineNumber: 178,
+                    lineNumber: 176,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "<[project]/src/app/_components/modules/NavHeader.tsx>",
-                lineNumber: 177,
+                lineNumber: 175,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "<[project]/src/app/_components/modules/NavHeader.tsx>",
-        lineNumber: 112,
+        lineNumber: 110,
         columnNumber: 5
     }, this);
 }
