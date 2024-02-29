@@ -1,5 +1,3 @@
-"use client";
-
 import { useEffect, useState } from "react";
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 import activeLogo from "../../_assets/logo-active.svg";
@@ -40,9 +38,8 @@ export default function NavHeader() {
     <NavigationMenu.List className="NavigationMenuList space-between flex w-screen items-center px-5">
       <NavigationMenu.Item className="NavigationMenuItem mr-auto">
         <NavigationMenu.Link
-          className="NavigationMenuLink"
-          active={activeSection === "home" || activeSection === "/"}
-          href="#home"
+          className={`NavigationMenuLink ${activeSection === "home" || activeSection === "/" ? "active" : ""}`}
+          href="/#home"
           aria-label="Home"
         >
           {activeSection === "home" || activeSection === "/" ? (
@@ -75,36 +72,32 @@ export default function NavHeader() {
         <NavigationMenu.Content className="NavigationMenuContent mx-10">
           <NavigationMenu.Item className="NavigationMenuItem">
             <NavigationMenu.Link
-              href="#about"
-              active={activeSection === "about"}
-              className="NavigationMenuLink"
+              href="/#about"
+              className={`NavigationMenuLink ${activeSection === "home" ? "active" : ""}`}
             >
               About
             </NavigationMenu.Link>
           </NavigationMenu.Item>
           <NavigationMenu.Item className="NavigationMenuItem">
             <NavigationMenu.Link
-              href="#resume"
-              active={activeSection === "resume"}
-              className="NavigationMenuLink"
+              href="/#resume"
+              className={`NavigationMenuLink ${activeSection === "resume" ? "active" : ""}`}
             >
               Resume
             </NavigationMenu.Link>
           </NavigationMenu.Item>
           <NavigationMenu.Item className="NavigationMenuItem">
             <NavigationMenu.Link
-              href="#work"
-              active={activeSection === "work"}
-              className="NavigationMenuLink"
+              href="/#work"
+              className={`NavigationMenuLink ${activeSection === "work" ? "active" : ""}`}
             >
               Work
             </NavigationMenu.Link>
           </NavigationMenu.Item>
           <NavigationMenu.Item className="NavigationMenuItem">
             <NavigationMenu.Link
-              href="#contact"
-              active={activeSection === "contact"}
-              className="NavigationMenuLink"
+              href="/#contact"
+              className={`NavigationMenuLink ${activeSection === "contact" ? "active" : ""}`}
             >
               Contact
             </NavigationMenu.Link>
@@ -121,9 +114,8 @@ export default function NavHeader() {
         <NavigationMenu.List className="NavigationMenuList space-between flex h-16 w-screen items-center px-20">
           <NavigationMenu.Item className="NavigationMenuItem mr-auto">
             <NavigationMenu.Link
-              className="NavigationMenuLink"
-              active={activeSection === "home" || activeSection === "/"}
-              href="#home"
+              className={`NavigationMenuLink ${activeSection === "home" ? "active" : ""}`}
+              href="/#home"
               aria-label="Home"
             >
               {activeSection === "home" || activeSection === "/" ? (
@@ -147,36 +139,32 @@ export default function NavHeader() {
           </NavigationMenu.Item>
           <NavigationMenu.Item className="NavigationMenuItem ml-auto">
             <NavigationMenu.Link
-              href="#about"
-              active={activeSection === "about"}
-              className="NavigationMenuLink"
+              href="/#about"
+              className={`NavigationMenuLink ${activeSection === "about" ? "active" : ""}`}
             >
               About
             </NavigationMenu.Link>
           </NavigationMenu.Item>
           <NavigationMenu.Item className="NavigationMenuItem">
             <NavigationMenu.Link
-              href="#resume"
-              active={activeSection === "resume"}
-              className="NavigationMenuLink"
+              href="/#resume"
+              className={`NavigationMenuLink ${activeSection === "resume" ? "active" : ""}`}
             >
               Resume
             </NavigationMenu.Link>
           </NavigationMenu.Item>
           <NavigationMenu.Item className="NavigationMenuItem">
             <NavigationMenu.Link
-              href="#work"
-              active={activeSection === "work"}
-              className="NavigationMenuLink"
+              href="/#work"
+              className={`NavigationMenuLink ${activeSection === "work" ? "active" : ""}`}
             >
               Work
             </NavigationMenu.Link>
           </NavigationMenu.Item>
           <NavigationMenu.Item className="NavigationMenuItem">
             <NavigationMenu.Link
-              href="#contact"
-              active={activeSection === "contact"}
-              className="NavigationMenuLink"
+              href="/#contact"
+              className={`NavigationMenuLink ${activeSection === "contact" ? "active" : ""}`}
             >
               Contact
             </NavigationMenu.Link>

@@ -15,6 +15,18 @@ export const cvData = {
   },
   jobs: [
     {
+      company: "Data Annotation",
+      title: "Software Developer - AI Trainer (Part-Time)",
+      date: "Feb 2024 - Present",
+      link: "https://www.dataannotation.tech/",
+      description: [
+        "Evaluated language model outputs to improve user interactions with Artificial Intelligence systems",
+        "Skillfully manage the annotation of data, with tasks such as entity labeling, tagging, and identifying object relationships",
+        "Adapt to evolving project requirements while staying current on the latest annotation tools and techniques",
+        "Ensure the completion of projects within specified timelines by meeting deadlines for data analysis and model training",
+      ],
+    },
+    {
       company: "Dropps",
       title: "Software Engineer",
       date: "May 2022 - Present",
@@ -49,7 +61,8 @@ export const cvData = {
       project_title: "Portfolio",
       subtitle: "Personal Website | TypeScript, React.js, Next.js",
       description: [
-        "Built a portfolio website and deployed via Netlify to showcase projects and experiences to bolster professional presence",
+        "Engineered a responsive SPA portfolio website, combining the power of React.js for dynamic UI components, TypeScript for enhanced type safety and code clarity, and Next.js for optimized client-side rendering and navigation",
+        "Effectively managed SPA deployment on Netlify for seamless integration and high availability",
       ],
     },
     {
