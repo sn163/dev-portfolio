@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
-import activeLogo from "../../_assets/logo-active.svg";
-import logo from "../../_assets/logo.svg";
+import activeLogo from "@/public/logo-active.svg";
+import logo from "@/public/logo.svg";
 import { HamburgerMenuIcon } from "@radix-ui/react-icons";
 import useCheckMobileScreen from "../utils/useCheckMobileScreen";
 import Image from "next/image";

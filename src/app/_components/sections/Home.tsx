@@ -1,8 +1,8 @@
 import { TypeAnimation } from "react-type-animation";
-import githubSVG from "../../_assets/github.svg";
-import linkedinSVG from "../../_assets/linkedin.svg";
-import scrollSVG from "../../_assets/arrow-circle-down.svg";
-import hero from "../../_assets/imgs/hero-img.webp";
+import githubSVG from "@/public/github.svg";
+import linkedinSVG from "@/public/linkedin.svg";
+import scrollSVG from "@/public/arrow-circle-down.svg";
+import hero from "@/public/imgs/hero-img.webp";
 import Image from "next/image";
 
 export default function Home() {
