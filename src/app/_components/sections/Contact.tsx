@@ -3,7 +3,7 @@ import emailjs from "@emailjs/browser";
 import { Field, Form, ErrorMessage, Formik } from "formik";
 import * as yup from "yup";
 import { FadeInSection } from "../modules/FadeInSection";
-import hero from "@/public/imgs/hero-img.webp";
+import hero from "@/public/imgs/hero-img.jpg";
 import Image from "next/image";
 import contact from "@/public//contact-pic.webp";
 
