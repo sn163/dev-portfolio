@@ -29,7 +29,6 @@
     "dev": "concurrently \"next dev --turbo\" \"tailwindcss --input ./src/index.css --output ./public/index.css --watch\"",
     "build": "tailwindcss ./src/index.css  --output ./public/index.css && next build",
     "preview": "next preview",
-    "watch:tw": "postcss -w ./src/index.css  -o ./public/index.css",
     "test": "next test",
     "eject": "next eject",
     "lint": "next lint",
