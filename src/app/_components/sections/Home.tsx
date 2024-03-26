@@ -2,7 +2,7 @@ import { TypeAnimation } from "react-type-animation";
 import githubSVG from "@/public/github.svg";
 import linkedinSVG from "@/public/linkedin.svg";
 import scrollSVG from "@/public/arrow-circle-down.svg";
-import hero from "@/public/imgs/hero-img.webp";
+import hero from "@/public/imgs/hero-img.jpg";
 import Image from "next/image";
 
 export default function Home() {

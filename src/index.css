@@ -118,7 +118,7 @@ code {
   z-index: 1;
   min-width: 364px;
   background-color: #1a1a1a;
-  border-bottom: 2px solid #ff4d59;
+  height: 4.25rem;
 }
 
 .NavigationMenuLink {

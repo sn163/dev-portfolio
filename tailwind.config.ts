@@ -3,7 +3,7 @@ import TailwindRadix from "tailwindcss-radix";
 
 export default {
   mode: "jit",
-  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
     extend: {},
   },

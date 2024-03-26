@@ -107,7 +107,7 @@ export default function NavHeader() {
     </NavigationMenu.List>
   );
   return (
-    <NavigationMenu.Root className="NavigationMenuRoot fixed top-0 h-16 shadow-sm shadow-red-500">
+    <NavigationMenu.Root className="NavigationMenuRoot fixed top-0 shadow-md shadow-[#1a1a1a]">
       {isMobile ? (
         navMobile
       ) : (
