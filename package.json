@@ -9,7 +9,6 @@
     "@types/node": "^20.11.20",
     "@types/react-dom": "^18.0.6",
     "autoprefixer": "^10.4.16",
-    "concurrently": "^8.2.2",
     "formik": "^2.4.5",
     "next": "^14.1.0",
     "react": "^18.2.0",
@@ -26,14 +25,12 @@
   },
   "scripts": {
     "start": "next start",
-    "dev": "concurrently \"next dev --turbo\" \"tailwindcss --input ./src/index.css --output ./public/index.css --watch\"",
-    "build": "tailwindcss ./src/index.css  --output ./public/index.css && next build",
-    "preview": "next preview",
-    "test": "next test",
-    "eject": "next eject",
+    "dev": "next dev --turbo",
+    "build": "next build",    
     "lint": "next lint",
     "lint:fix": "next lint --fix",
-    "format": "prettier --write src"
+    "format": "prettier --write src",
+    "prepare": "husky"
   },
   "browserslist": {
     "production": [
@@ -54,7 +51,6 @@
     "@types/eslint": "^8.44.2",
     "@types/eslint-config-prettier": "^6.11.0",
     "@types/eslint-plugin-prettier": "^3.1.0",
-    "@types/postcss-flexbugs-fixes": "^5.0.3",
     "@types/prettier": "^2.7.3",
     "@types/react": "^18.2.21",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
@@ -64,10 +60,9 @@
     "eslint": "^8.51.0",
     "eslint-config-next": "^14.1.0",
     "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-jsx-a11y": "^6.6.1",
     "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-react": "^7.31.0",
-    "eslint-plugin-react-hooks": "^4.6.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
     "postcss": "^8.4.35",
     "prettier": "^3.0.3",
     "prettier-plugin-tailwindcss": "^0.5.6",

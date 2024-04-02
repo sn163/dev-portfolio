@@ -8,6 +8,7 @@
 vite-env.d.ts
 .next
 next-env.d.ts
+.husky
 
 # testing
 /coverage
