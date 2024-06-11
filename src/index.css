@@ -14,24 +14,24 @@
   .text-red {
     color: #ff4d59;
     font-size: 16px;
-    font-family: "Raleway", sans-serif;
+    font-family: "Inter", sans-serif;
   }
 
   .text-light {
     color: #dedede;
     font-size: 17px;
-    font-family: "Raleway", sans-serif;
+    font-family: "Inter", sans-serif;
   }
   .text-dark {
     color: #1d1d1d;
     font-size: 16px;
-    font-family: "Raleway", sans-serif;
+    font-family: "Inter", sans-serif;
   }
 
   .text-dark-grey {
     color: #272727;
     font-size: 17px;
-    font-family: "Raleway", sans-serif;
+    font-family: "Inter", sans-serif;
   }
 }
 :root {
@@ -62,7 +62,11 @@ body::-webkit-scrollbar {
 }
 
 .cover {
-  background-image: url(/src/assets/imgs/hero-img.webp);
+  overflow: hidden;
+  width: 100vw;
+  background: linear-gradient(rgba(255, 77, 89, 0.1), rgba(255, 77, 89, 0.7)),
+    url(../public/imgs/hero-bg.jpg);
+  background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -117,7 +121,6 @@ code {
   z-index: 1;
   min-width: 364px;
   background-color: #1a1a1a;
-  opacity: 0.95;
   height: 4.25rem;
 }
 
@@ -256,11 +259,12 @@ code {
 .s-hero {
   width: 100%;
   overflow: hidden;
+  background-color: #1a1a1a;
   scroll-margin-top: var(--h-header);
 }
 
 .hero-typewriter {
-  min-width: 300px;
+  min-width: 500px;
   width: 700px;
   font-family: "Space Mono", monospace;
 }
@@ -290,23 +294,17 @@ code {
   border: none;
 }
 
-.about-img {
-  width: 315px;
-  height: 100%;
-  position: relative;
-}
-
 .bio-container {
   background-color: #1d1d1d;
-  max-width: 600px;
+  max-width: 400px;
 }
 .bio-text {
   @apply text-base;
   font-family: "Raleway", sans-serif;
   letter-spacing: 0.2px;
   color: #dedede;
-  min-width: 320px;
-  max-width: 450px;
+  min-width: 300px;
+  max-width: 400px;
 }
 
 .about-img-container {
@@ -366,7 +364,7 @@ code {
 }
 
 .sub-title {
-  font-family: "IBM Plex Serif", serif;
+  font-family: "Inter", serif;
   font-size: 20px;
   font-weight: 300;
   font-style: italic;
