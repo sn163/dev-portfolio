@@ -4,23 +4,20 @@ import aboutMePic from "@/public/about-pic.webp";
 
 export default function About() {
   const aboutMe = (
-    <div className="bio-container flex flex-col justify-center space-y-4 p-5 md:mt-2 md:px-8 md:py-5">
-      <p className="bio-text">
-        I&apos;m Sonny Nguyen, a Software Engineer in Los Angeles, CA, with over
-        three years&apos; professional experience building robust software
-        solutions across the stack.
-      </p>
+    <div className="bio-container flex flex-col justify-center space-y-4 p-5 md:px-8">
       <p className="bio-text">
         Technology has captivated me since my youth — spanning from building
-        computers, DJing, photo/video editing, and gaming. This drive eventually
-        led me towards a fulfilling career in Software Engineering.
+        computers, DJing, photo/video editing, and gaming. This passion
+        eventually paved the way for a fulfilling career in Software
+        Engineering, where I&apos;ve garnered over three years of professional
+        experience building robust software solutions across the stack.
       </p>
       <p className="bio-text">
         Fast-forward to more recent years, and I&apos;m a Software Engineer at{" "}
         <a
           href="https://www.dropps.com/"
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           className="text-base font-bold underline"
         >
           Dropps
@@ -57,12 +54,12 @@ export default function About() {
         <div className="section-title-bar" />
       </div>
       <FadeInSection classProps="about-me-container flex mt-10 md:my-auto flex-col md:flex-row shadow-xl">
-        <div className="about-img-container flex items-center justify-center md:max-h-[540px]">
-          <div className="about-img mt-7 md:ml-7 md:mt-0 md:w-[360px]">
+        <div className="about-img-container flex flex-col items-center justify-center md:flex-row">
+          <div className="mt-2.5 md:mt-0 md:pl-7">
             <Image
               src={aboutMePic.src}
-              fill
-              style={{ objectFit: "contain" }}
+              width={380}
+              height={600}
               alt="about me pic"
             />
           </div>

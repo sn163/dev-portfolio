@@ -3,7 +3,7 @@ import emailjs from "@emailjs/browser";
 import { Field, Form, ErrorMessage, Formik } from "formik";
 import * as yup from "yup";
 import { FadeInSection } from "../modules/FadeInSection";
-import hero from "@/public/imgs/hero-img.jpg";
+import hero from "@/public/imgs/hero-bg.jpg";
 import Image from "next/image";
 import contact from "@/public//contact-pic.webp";
 
@@ -95,7 +95,7 @@ export default function Contact() {
                       id="from_name"
                       name="from_name"
                       type="text"
-                      className="my-2 rounded px-2 py-1"
+                      className="my-2 rounded bg-base-100 px-2 py-1"
                       value={props.values.from_name}
                       onChange={props.handleChange}
                     />

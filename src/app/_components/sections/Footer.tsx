@@ -47,7 +47,7 @@ export default function Footer() {
             className="contact-links hover:animate-pulse"
             href="https://www.linkedin.com/in/sonny-nguyen163/"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
           >
             <Image
               src={linkedinSVG.src}
@@ -64,7 +64,7 @@ export default function Footer() {
             className="contact-links hover:animate-pulse"
             href="https://github.com/sn163"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
           >
             <Image
               src={githubSVG.src}

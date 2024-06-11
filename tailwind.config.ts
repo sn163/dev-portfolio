@@ -9,8 +9,24 @@ export default {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  theme: {
-    extend: {},
+  extend: {
+    fontFamily: {
+      sans: ['"Inter"', "sans-serif"],
+    },
   },
-  plugins: [TailwindRadix],
+  daisyui: {
+    themes: [
+      {
+        mytheme: {
+          primary: "#ff4d59",
+          secondary: "#cc3d47",
+          accent: "#37cdbe",
+          neutral: "#3a3a3a",
+          "base-100": "#fbfcfa",
+          "base-200": "#dedede",
+        },
+      },
+    ],
+  },
+  plugins: [TailwindRadix, require("daisyui")],
 } satisfies Config;
