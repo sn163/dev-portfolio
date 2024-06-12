@@ -23,7 +23,7 @@ export default function Home() {
           <span className="hero-text text-xl tracking-tight text-white md:text-2xl">
             Hi, my name is{" "}
           </span>
-          <span className="text-primary text-6xl font-bold tracking-tighter">
+          <span className="text-6xl font-bold tracking-tighter text-primary">
             Sonny Nguyen,
           </span>
           <TypeAnimation
@@ -31,9 +31,9 @@ export default function Home() {
             wrapper="span"
             cursor={true}
             repeat={Infinity}
-            className="text-base-200 inline-block whitespace-pre text-5xl tracking-tight"
+            className="inline-block whitespace-pre text-5xl tracking-tight text-base-200"
           />
-          <p className="text-base-200 max-w-xl pt-4 font-sans text-xl">
+          <p className="max-w-xl pt-4 font-sans text-xl text-base-200">
             Based in Los Angeles, I specialize in crafting remarkable digital
             experiences through innovative development, complemented by
             occasional design work.
