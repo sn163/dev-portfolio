@@ -4,19 +4,26 @@ import linkedinSVG from "@/public/linkedin.svg";
 import scrollSVG from "@/public/arrow-circle-down.svg";
 import portrait from "@/public/imgs/portrait.png";
 import Image from "next/image";
+import hero from "@/public/imgs/hero-bg.jpg";
 
 export default function Home() {
   return (
     <section
       id="home"
-      className="s-hero cover container-fluid flex min-h-screen flex-col justify-between  px-3 pb-10 md:px-20"
+      className="s-hero container-fluid flex min-h-screen flex-col justify-between  px-3 pb-10 md:px-20"
+      style={{
+        background: `linear-gradient(rgba(255, 77, 89, 0.1), rgba(255, 77, 89, 0.30)), url(${hero.src})`,
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+        backgroundPosition: "center center",
+      }}
     >
       <div className="m-auto flex items-center">
-        <div className="hero-typewriter flex flex-col space-y-4">
-          <span className="hero-text text-xl tracking-tight text-white md:text-3xl">
+        <div className="hero-typewriter flex select-none flex-col space-y-4">
+          <span className="hero-text text-xl tracking-tight text-white md:text-2xl">
             Hi, my name is{" "}
           </span>
-          <span className="text-7xl font-bold tracking-tighter text-primary">
+          <span className="text-6xl font-bold tracking-tighter text-primary">
             Sonny Nguyen,
           </span>
           <TypeAnimation
@@ -24,9 +31,9 @@ export default function Home() {
             wrapper="span"
             cursor={true}
             repeat={Infinity}
-            className="inline-block whitespace-pre font-sans text-5xl text-base-200"
+            className="inline-block whitespace-pre text-5xl tracking-tight text-base-200"
           />
-          <p className="max-w-xl pt-4 font-sans text-2xl text-base-200">
+          <p className="max-w-xl pt-4 font-sans text-xl text-base-200">
             Based in Los Angeles, I specialize in crafting remarkable digital
             experiences through innovative development, complemented by
             occasional design work.
@@ -72,7 +79,7 @@ export default function Home() {
           className="mt-24 inline-block p-8 md:mt-0 md:p-0"
           src={portrait}
           alt="portrait"
-          width={520}
+          width={420}
           height={280}
         />
       </div>

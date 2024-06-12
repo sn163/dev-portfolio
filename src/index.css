@@ -46,29 +46,16 @@ html {
   scroll-behavior: smooth;
   /* height of sticky header */
   scroll-padding-top: 4rem;
-  margin: 0;
+  width: 100%;
   overflow-x: hidden;
   height: 100%;
 }
 
 body {
+  width: 100%;
   margin: 0;
-  overflow-y: scroll;
   position: relative;
-}
-
-body::-webkit-scrollbar {
-  display: none;
-}
-
-.cover {
-  overflow: hidden;
-  width: 100vw;
-  background: linear-gradient(rgba(255, 77, 89, 0.1), rgba(255, 77, 89, 0.7)),
-    url(../public/imgs/hero-bg.jpg);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: #3a3a3a;
 }
 
 main {
