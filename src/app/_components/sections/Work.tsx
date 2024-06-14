@@ -1,5 +1,6 @@
 import uuid from "react-uuid";
 import { FadeInSection } from "../modules/FadeInSection";
+import Image from "next/image";
 
 export default function Work() {
   const droppsSkills = [
@@ -65,12 +66,13 @@ export default function Work() {
       <FadeInSection classProps="flex flex-col m-auto w-full my-20 space-y-32">
         <div className="flex items-center space-x-32">
           <div className="project-container  rounded-lg p-6 duration-500 ease-in-out hover:scale-105 hover:animate-pulse">
-            <a href="https://www.dropps.com/" target="_blank" rel="noreferrer">
-              <picture>
-                <source srcSet="/dropps.webp" type="image/webp"></source>
-                <source srcSet="/dropps.jpg" type="image/jpeg"></source>
-                <img alt="dropps" src="/dropps.jpg" className="h-full w-full" />
-              </picture>
+            <a
+              href="https://www.dropps.com/"
+              target="_blank"
+              title="dropps"
+              rel="noreferrer noopener"
+            >
+              <Image alt="dropps" src="/dropps.jpg" width={520} height={300} />
             </a>
           </div>
           <div className="max-w-xl">
@@ -78,7 +80,7 @@ export default function Work() {
               <a
                 href="https://www.dropps.com/"
                 target="_blank"
-                rel="noreferrer"
+                rel="noreferrer noopener"
                 className="my-4"
               >
                 Dropps
@@ -95,16 +97,18 @@ export default function Work() {
 
         <div className="flex items-center space-x-32">
           <div className="project-container  rounded-lg p-6 duration-500 ease-in-out hover:scale-105 hover:animate-pulse">
-            <a href="https://www.overvue.org/" target="_blank" rel="noreferrer">
-              <picture>
-                <source srcSet="/overvue.webp" type="image/webp"></source>
-                <source srcSet="/overvue.jpg" type="image/jpeg"></source>
-                <img
-                  alt="overvue"
-                  src="/overvue.jpg"
-                  className="h-full w-full"
-                />
-              </picture>
+            <a
+              href="https://www.overvue.org/"
+              target="_blank"
+              title="overvue"
+              rel="noreferrer noopener"
+            >
+              <Image
+                alt="overvue"
+                src="/overvue.jpg"
+                width={520}
+                height={300}
+              />
             </a>
           </div>
           <div className="max-w-xl">
@@ -112,7 +116,7 @@ export default function Work() {
               <a
                 href="https://www.overvue.org/"
                 target="_blank"
-                rel="noreferrer"
+                rel="noreferrer noopener"
                 className="my-4"
               >
                 OverVue
@@ -132,17 +136,15 @@ export default function Work() {
             <a
               href="https://www.mysociallite.com/"
               target="_blank"
-              rel="noreferrer"
+              title="mysociallite"
+              rel="noreferrer noopener"
             >
-              <picture>
-                <source srcSet="/sociallite.webp" type="image/webp"></source>
-                <source srcSet="/sociallite.jpg" type="image/jpeg"></source>
-                <img
-                  alt="sociallite"
-                  src="/sociallite.jpg"
-                  className="h-full w-full"
-                />
-              </picture>
+              <Image
+                alt="sociallite"
+                src="/sociallite.jpg"
+                width={520}
+                height={300}
+              />
             </a>
           </div>
           <div className="max-w-xl">
@@ -150,7 +152,7 @@ export default function Work() {
               <a
                 href="https://www.mysociallite.com/"
                 target="_blank"
-                rel="noreferrer"
+                rel="noreferrer noopener"
                 className="my-4"
               >
                 Social Lite
@@ -169,16 +171,15 @@ export default function Work() {
             <a
               href="https://github.com/tanpeterson/Interview-Hub"
               target="_blank"
-              rel="noreferrer"
+              title="interviewhub"
+              rel="noreferrer noopener"
             >
-              <picture>
-                <source srcSet="/interviewhub.jpg" type="image/jpeg"></source>
-                <img
-                  alt="interview hub"
-                  src="/interviewhub.jpg"
-                  className="h-full w-full"
-                />
-              </picture>
+              <Image
+                alt="interview hub"
+                src="/interviewhub.jpg"
+                width={520}
+                height={300}
+              />
             </a>
           </div>
           <div className="max-w-xl">
@@ -186,7 +187,7 @@ export default function Work() {
               <a
                 href="https://github.com/tanpeterson/Interview-Hub"
                 target="_blank"
-                rel="noreferrer"
+                rel="noreferrer noopener"
                 className="my-4"
               >
                 InterviewHub

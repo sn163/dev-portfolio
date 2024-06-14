@@ -111,27 +111,13 @@ code {
   height: 4.25rem;
 }
 
-.NavigationMenuLink {
-  color: #dedede;
-  font-weight: 500;
-  font-size: 18px;
-  font-family: "Raleway", sans-serif;
-  scroll-behavior: smooth;
-  outline: none;
-  user-select: none;
-  line-height: 1;
-  border-radius: 4px;
-}
-
-.NavigationMenuLink.active {
+.nav-link.active {
   color: #ff4d59;
 }
-.NavigationMenuLink:hover {
+.nav-link:hover {
   color: #ff4d59;
 }
-.NavigationMenuList.NavigationMenuItem:nth-child(n + 2):nth-child(
-    -n + 4
-  ):after {
+.nav-list.nav-item:nth-child(n + 1):nth-child(-n + 3):after {
   color: #dedede;
   font-size: 100%;
   margin: 0 1rem;
@@ -139,12 +125,11 @@ code {
 }
 
 @media screen and (min-width: 768px) {
-  .NavigationMenuList
-    .NavigationMenuItem:nth-child(n + 2):nth-child(-n + 4):after {
+  .nav-list .nav-item:nth-child(n + 1):nth-child(-n + 3):after {
     content: " | ";
     color: #dedede;
     font-size: 100%;
-    margin: 0 2rem;
+    margin: 0 2.5rem;
     font-weight: 400;
   }
 }
@@ -386,10 +371,10 @@ code {
 }
 
 .project-container img {
-  width: 620px;
-  height: 380px;
+  width: 520px;
+  height: 300px;
   min-width: 520px;
-  min-height: 280px;
+  min-height: 300px;
 }
 
 .project-title a {

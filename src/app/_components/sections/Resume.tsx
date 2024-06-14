@@ -12,7 +12,7 @@ export default function Resume() {
     ));
 
     const resumeTitle = x.link ? (
-      <a href={x.link} target="_blank" rel="noreferrer">
+      <a href={x.link} target="_blank" rel="noreferrer noopener">
         {x.company}
       </a>
     ) : (
@@ -98,7 +98,7 @@ export default function Resume() {
           <a
             href="/sonny_nguyen_cv.pdf"
             className="btn"
-            rel="noreferrer"
+            rel="noreferrer noopener"
             target="_blank"
           >
             VIEW PDF

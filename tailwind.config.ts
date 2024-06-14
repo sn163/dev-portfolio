@@ -25,6 +25,7 @@ export default {
           neutral: "#3a3a3a",
           "base-100": "#fbfcfa",
           "base-200": "#dedede",
+          "base-300": "#1a1a1a",
         },
       },
     ],
