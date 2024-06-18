@@ -5,29 +5,25 @@
     "paths": {
       "@/*": ["/*"]
     },
-    "skipLibCheck": true,
-    "lib": ["dom", "dom.iterable", "esnext"],
+
     "plugins": [
       {
         "name": "next"
       }
     ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
-    "outDir": "build",
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
     "module": "esnext",
+    "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "noEmit": true,
-    // The input module resolution system, "bundler" mode support an hybrid of CommonJS and ESM.
-    // If it's not a requirement for your project, you can use "nodenext" instead.
-    "moduleResolution": "node",
-    "strictNullChecks": true
   },
   "include": [
     "custom.d.ts",

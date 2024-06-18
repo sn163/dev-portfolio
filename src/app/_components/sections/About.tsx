@@ -1,6 +1,7 @@
 import Image from "next/image";
-import { FadeInSection } from "../modules/FadeInSection";
+import { FadeInSection } from "../ui/FadeInSection";
 import aboutMePic from "@/public/about-pic.webp";
+import { Container } from "../ui/Container";
 
 export default function About() {
   const aboutMe = (
@@ -45,27 +46,26 @@ export default function About() {
   );
 
   return (
-    <section
-      id="about"
-      className="s-about container-fluid flex min-h-screen flex-col items-center py-16"
-    >
-      <div className="section-title-container">
-        <h2 className="section-title-light">ABOUT</h2>
-        <div className="section-title-bar" />
-      </div>
-      <FadeInSection classProps="about-me-container flex mt-10 md:my-auto flex-col md:flex-row shadow-xl">
-        <div className="about-img-container flex flex-col items-center justify-center md:flex-row">
-          <div className="mt-2.5 md:mt-0 md:pl-7">
-            <Image
-              src={aboutMePic.src}
-              width={380}
-              height={600}
-              alt="about me pic"
-            />
-          </div>
+    <section id="about" className="s-about">
+      <Container className="min-h-screen">
+        <div className="section-title-container">
+          <h2 className="section-title-light">ABOUT</h2>
+          <div className="section-title-bar" />
         </div>
-        {aboutMe}
-      </FadeInSection>
+        <FadeInSection classProps="about-me-container flex mt-10 md:my-auto flex-col md:flex-row shadow-xl">
+          <div className="about-img-container flex flex-col items-center justify-center md:flex-row">
+            <div className="mt-2.5 md:mt-0 md:pl-7">
+              <Image
+                src={aboutMePic.src}
+                width={380}
+                height={600}
+                alt="about me pic"
+              />
+            </div>
+          </div>
+          {aboutMe}
+        </FadeInSection>
+      </Container>
     </section>
   );
 }

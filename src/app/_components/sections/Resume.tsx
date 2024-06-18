@@ -1,5 +1,7 @@
 import { cvData } from "../../_data/cvData";
 import uuid from "react-uuid";
+import { Container } from "../ui/Container";
+import Link from "next/link";
 
 export default function Resume() {
   const { jobs, education, projects, achievements, skills } = cvData;
@@ -87,76 +89,79 @@ export default function Resume() {
   ));
 
   return (
-    <section
-      id="resume"
-      className="s-resume container-fluid flex h-full flex-col items-center py-16"
-    >
-      <div className="section-title-container">
-        <h2 className="section-title-dark">RESUME</h2>
-        <div className="section-title-bar" />
-        <div className="mt-10 flex space-x-4">
-          <a
-            href="/sonny_nguyen_cv.pdf"
-            className="btn"
-            rel="noreferrer noopener"
-            target="_blank"
-          >
-            VIEW PDF
-          </a>
-          <a
-            href="/sonny_nguyen_cv.pdf"
-            className="btn"
-            download="sonny_nguyen_resume.pdf"
-          >
-            DOWNLOAD PDF
-          </a>
+    <section id="resume" className="s-resume">
+      <Container className="h-full">
+        <div className="section-title-container">
+          <h2 className="section-title-dark">RESUME</h2>
+          <div className="section-title-bar" />
+          <div className="mt-10 flex space-x-4">
+            <Link
+              href="/sonny_nguyen_cv.pdf"
+              className="btn"
+              rel="noreferrer noopener"
+              target="_blank"
+            >
+              VIEW PDF
+            </Link>
+            <Link
+              href="/sonny_nguyen_cv.pdf"
+              className="btn"
+              download="sonny_nguyen_resume.pdf"
+            >
+              DOWNLOAD PDF
+            </Link>
+          </div>
         </div>
-      </div>
-      <ul className="resume-content m-auto flex flex-col justify-center space-y-20 px-12 py-20">
-        <li
-          key={`career-section-${uuid()}`}
-          className="resume-content-item flex justify-start gap-2"
-        >
-          <div className="resume-header mt-2 flex justify-start">CAREER</div>
-          <div className="space-y-6">{jobsList}</div>
-        </li>
-        {divider}
-        <li
-          key={`projects-section-${uuid()}`}
-          className="resume-content-item flex justify-start gap-2"
-        >
-          <div className="resume-header mt-2 flex justify-start">PROJECTS</div>
-          <div className="space-y-6">{projectsList}</div>
-        </li>
-        {divider}
-        <li
-          key={`achievements-section-${uuid()}`}
-          className="resume-content-item flex justify-start gap-2"
-        >
-          <div className="resume-header mt-2 flex justify-start">
-            ACHIEVEMENTS
-          </div>
-          <div className="space-y-6">{achievementsList}</div>
-        </li>
-        {divider}
-        <li
-          key={`skills-section-${uuid()}`}
-          className="flex justify-start gap-2"
-        >
-          <div className="resume-header mt-2 flex justify-start">SKILLS</div>
-          <div>
-            <ul className="skill-list my-2 flex-wrap">{skillsList}</ul>
-          </div>
-        </li>
-        {divider}
-        <li
-          key={`education-section-${uuid()}`}
-          className="resume-content-item flex justify-start gap-2"
-        >
-          <div className="resume-header mt-2 flex justify-start">EDUCATION</div>
-          <div className="space-y-6">{schoolsList}</div>
-        </li>
-      </ul>
+        <ul className="resume-content flex flex-col justify-center space-y-20 px-12 py-20">
+          <li
+            key={`career-section-${uuid()}`}
+            className="resume-content-item flex justify-start gap-2"
+          >
+            <div className="resume-header mt-2 flex justify-start">CAREER</div>
+            <div className="space-y-6">{jobsList}</div>
+          </li>
+          {divider}
+          <li
+            key={`projects-section-${uuid()}`}
+            className="resume-content-item flex justify-start gap-2"
+          >
+            <div className="resume-header mt-2 flex justify-start">
+              PROJECTS
+            </div>
+            <div className="space-y-6">{projectsList}</div>
+          </li>
+          {divider}
+          <li
+            key={`achievements-section-${uuid()}`}
+            className="resume-content-item flex justify-start gap-2"
+          >
+            <div className="resume-header mt-2 flex justify-start">
+              ACHIEVEMENTS
+            </div>
+            <div className="space-y-6">{achievementsList}</div>
+          </li>
+          {divider}
+          <li
+            key={`skills-section-${uuid()}`}
+            className="flex justify-start gap-2"
+          >
+            <div className="resume-header mt-2 flex justify-start">SKILLS</div>
+            <div>
+              <ul className="skill-list my-2 flex-wrap">{skillsList}</ul>
+            </div>
+          </li>
+          {divider}
+          <li
+            key={`education-section-${uuid()}`}
+            className="resume-content-item flex justify-start gap-2"
+          >
+            <div className="resume-header mt-2 flex justify-start">
+              EDUCATION
+            </div>
+            <div className="space-y-6">{schoolsList}</div>
+          </li>
+        </ul>
+      </Container>
     </section>
   );
 }

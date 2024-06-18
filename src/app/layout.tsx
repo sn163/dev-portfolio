@@ -1,11 +1,13 @@
 import "../index.css";
 import Script from "next/script";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 
 export const metadata: Metadata = {
   title: "Sonny Nguyen",
   description: "Full Stack Software Engineer",
 };
+
+export const viewport: Viewport = { width: "device-width", initialScale: 1 };
 
 export default function RootLayout({
   children,
@@ -13,17 +15,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-pt-16 overflow-x-hidden scroll-smooth">
       <head>
-        <meta name="theme-color" content="#000000" />
         <Script
           type="text/javascript"
           src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
         />
       </head>
-      <body>
+      <body className="m-0 bg-neutral">
         <div id="root">{children}</div>
-        <Script type="module" src="/src/index.jsx"></Script>
       </body>
     </html>
   );

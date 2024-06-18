@@ -5,7 +5,7 @@ import About from "./_components/sections/About";
 import Contact from "./_components/sections/Contact";
 import Resume from "./_components/sections/Resume";
 import Work from "./_components/sections/Work";
-import NavHeader from "./_components/modules/NavHeader";
+import NavHeader from "./_components/sections/NavHeader";
 import Footer from "./_components/sections/Footer";
 
 export default function Dashboard() {
