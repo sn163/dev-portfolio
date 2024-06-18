@@ -1,5 +1,4 @@
 import type { Config } from "tailwindcss";
-import TailwindRadix from "tailwindcss-radix";
 
 export default {
   mode: "jit",
@@ -10,11 +9,6 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  extend: {
-    fontFamily: {
-      sans: ['"Inter"', "sans-serif"],
-    },
-  },
   daisyui: {
     themes: [
       {
@@ -30,5 +24,5 @@ export default {
       },
     ],
   },
-  plugins: [TailwindRadix, require("daisyui")],
+  plugins: [require("@tailwindcss/typography"), require("daisyui")],
 } satisfies Config;
