@@ -6,10 +6,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --h-header: 4rem;
-}
-
 @layer utilities {
   .text-red {
     color: #ff4d59;
@@ -276,73 +272,14 @@ code {
 ## resume
 ------------------------------------------------------------------- */
 
-.s-resume {
-  background-color: #fbfcfa;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  scroll-margin-top: var(--h-header);
-}
-
 .resume-title {
   font-family: "Raleway", sans-serif;
-  font-size: 32px;
-  color: #ff4d59;
-}
-
-.s-resume .resume-content {
-  list-style: disc;
-  max-width: 1000px;
-}
-.s-resume .resume-content .resume-content-item {
-  background-color: #fbfcfa;
-  font-family: "Raleway", sans-serif;
-  font-size: 17px;
-  letter-spacing: 0.5px;
-  display: flex;
-  border: none;
-}
-
-.resume-date {
-  font-family: var(--font-1);
-  font-size: calc(var(--text-size) * 0.8889);
-  font-style: normal;
-  color: #acacac;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  padding-top: 5px;
 }
 
 .resume-date::before {
   content: "\2022";
-  color: var(--color-text);
   margin-right: 0.5rem;
   margin-left: 0.5rem;
-}
-
-.sub-title {
-  font-family: "Inter", serif;
-  font-size: 20px;
-  font-weight: 300;
-  font-style: italic;
-}
-
-.skill-list {
-  display: flex;
-}
-
-.skill-list-item {
-  @apply m-1 rounded-md px-2.5 py-1.5 font-bold text-white;
-  font-family: "Raleway", sans-serif;
-  letter-spacing: 0.5px;
-  background-color: #ff4d59;
-}
-
-.project-skill-list-item {
-  @apply m-1 rounded-md px-1.5 py-0.5 font-bold text-white;
-  font-family: "Raleway", sans-serif;
-  letter-spacing: 0.5px;
-  background-color: #ff4d59;
 }
 
 .project-container {

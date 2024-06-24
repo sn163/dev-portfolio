@@ -48,7 +48,7 @@ export default function Work() {
     return skillsList.map((x) => (
       <li
         key={`skills-${uuid()}`}
-        className="project-skill-list-item text-base"
+        className="prose m-1 rounded-md bg-primary px-2 py-0.5 text-white"
       >
         {x}
       </li>
@@ -64,7 +64,7 @@ export default function Work() {
         </div>
         <FadeInSection classProps="flex flex-col m-auto w-full my-20 space-y-32">
           <div className="flex items-center space-x-32">
-            <div className="project-container  rounded-lg p-6 duration-500 ease-in-out hover:scale-105 hover:animate-pulse">
+            <div className="project-container rounded-lg p-6 duration-500 ease-in-out hover:scale-105 hover:animate-pulse">
               <a
                 href="https://www.dropps.com/"
                 target="_blank"
@@ -92,7 +92,7 @@ export default function Work() {
                 <div className="project-subtitle mb-4">
                   Eco-friendly Household/Laundry E-commerce
                 </div>
-                <ul className="skill-list flex-wrap">
+                <ul className="flex flex-wrap">
                   {projectSkills(droppsSkills)}
                 </ul>
               </div>
@@ -100,7 +100,7 @@ export default function Work() {
           </div>
 
           <div className="flex items-center space-x-32">
-            <div className="project-container  rounded-lg p-6 duration-500 ease-in-out hover:scale-105 hover:animate-pulse">
+            <div className="project-container rounded-lg p-6 duration-500 ease-in-out hover:scale-105 hover:animate-pulse">
               <a
                 href="https://www.overvue.org/"
                 target="_blank"
@@ -128,7 +128,7 @@ export default function Work() {
                 <div className="project-subtitle mb-4">
                   Prototyping Development Tool for Vue Developers
                 </div>
-                <ul className="skill-list flex-wrap">
+                <ul className="flex flex-wrap">
                   {projectSkills(overVueSkills)}
                 </ul>
               </div>
@@ -136,7 +136,7 @@ export default function Work() {
           </div>
 
           <div className="flex items-center space-x-32">
-            <div className="project-container  rounded-lg p-6 duration-500 ease-in-out hover:scale-105 hover:animate-pulse">
+            <div className="project-container rounded-lg p-6 duration-500 ease-in-out hover:scale-105 hover:animate-pulse">
               <a
                 href="https://www.mysociallite.com/"
                 target="_blank"
@@ -164,7 +164,7 @@ export default function Work() {
                 <div className="project-subtitle mb-4">
                   Event Entertainment Services Provider
                 </div>
-                <ul className="skill-list flex-wrap">
+                <ul className="flex flex-wrap">
                   {projectSkills(socialLiteSkills)}
                 </ul>
               </div>
@@ -199,7 +199,7 @@ export default function Work() {
               <div className="project-subtitle mb-4">
                 Interview Review & Preparation Platform
               </div>
-              <ul className="skill-list flex-wrap">
+              <ul className="flex flex-wrap">
                 {projectSkills(interviewHubSkills)}
               </ul>
             </div>

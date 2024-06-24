@@ -22,7 +22,7 @@ export default function RootLayout({
           src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
         />
       </head>
-      <body className="m-0 bg-neutral">
+      <body className="m-0 overflow-x-hidden bg-neutral">
         <div id="root">{children}</div>
       </body>
     </html>
