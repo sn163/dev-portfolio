@@ -8,9 +8,7 @@ export default function Resume() {
 
   const jobsList = jobs.map((x) => {
     const bulletpoints = x.description.map((x) => (
-      <li className="my-1" key={`jobs-${uuid()}`}>
-        {x}
-      </li>
+      <li key={`jobs-${uuid()}`}>{x}</li>
     ));
 
     const resumeTitle = x.link ? (
@@ -23,30 +21,34 @@ export default function Resume() {
 
     return (
       <div key={uuid()}>
-        <h3 className="resume-title">{resumeTitle}</h3>
-        <div className="mb-4 mt-2 flex space-x-1">
-          <span className="sub-title">{x.title}</span>
-          <span className="resume-date text-base">{x.date}</span>
+        <h3 className="resume-title text-4xl text-primary">{resumeTitle}</h3>
+        <div className="prose mb-4 mt-2 space-x-1">
+          <span className="text-lg font-light italic">
+            {x.title}{" "}
+            <span className="resume-date text-center text-sm uppercase tracking-wider text-[#acacac]">
+              {x.date}
+            </span>
+          </span>
         </div>
-        <ul className="mx-5 list-disc space-y-2">{bulletpoints}</ul>
+        <ul className="prose mx-5 list-disc space-y-3">{bulletpoints}</ul>
       </div>
     );
   });
 
   const projectsList = projects.map((x) => {
     const bulletpoints = x.description.map((x) => (
-      <li className="my-1" key={`projects-${uuid()}`}>
-        {x}
-      </li>
+      <li key={`projects-${uuid()}`}>{x}</li>
     ));
 
     return (
       <div key={uuid()}>
-        <h3 className="resume-title">{x.project_title}</h3>
+        <h3 className="resume-title text-4xl text-primary">
+          {x.project_title}
+        </h3>
         <div className="mb-4 mt-2">
-          <span className="sub-title">{x.subtitle}</span>
+          <span className="prose text-lg font-light italic">{x.subtitle}</span>
         </div>
-        <ul className="mx-5 list-disc space-y-2">{bulletpoints}</ul>
+        <ul className="prose mx-5 list-disc space-y-3">{bulletpoints}</ul>
       </div>
     );
   });
@@ -54,42 +56,43 @@ export default function Resume() {
   const achievementsList = achievements.map((x) => {
     return (
       <div key={uuid()}>
-        <h3 className="resume-title mb-3">{x.title}</h3>
-        <span>{x.description}</span>
+        <h3 className="resume-title mb-3 text-4xl text-primary">{x.title}</h3>
+        <span className="prose">{x.description}</span>
       </div>
     );
   });
-  const divider = (
-    <hr
-      className="mx-3"
-      style={{
-        background: "#d0d1d1",
-        height: "2.5px",
-        border: "none",
-      }}
-    />
-  );
+  const divider = <hr className="h-0.5 border-0 bg-[#d0d1d1]" />;
   const schoolsList = education.map((x) => {
     return (
       <div key={uuid()}>
-        <h3 className="resume-title">{x.school_name}</h3>
+        <h3 className="resume-title text-4xl text-primary">{x.school_name}</h3>
         <div className="mb-2 mt-2">
-          <span className="sub-title">{x.description}</span>
-          {x.major && <span className="major sub-title">{x.major}</span>}
+          <span className="prose text-lg">{x.description}</span>
+          {x.major && (
+            <span className="major prose text-lg font-light italic">
+              {x.major}
+            </span>
+          )}
         </div>
-        <span className="mb-2">{x.location}</span>
+        <span className="prose mb-2">{x.location}</span>
       </div>
     );
   });
 
   const skillsList = skills.map((x) => (
-    <li key={`skills-${uuid()}`} className="skill-list-item text-base">
+    <li
+      key={`skills-${uuid()}`}
+      className="prose-sm m-1 rounded-md bg-primary px-2.5 py-1.5 font-semibold text-white"
+    >
       {x}
     </li>
   ));
 
   return (
-    <section id="resume" className="s-resume">
+    <section
+      id="resume"
+      className="h-full w-full scroll-mt-16 overflow-hidden bg-base-100"
+    >
       <Container className="h-full">
         <div className="section-title-container">
           <h2 className="section-title-dark">RESUME</h2>
@@ -112,33 +115,33 @@ export default function Resume() {
             </Link>
           </div>
         </div>
-        <ul className="resume-content flex flex-col justify-center space-y-20 px-12 py-20">
+        <ul className="flex max-w-5xl list-disc flex-col justify-center space-y-20 px-12 py-20">
           <li
             key={`career-section-${uuid()}`}
-            className="resume-content-item flex justify-start gap-2"
+            className="flex justify-start gap-2"
           >
             <div className="resume-header mt-2 flex justify-start">CAREER</div>
-            <div className="space-y-6">{jobsList}</div>
+            <div className="space-y-12">{jobsList}</div>
           </li>
           {divider}
           <li
             key={`projects-section-${uuid()}`}
-            className="resume-content-item flex justify-start gap-2"
+            className="flex justify-start gap-2"
           >
             <div className="resume-header mt-2 flex justify-start">
               PROJECTS
             </div>
-            <div className="space-y-6">{projectsList}</div>
+            <div className="space-y-12">{projectsList}</div>
           </li>
           {divider}
           <li
             key={`achievements-section-${uuid()}`}
-            className="resume-content-item flex justify-start gap-2"
+            className="flex justify-start gap-2"
           >
             <div className="resume-header mt-2 flex justify-start">
               ACHIEVEMENTS
             </div>
-            <div className="space-y-6">{achievementsList}</div>
+            <div className="space-y-12">{achievementsList}</div>
           </li>
           {divider}
           <li
@@ -147,7 +150,7 @@ export default function Resume() {
           >
             <div className="resume-header mt-2 flex justify-start">SKILLS</div>
             <div>
-              <ul className="skill-list my-2 flex-wrap">{skillsList}</ul>
+              <ul className="my-2 flex flex-wrap">{skillsList}</ul>
             </div>
           </li>
           {divider}
@@ -158,7 +161,7 @@ export default function Resume() {
             <div className="resume-header mt-2 flex justify-start">
               EDUCATION
             </div>
-            <div className="space-y-6">{schoolsList}</div>
+            <div className="space-y-12">{schoolsList}</div>
           </li>
         </ul>
       </Container>

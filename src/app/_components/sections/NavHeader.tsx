@@ -36,7 +36,7 @@ export default function NavHeader() {
   return (
     <header className="fixed z-10 flex w-full flex-wrap items-center justify-center bg-base-300 py-0.5">
       <nav className="container shadow-lg">
-        <div className=" flex items-center justify-between">
+        <div className="flex items-center justify-between">
           <Link
             className={` ${activeSection === "home" ? "active" : ""}`}
             href="#home"
