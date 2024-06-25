@@ -32,17 +32,6 @@ export default function Work() {
     "Slack OAuth",
   ];
   const socialLiteSkills = ["JavaScript", "HTML", "CSS"];
-  // const interviewHubSkills = [
-  //   "React",
-  //   "JavaScript",
-  //   "Node",
-  //   "React Router",
-  //   "Bootstrap",
-  //   "WebRTC",
-  //   "PostgreSQL",
-  //   "HTML",
-  //   "CSS",
-  // ];
 
   const projectSkills = (skillsList: string[]) => {
     return skillsList.map((x) => (
@@ -56,7 +45,10 @@ export default function Work() {
   };
 
   return (
-    <section id="work" className="s-work">
+    <section
+      id="work"
+      className="m-0 w-full min-w-3.5 scroll-mt-16 overflow-hidden bg-[#272727]"
+    >
       <Container className="h-full">
         <div className="section-title-container">
           <h2 className="section-title-light">WORK</h2>
@@ -98,7 +90,6 @@ export default function Work() {
               </div>
             </div>
           </div>
-
           <div className="flex items-center space-x-32">
             <div className="project-container rounded-lg p-6 duration-500 ease-in-out hover:scale-105 hover:animate-pulse">
               <a
@@ -170,41 +161,6 @@ export default function Work() {
               </div>
             </div>
           </div>
-          {/* <div className="flex items-center space-x-32">
-          <div className="project-container rounded-lg p-6 duration-500 ease-in-out hover:scale-105 hover:animate-pulse">
-            <a
-              href="https://github.com/tanpeterson/Interview-Hub"
-              target="_blank"
-              title="interviewhub"
-              rel="noreferrer noopener"
-            >
-              <Image
-                alt="interview hub"
-                src="/interviewhub.jpg"
-                width={520}
-                height={300}
-              />
-            </a>
-          </div>
-          <div className="max-w-xl">
-            <div className="project-title flex flex-col">
-              <a
-                href="https://github.com/tanpeterson/Interview-Hub"
-                target="_blank"
-                rel="noreferrer noopener"
-                className="my-4"
-              >
-                InterviewHub
-              </a>
-              <div className="project-subtitle mb-4">
-                Interview Review & Preparation Platform
-              </div>
-              <ul className="flex flex-wrap">
-                {projectSkills(interviewHubSkills)}
-              </ul>
-            </div>
-          </div>
-        </div> */}
         </FadeInSection>
       </Container>
     </section>

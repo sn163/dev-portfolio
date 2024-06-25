@@ -208,17 +208,7 @@ code {
 /* ------------------------------------------------------------------- 
 ## hero
 ------------------------------------------------------------------- */
-
-.s-hero {
-  width: 100%;
-  overflow: hidden;
-  background-color: #1a1a1a;
-  scroll-margin-top: var(--h-header);
-}
-
 .hero-typewriter {
-  min-width: 500px;
-  width: 700px;
   font-family: "Space Mono", monospace;
 }
 
@@ -240,24 +230,6 @@ code {
   overflow: hidden;
   margin: 0;
   scroll-margin-top: var(--h-header);
-}
-
-.about-me-container {
-  background-color: #1d1d1d;
-  border: none;
-}
-
-.bio-container {
-  background-color: #1d1d1d;
-  max-width: 400px;
-}
-.bio-text {
-  @apply text-base;
-  font-family: "Raleway", sans-serif;
-  letter-spacing: 0.2px;
-  color: #dedede;
-  min-width: 300px;
-  max-width: 400px;
 }
 
 .about-img-container {
@@ -371,31 +343,8 @@ code {
 }
 
 /* ------------------------------------------------------------------- 
-## work/projects
-------------------------------------------------------------------- */
-.s-work {
-  background-color: #272727;
-  width: 100%;
-  overflow: hidden;
-  margin: 0;
-  scroll-margin-top: var(--h-header);
-}
-/* ------------------------------------------------------------------- 
 ## contact
 ------------------------------------------------------------------- */
-.s-contact {
-  width: 100%;
-  overflow: hidden;
-  scroll-margin-top: var(--h-header);
-}
-
-.contact-img {
-  min-width: 70px;
-  height: 70px;
-  background-image: url(/src/assets/contact-pic.webp);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 
 .logo {
   background-color: #1a1a1a !important;
@@ -415,19 +364,6 @@ code {
   min-height: 350px;
 }
 
-.contact-info-input {
-  min-height: 100px;
-}
-
-.contact-msg-input {
-  min-height: 180px;
-}
-
-.contact-input-group {
-  background-color: #272727;
-  padding: 30px;
-  border-radius: 0 0 0.375rem 0.375rem;
-}
 /* ------------------------------------------------------------------- 
  ## footer
  ------------------------------------------------------------------ */

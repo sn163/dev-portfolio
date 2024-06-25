@@ -11,19 +11,19 @@ export default function Home() {
   return (
     <section
       id="home"
-      className="s-hero bg-center bg-no-repeat"
+      className="w-full scroll-mt-16 overflow-hidden bg-base-300 bg-center bg-no-repeat"
       style={{
         background: `linear-gradient(rgba(255, 77, 89, 0.1), rgba(255, 77, 89, 0.30)), url(${hero.src})`,
         backgroundSize: "cover",
       }}
     >
-      <Container className="min-h-screen justify-between px-3 pb-10 md:px-20">
-        <div className="my-auto flex items-center">
+      <Container className="min-h-screen px-3 pb-10 md:justify-between md:px-20">
+        <div className="space-between m-auto flex items-center gap-20 px-4 md:px-0">
           <div className="hero-typewriter flex select-none flex-col space-y-4">
-            <span className="hero-text text-xl tracking-tight text-white md:text-2xl">
+            <span className="hero-text tracking-tight text-white md:text-2xl">
               Hi, my name is{" "}
             </span>
-            <span className="text-6xl font-bold tracking-tighter text-primary">
+            <span className="text-3xl font-bold tracking-tighter text-primary md:text-5xl">
               Sonny Nguyen,
             </span>
             <TypeAnimation
@@ -36,9 +36,9 @@ export default function Home() {
               wrapper="span"
               cursor={true}
               repeat={Infinity}
-              className="inline-block whitespace-pre text-5xl tracking-tight text-base-200"
+              className="inline-block whitespace-pre text-xl tracking-tight text-base-200 md:text-4xl"
             />
-            <p className="max-w-xl pt-4 font-sans text-xl text-base-200">
+            <p className="prose max-w-xs text-wrap pt-4 font-sans text-sm text-base-200 md:max-w-xl md:text-xl">
               Based in Los Angeles, I specialize in crafting remarkable digital
               experiences through innovative development, complemented by
               occasional design work.
@@ -81,7 +81,7 @@ export default function Home() {
             </ul>
           </div>
           <Image
-            className="mt-24 inline-block p-8 md:mt-0 md:p-0"
+            className="mt-24 hidden p-8 md:mt-0 md:inline-block md:p-0"
             src={portrait}
             alt="portrait"
             width={420}

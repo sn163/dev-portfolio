@@ -23,7 +23,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="s-contact bg-center bg-no-repeat "
+      className="w-full scroll-mt-16 overflow-hidden bg-center bg-no-repeat "
       style={{
         backgroundImage: `url(${hero.src})`,
         backgroundSize: "cover",
@@ -91,9 +91,9 @@ export default function Contact() {
                     <div>I&apos;d love to hear from you!</div>
                   </div>
                 </div>
-                <div className="contact-input-group flex flex-col">
+                <div className="flex flex-col rounded-md bg-[#272727] p-7">
                   <div className="flex w-full gap-6">
-                    <div className="contact-info-input flex w-full flex-col">
+                    <div className="flex min-h-24 w-full flex-col">
                       <label className="text-light" htmlFor="from_name">
                         Name
                       </label>
@@ -109,7 +109,7 @@ export default function Contact() {
                         {(msg) => <span className="text-red ml-3">{msg}</span>}
                       </ErrorMessage>
                     </div>
-                    <div className="contact-info-input flex w-full flex-col">
+                    <div className="flex min-h-24 w-full flex-col">
                       <label className="text-light" htmlFor="email">
                         Email
                       </label>
@@ -126,7 +126,7 @@ export default function Contact() {
                       </ErrorMessage>
                     </div>
                   </div>
-                  <div className="contact-msg-input flex w-full flex-col">
+                  <div className="flex min-h-44 w-full flex-col">
                     <label className="text-light" htmlFor="message">
                       Message
                     </label>
