@@ -55,13 +55,6 @@ h1 {
 /* ------------------------------------------------------------------- 
 ## nav
 ------------------------------------------------------------------- */
-.NavigationMenuRoot {
-  display: flex;
-  z-index: 1;
-  min-width: 364px;
-  background-color: #1a1a1a;
-  height: 4.25rem;
-}
 
 .nav-link.active {
   color: #ff4d59;

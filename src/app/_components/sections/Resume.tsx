@@ -82,7 +82,7 @@ export default function Resume() {
   const skillsList = skills.map((x) => (
     <li
       key={`skills-${uuid()}`}
-      className="prose-sm m-1 rounded-md bg-primary px-2.5 py-1.5 font-semibold text-white"
+      className="prose-sm m-1 rounded-md bg-primary px-2.5 py-1 font-semibold text-white"
     >
       {x}
     </li>
