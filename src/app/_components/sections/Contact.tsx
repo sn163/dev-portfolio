@@ -94,7 +94,7 @@ export default function Contact() {
                 <div className="flex flex-col rounded-md bg-[#272727] p-7">
                   <div className="flex w-full gap-6">
                     <div className="flex min-h-24 w-full flex-col">
-                      <label className="text-light" htmlFor="from_name">
+                      <label className="text-base-100" htmlFor="from_name">
                         Name
                       </label>
                       <Field
@@ -106,11 +106,13 @@ export default function Contact() {
                         onChange={props.handleChange}
                       />
                       <ErrorMessage name="from_name">
-                        {(msg) => <span className="text-red ml-3">{msg}</span>}
+                        {(msg) => (
+                          <span className="ml-3 text-primary">{msg}</span>
+                        )}
                       </ErrorMessage>
                     </div>
                     <div className="flex min-h-24 w-full flex-col">
-                      <label className="text-light" htmlFor="email">
+                      <label className="text-base-100" htmlFor="email">
                         Email
                       </label>
                       <Field
@@ -122,12 +124,14 @@ export default function Contact() {
                         onChange={props.handleChange}
                       />
                       <ErrorMessage name="email">
-                        {(msg) => <span className="text-red ml-3">{msg}</span>}
+                        {(msg) => (
+                          <span className="ml-3 text-primary">{msg}</span>
+                        )}
                       </ErrorMessage>
                     </div>
                   </div>
                   <div className="flex min-h-44 w-full flex-col">
-                    <label className="text-light" htmlFor="message">
+                    <label className="text-base-100" htmlFor="message">
                       Message
                     </label>
                     <Field
@@ -140,7 +144,9 @@ export default function Contact() {
                       onChange={props.handleChange}
                     />
                     <ErrorMessage name="message">
-                      {(msg) => <span className="text-red ml-3">{msg}</span>}
+                      {(msg) => (
+                        <span className="ml-3 text-primary">{msg}</span>
+                      )}
                     </ErrorMessage>
                   </div>
                   <button

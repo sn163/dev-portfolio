@@ -6,30 +6,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
-  .text-red {
-    color: #ff4d59;
-    font-size: 16px;
-    font-family: "Inter", sans-serif;
-  }
-
-  .text-light {
-    color: #dedede;
-    font-size: 17px;
-    font-family: "Inter", sans-serif;
-  }
-  .text-dark {
-    color: #1d1d1d;
-    font-size: 16px;
-    font-family: "Inter", sans-serif;
-  }
-
-  .text-dark-grey {
-    color: #272727;
-    font-size: 17px;
-    font-family: "Inter", sans-serif;
-  }
-}
 :root {
   font-family: "Inter", sans-serif;
   line-height: 1.5;
@@ -47,11 +23,6 @@ main {
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
 }
 
 .btn {
