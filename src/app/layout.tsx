@@ -1,6 +1,7 @@
 import "../index.css";
 import Script from "next/script";
 import type { Metadata, Viewport } from "next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata: Metadata = {
   title: "Sonny Nguyen",
@@ -25,6 +26,7 @@ export default function RootLayout({
       <body className="m-0 overflow-x-hidden bg-neutral">
         <div id="root">{children}</div>
       </body>
+      <SpeedInsights />
     </html>
   );
 }
