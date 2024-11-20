@@ -31,7 +31,6 @@
     "format": "prettier --write src",
     "prepare": "husky",
     "knip": "knip",
-    "lint-staged": "npx lint-staged",
     "bundle-stats": "ANALYZE=true npm run build"
   },
   "browserslist": {
