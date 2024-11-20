@@ -23,10 +23,12 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="w-full scroll-mt-16 overflow-hidden bg-center bg-no-repeat "
+      className="w-full scroll-mt-16 overflow-hidden"
       style={{
         backgroundImage: `url(${hero.src})`,
         backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
       }}
     >
       <Container className="min-h-[calc(100vh-11rem)]">

@@ -3,6 +3,7 @@ import githubSVG from "@/public/github.svg";
 import linkedinSVG from "@/public/linkedin.svg";
 import scrollSVG from "@/public/arrow-circle-down.svg";
 import portrait from "@/public/imgs/portrait.png";
+import hero from "@/public/imgs/hero-bg.jpg";
 import Image from "next/image";
 import { Container } from "../ui/Container";
 
@@ -10,7 +11,13 @@ export default function Home() {
   return (
     <section
       id="home"
-      className="w-full scroll-mt-16 overflow-hidden bg-base-300 bg-[url('@/public/imgs/hero-bg.jpg')] bg-cover bg-center bg-no-repeat"
+      className="w-full scroll-mt-16 overflow-hidden bg-base-300"
+      style={{
+        backgroundImage: `url(${hero.src})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
     >
       <Container className="min-h-screen px-3 pb-10 md:justify-between md:px-20">
         <div className="space-between m-auto flex items-center gap-20 px-4 md:px-0">
@@ -95,7 +102,7 @@ export default function Home() {
               height={35}
               alt="scroll arrow"
             />
-            <span className="scroll-text text-base ">View More</span>
+            <span className="scroll-text text-base">View More</span>
           </a>
         </div>
       </Container>
