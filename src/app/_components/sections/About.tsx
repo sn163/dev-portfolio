@@ -8,14 +8,14 @@ export default function About() {
   const isMobile = useCheckMobileScreen();
   const aboutMe = (
     <div className="flex max-w-sm flex-col space-y-4 p-5 text-base-100 md:max-w-lg md:bg-base-300 md:px-8">
-      <p className="prose text-sm text-base-100 md:text-base">
+      <div className="prose text-sm text-base-100 md:text-base">
         Technology has captivated me since my youth — spanning from building
         computers, DJing, photo/video editing, and gaming. This passion
         eventually paved the way for a fulfilling career in Software
         Engineering, where I&apos;ve garnered over three years of professional
         experience building robust software solutions across the stack.
-      </p>
-      <p className="prose text-sm text-base-100 md:text-base">
+      </div>
+      <div className="prose text-sm text-base-100 md:text-base">
         Fast-forward to more recent years, and I&apos;m a Software Engineer at{" "}
         <a
           href="https://www.dropps.com/"
@@ -28,13 +28,13 @@ export default function About() {
         , specializing in developing responsive UI, conducting A/B tests for
         optimization, improving SEO strategies, and ensuring website
         accessibility.{" "}
-      </p>
-      <p className="prose text-sm text-base-100 md:text-base">
+      </div>
+      <div className="prose text-sm text-base-100 md:text-base">
         Beyond technical proficiency, I bring a dedicated work ethic and a love
         for continual learning. Outside of work, I enjoy exploring new
         technologies through personal projects, client website maintenance, and
         contributing to open-source initiatives.
-      </p>
+      </div>
       <div className="connect-txt text-center">
         Let&apos;s{" "}
         <span>

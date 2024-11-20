@@ -34,7 +34,7 @@ export default function Contact() {
           <h2 className="section-title-light">CONTACT</h2>
           <div className="section-title-bar" />
         </div>
-        <FadeInSection classProps="contact-container m-auto flex items-start justify-center">
+        <FadeInSection classProps="contact-container m-auto flex items-start justify-center shadow">
           <Formik
             initialValues={{
               from_name: "",
@@ -76,10 +76,10 @@ export default function Contact() {
               <Form
                 noValidate
                 onSubmit={props.handleSubmit}
-                className="contact-form my-10 flex flex-col rounded-md shadow-xl"
+                className="contact-form flex flex-col rounded-md shadow-lg"
                 data-netlify="true"
               >
-                <div className="flex items-center justify-start gap-6 p-4 text-base-100">
+                <div className="flex select-none items-center justify-start gap-6 p-4 text-base-100">
                   <Image
                     src={contact.src}
                     alt="contact"
@@ -91,10 +91,13 @@ export default function Contact() {
                     <div>I&apos;d love to hear from you!</div>
                   </div>
                 </div>
-                <div className="flex flex-col rounded-md bg-[#272727] p-7">
+                <div className="flex flex-col rounded-xl border-8 border-base-300 bg-[#272727] p-7">
                   <div className="flex w-full gap-6">
                     <div className="flex min-h-24 w-full flex-col">
-                      <label className="text-base-100" htmlFor="from_name">
+                      <label
+                        className="select-none text-base-100"
+                        htmlFor="from_name"
+                      >
                         Name
                       </label>
                       <Field
@@ -107,12 +110,17 @@ export default function Contact() {
                       />
                       <ErrorMessage name="from_name">
                         {(msg) => (
-                          <span className="ml-3 text-primary">{msg}</span>
+                          <span className="ml-3 select-none text-primary">
+                            {msg}
+                          </span>
                         )}
                       </ErrorMessage>
                     </div>
                     <div className="flex min-h-24 w-full flex-col">
-                      <label className="text-base-100" htmlFor="email">
+                      <label
+                        className="select-none text-base-100"
+                        htmlFor="email"
+                      >
                         Email
                       </label>
                       <Field
@@ -125,13 +133,18 @@ export default function Contact() {
                       />
                       <ErrorMessage name="email">
                         {(msg) => (
-                          <span className="ml-3 text-primary">{msg}</span>
+                          <span className="ml-3 select-none text-primary">
+                            {msg}
+                          </span>
                         )}
                       </ErrorMessage>
                     </div>
                   </div>
                   <div className="flex min-h-44 w-full flex-col">
-                    <label className="text-base-100" htmlFor="message">
+                    <label
+                      className="select-none text-base-100"
+                      htmlFor="message"
+                    >
                       Message
                     </label>
                     <Field
@@ -145,7 +158,9 @@ export default function Contact() {
                     />
                     <ErrorMessage name="message">
                       {(msg) => (
-                        <span className="ml-3 text-primary">{msg}</span>
+                        <span className="ml-3 select-none text-primary">
+                          {msg}
+                        </span>
                       )}
                     </ErrorMessage>
                   </div>

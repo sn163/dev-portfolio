@@ -25,8 +25,8 @@ export default function RootLayout({
       </head>
       <body className="m-0 overflow-x-hidden bg-neutral">
         <div id="root">{children}</div>
+        <SpeedInsights />
       </body>
-      <SpeedInsights />
     </html>
   );
 }

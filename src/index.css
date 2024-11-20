@@ -218,24 +218,7 @@ h1 {
   margin-left: 0.5rem;
 }
 
-.project-container {
-  background-color: #1a1a1a;
-  box-shadow:
-    5px 5px rgba(255, 77, 89, 0.4),
-    10px 10px rgba(255, 77, 89, 0.3),
-    15px 15px rgba(255, 77, 89, 0.2),
-    20px 20px rgba(255, 77, 89, 0.1),
-    25px 25px rgba(255, 77, 89, 0.05);
-}
-
-.project-container img {
-  width: 520px;
-  height: 300px;
-  min-width: 520px;
-  min-height: 300px;
-}
-
-.project-title a {
+.project-title {
   font-family: "Raleway", sans-serif;
   font-size: 35px;
   letter-spacing: 0.5px;
@@ -243,7 +226,7 @@ h1 {
   text-decoration: none;
 }
 
-.project-title a:hover {
+.project-title:hover {
   color: rgba(255, 77, 89, 0.8);
 }
 

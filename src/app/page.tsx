@@ -1,6 +1,6 @@
-import { ClientOnly } from "./[[...slug]]/client";
+"use client";
 
-export const generateStaticParams = () => [{ slug: [""] }];
+import { ClientOnly } from "./[[...slug]]/client";
 
 export default function Page() {
   return <ClientOnly />;
