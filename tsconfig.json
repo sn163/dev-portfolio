@@ -23,11 +23,11 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true,
+    "incremental": true
   },
   "include": [
     "custom.d.ts",
-    "./src",
+    "src/**/*.{ts,tsx}",
     "./dist/types/**/*.ts",
     "./next-env.d.ts",
     ".next/types/**/*.ts"

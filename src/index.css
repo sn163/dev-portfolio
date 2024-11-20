@@ -79,48 +79,6 @@ h1 {
   }
 }
 
-.NavigationMenuTrigger {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 35px;
-}
-
-.NavigationMenuTrigger[data-state="open"] {
-  background-color: #3a3a3a;
-}
-
-.NavigationMenuContent .NavigationMenuItem {
-  list-style: none;
-}
-
-.NavigationMenuContent {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: #1a1a1a;
-  border: 2px solid #3a3a3a;
-  border-radius: 10px;
-}
-.NavigationMenuContent .NavigationMenuItem {
-  width: 100%;
-}
-.NavigationMenuContent .NavigationMenuLink[data-active] {
-  background-color: #3a3a3a;
-  color: #ff4d59;
-}
-.NavigationMenuContent .NavigationMenuItem:not(:last-child) {
-  border-bottom: 2px solid #3a3a3a;
-}
-
-.NavigationMenuContent .NavigationMenuItem .NavigationMenuLink {
-  display: flex;
-  justify-content: center;
-  padding: 15px 0px;
-}
-
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -137,36 +95,6 @@ h1 {
   to {
     opacity: 0;
   }
-}
-
-.NavigationMenuViewport {
-  position: relative;
-  transform-origin: top center;
-  margin-top: 6px;
-  width: 100%;
-  border: none;
-  overflow: hidden;
-  height: var(--radix-navigation-menu-viewport-height);
-  transition:
-    width,
-    height,
-    300ms ease;
-}
-.NavigationMenuViewport[data-state="open"] {
-  animation: fadeIn 500ms ease;
-}
-.NavigationMenuViewport[data-state="closed"] {
-  animation: fadeOut 500ms ease;
-}
-
-.ViewportPosition {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  top: 100%;
-  left: 0;
-  perspective: 2000px;
 }
 
 /* ------------------------------------------------------------------- 
@@ -218,24 +146,7 @@ h1 {
   margin-left: 0.5rem;
 }
 
-.project-container {
-  background-color: #1a1a1a;
-  box-shadow:
-    5px 5px rgba(255, 77, 89, 0.4),
-    10px 10px rgba(255, 77, 89, 0.3),
-    15px 15px rgba(255, 77, 89, 0.2),
-    20px 20px rgba(255, 77, 89, 0.1),
-    25px 25px rgba(255, 77, 89, 0.05);
-}
-
-.project-container img {
-  width: 520px;
-  height: 300px;
-  min-width: 520px;
-  min-height: 300px;
-}
-
-.project-title a {
+.project-title {
   font-family: "Raleway", sans-serif;
   font-size: 35px;
   letter-spacing: 0.5px;
@@ -243,7 +154,7 @@ h1 {
   text-decoration: none;
 }
 
-.project-title a:hover {
+.project-title:hover {
   color: rgba(255, 77, 89, 0.8);
 }
 
