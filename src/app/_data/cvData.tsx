@@ -47,8 +47,7 @@ export const cvData = {
   projects: [
     {
       project_title: "Pomoparty",
-      subtitle:
-        "Social Pomodoro App | TypeScript, React, Next, Node, PostgreSQL",
+      subtitle: "Social Pomodoro App | TypeScript, React, Next, Node, PostgreSQL",
       description: [
         "Designed and implemented a Social Pomodoro App leveraging React's component-based architecture, powered by Next.js, to ensure swift load times, SEO enhancement, and server-side rendering capabilities",
         "Integrated PostgreSQL for data storage, designing schemas for user profiles and activity logs, ensuring efficient querying",
@@ -65,8 +64,7 @@ export const cvData = {
     },
     {
       project_title: "Interview Hub",
-      subtitle:
-        "Interview Review & Preparation Platform | JavaScript PERN Stack",
+      subtitle: "Interview Review & Preparation Platform | JavaScript PERN Stack",
       description: [
         "Developed a web community platform with the PERN stack (PostgreSQL, Express.js, React.js, Node.js) for users to share interview experiences, advice, and review",
         "Applied React Router’s client-side routing to minimize server calls & improve UI/browser URL sync consistency by 15%",

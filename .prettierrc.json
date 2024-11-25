@@ -4,6 +4,9 @@
   "semi": true,
   "bracketSpacing": true,
   "tabWidth": 2,
+  "printWidth": 120,
+  "jsxSingleQuote": false,
+  "jsxBracketSameLine": true,
   "plugins": ["prettier-plugin-tailwindcss"],
   "overrides": [
     {

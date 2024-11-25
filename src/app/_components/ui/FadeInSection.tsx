@@ -3,10 +3,7 @@ import { useState, useEffect, useRef, PropsWithChildren } from "react";
 interface Props {
   classProps?: string;
 }
-export const FadeInSection: React.FC<PropsWithChildren<Props>> = ({
-  children,
-  classProps,
-}) => {
+export const FadeInSection: React.FC<PropsWithChildren<Props>> = ({ children, classProps }) => {
   const [isVisible, setVisible] = useState(true);
   const domRef = useRef<HTMLDivElement | null>(null);
   useEffect(() => {
@@ -18,12 +15,7 @@ export const FadeInSection: React.FC<PropsWithChildren<Props>> = ({
     return () => observer.unobserve(dom);
   }, []);
   return (
-    <div
-      className={`fade-in-section ${
-        isVisible ? "is-visible" : ""
-      } ${classProps}`}
-      ref={domRef}
-    >
+    <div className={`fade-in-section ${isVisible ? "is-visible" : ""} ${classProps}`} ref={domRef}>
       {children}
     </div>
   );

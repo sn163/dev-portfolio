@@ -30,16 +30,7 @@ export const workData = [
       alt: "overvue",
     },
     badge: null,
-    skills: [
-      "Vue",
-      "JavaScript",
-      "Node",
-      "HTML",
-      "CSS",
-      "Quasar Framework",
-      "Electron",
-      "Slack OAuth",
-    ],
+    skills: ["Vue", "JavaScript", "Node", "HTML", "CSS", "Quasar Framework", "Electron", "Slack OAuth"],
   },
   {
     title: "Social Lite",
