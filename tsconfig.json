@@ -3,20 +3,14 @@
     "target": "ESNext",
     "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "/*"
-      ]
+      "@/*": ["/*"]
     },
     "plugins": [
       {
         "name": "next"
       }
     ],
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -30,15 +24,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": [
-    "./dist/types/**/*.ts",
-    "./next-env.d.ts",
-    ".next/types/**/*.ts",
-    "custom.d.ts",
-    "src/**/*.{ts,tsx}",
-    "dist/types/**/*.ts"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["dist/types/**/*.ts", "./next-env.d.ts", ".next/types/**/*.ts", "custom.d.ts", "src/**/*.{ts,tsx}"],
+  "exclude": ["node_modules"]
 }
