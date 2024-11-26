@@ -2,7 +2,6 @@
 
 # dependencies
 /node_modules
-.github
 /.pnp
 .pnp.js
 vite-env.d.ts
