@@ -6,9 +6,6 @@
   "type": "module",
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
-    "@emotion/react": "^11.13.5",
-    "@emotion/styled": "^11.13.5",
-    "@mui/material": "^6.1.8",
     "@next/bundle-analyzer": "^14.2.4",
     "@types/react-dom": "^18.0.6",
     "@vercel/analytics": "^1.4.1",

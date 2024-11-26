@@ -9,7 +9,7 @@ on:
       - main # When PR is created to `main` from `dev`
   push:
     branches:
-      - dev # If you want to trigger on push to `dev`
+      - dev # If you want to trigger on push to `dev` for artifact upload
 
 defaults:
   run:
@@ -48,47 +48,52 @@ jobs:
           key: ${{ runner.os }}-build-${{ env.cache-name }}
 
       - name: Build next.js app
-        # change this if your site requires a custom build command
         run: ./node_modules/.bin/next build
 
-      # Here's the first place where next-bundle-analysis' own script is used
-      # This step pulls the raw bundle stats for the current bundle
+      # Analyze bundle of the dev branch
       - name: Analyze bundle
         run: npx -p nextjs-bundle-analysis report
 
+      # Upload bundle analysis artifact from dev branch
       - name: Upload bundle analysis artifact
         uses: actions/upload-artifact@v3
         with:
           name: bundle-analysis
           path: .next/analyze/__bundle_analysis.json
 
-      - name: Download base branch bundle stats
+      # If this is a PR, download the artifact from the base branch (main) for comparison
+      - name: Download base branch bundle stats (main)
         uses: dawidd6/action-download-artifact@v2
-        if: success() && github.event.number
+        if: github.event_name == 'pull_request' && success() && github.event.number
         with:
           workflow: Next.js Bundle Analysis # Workflow name on the `main` branch
           name: bundle-analysis # The name of the artifact
           branch: main # Reference `main` as the base branch
           path: .next/analyze/base # Store it in the `base` directory
 
+      # Verify if the base artifact is downloaded
       - name: Verify Downloaded Base Artifacts
         run: |
           echo "Checking for base directory..."
           ls -laR .next/analyze/base || echo "Base directory does not exist."
 
+      # Compare dev bundle with base (main) branch bundle
       - name: Compare with Base Branch Bundle
         if: success() && github.event.number
-        run: ls -laR .next/analyze/base && npx -p nextjs-bundle-analysis compare
+        run: |
+          ls -laR .next/analyze/base || echo "Base directory does not exist."
+          npx -p nextjs-bundle-analysis compare
 
+      # Debugging step to check the contents of the downloaded artifact
       - name: Debug Download Artifact
         run: |
           echo "Attempting to download artifact from main..."
           ls -la .next/analyze || echo "Artifact directory does not exist."
 
+      # Get and post the analysis results as a comment on the PR
       - name: Get Comment Body
         id: get-comment-body
         if: success() && github.event.number
-        # https://docs.github.com/en/actions/using-workflows/workflow-commands-for-github-actions#multiline-strings
         run: |
           echo "body<<EOF" >> $GITHUB_OUTPUT
           echo "$(cat .next/analyze/__bundle_analysis_comment.txt)" >> $GITHUB_OUTPUT
