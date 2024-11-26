@@ -14,8 +14,9 @@ export default function Footer() {
             <Image
               src={locationSVG.src}
               alt="location"
-              height={25}
-              width={25}
+              height={22}
+              width={22}
+              objectFit="contain"
               className="contact-icons"
             />
             Los Angeles, CA
@@ -23,9 +24,10 @@ export default function Footer() {
           <li>
             <Image
               src={iphoneSVG.src}
-              height={25}
-              width={25}
+              height={22}
+              width={22}
               alt="phone"
+              objectFit="contain"
               className="contact-icons"
             />
             626-863-5972
@@ -33,9 +35,10 @@ export default function Footer() {
           <li>
             <Image
               src={emailSVG.src}
-              height={25}
-              width={25}
+              height={20}
+              width={20}
               alt="email"
+              objectFit="contain"
               className="contact-icons"
             />
             sonnynguyen163@gmail.com
@@ -49,10 +52,12 @@ export default function Footer() {
             >
               <Image
                 src={linkedinSVG.src}
-                height={25}
-                width={25}
+                height={23}
+                width={23}
                 alt="linkedin"
-                className="contact-icons"
+                objectFit="contain"
+                className="contact-icons text-primary"
+                style={{ fill: "white" }}
               />
               LinkedIn
             </a>
@@ -66,17 +71,18 @@ export default function Footer() {
             >
               <Image
                 src={githubSVG.src}
-                height={25}
-                width={25}
+                height={20}
+                width={20}
                 alt="github"
-                className="contact-icons"
+                objectFit="contain"
+                className="contact-icons text-primary"
               />
               Github
             </a>
           </li>
         </ul>
         <span className="text-lg text-base-100">
-          Sonny Nguyen <span className="text-primary">©2024</span>
+          Sonny Nguyen <span className="text-primary">©2024</span> All rights reserved.
         </span>
       </div>
     </section>

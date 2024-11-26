@@ -5,7 +5,6 @@
     "paths": {
       "@/*": ["/*"]
     },
-
     "plugins": [
       {
         "name": "next"
@@ -25,12 +24,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": [
-    "custom.d.ts",
-    "src/**/*.{ts,tsx}",
-    "./dist/types/**/*.ts",
-    "./next-env.d.ts",
-    ".next/types/**/*.ts"
-  ],
+  "include": ["dist/types/**/*.ts", "./next-env.d.ts", ".next/types/**/*.ts", "custom.d.ts", "src/**/*.{ts,tsx}"],
   "exclude": ["node_modules"]
 }

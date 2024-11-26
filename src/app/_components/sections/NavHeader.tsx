@@ -18,10 +18,7 @@ export default function NavHeader() {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.offsetHeight;
 
-        if (
-          scrollPosition >= sectionTop - 65 &&
-          scrollPosition < sectionTop + sectionHeight - 50
-        ) {
+        if (scrollPosition >= sectionTop - 65 && scrollPosition < sectionTop + sectionHeight - 50) {
           setActiveSection(section.id);
         }
       });
@@ -37,11 +34,7 @@ export default function NavHeader() {
     <header className="fixed z-10 flex w-full flex-wrap items-center justify-center bg-base-300 px-16 py-0.5">
       <nav className="container shadow-lg">
         <div className="flex items-center justify-between">
-          <Link
-            className={` ${activeSection === "home" ? "active" : ""}`}
-            href="#home"
-            aria-label="Home"
-          >
+          <Link className={` ${activeSection === "home" ? "active" : ""}`} href="#home" aria-label="Home">
             {activeSection === "home" || activeSection === "/" ? (
               <Image
                 src={activeLogo.src}

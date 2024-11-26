@@ -17,20 +17,12 @@ type CarouselProps = {
 
 export const Carousel = (props: CarouselProps) => {
   const [curr, setCurr] = useState(0);
-  const prev = () =>
-    setCurr((curr) => (curr === 0 ? props.work.length - 1 : curr - 1));
-  const next = () =>
-    setCurr((curr) => (curr === props.work.length - 1 ? 0 : curr + 1));
+  const prev = () => setCurr((curr) => (curr === 0 ? props.work.length - 1 : curr - 1));
+  const next = () => setCurr((curr) => (curr === props.work.length - 1 ? 0 : curr + 1));
 
   const slides = props.work.map((s, i) => (
     <div key={i} className="carousel-item w-full justify-center">
-      <Card
-        title={s.title}
-        url={s.url}
-        description={s.description}
-        image={s.image}
-        skills={s.skills}
-      />
+      <Card title={s.title} url={s.url} description={s.description} image={s.image} skills={s.skills} />
     </div>
   ));
 

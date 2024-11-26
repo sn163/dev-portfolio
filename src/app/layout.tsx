@@ -11,18 +11,11 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = { width: "device-width", initialScale: 1 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className="scroll-pt-16 overflow-x-hidden scroll-smooth">
       <head>
-        <Script
-          type="text/javascript"
-          src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
-        />
+        <Script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js" />
       </head>
       <body className="m-0 overflow-x-hidden bg-neutral">
         <div id="root">{children}</div>

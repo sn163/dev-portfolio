@@ -7,16 +7,14 @@ import hero from "@/public/imgs/hero-bg.jpg";
 import Image from "next/image";
 import contact from "@/public//contact-pic.webp";
 import { Container } from "../ui/Container";
+import { Button } from "../ui/Button";
 
 export default function Contact() {
   const [sendStatus, setSendStatus] = useState("SUBMIT");
 
   const ValidationSchema = yup.object({
     from_name: yup.string().required("* Name field is required"),
-    email: yup
-      .string()
-      .email("Invalid email address")
-      .required("* Email field is required"),
+    email: yup.string().email("Invalid email address").required("* Email field is required"),
     message: yup.string().required("* Message field is required"),
   });
 
@@ -48,30 +46,22 @@ export default function Contact() {
               setSendStatus("SENDING...");
 
               const templateId = "template_ykuqq3v";
-              const serviceId = "service_elh2eah";
+              const serviceId = "service_rfgjn8i";
 
-              emailjs
-                .send(serviceId, templateId, values, "wgi6cGen04bpt-EVb")
-                .then(
-                  (result) => {
-                    setSendStatus("SENT!");
-                    alert(
-                      `Thank you for your message. I'll get back to you as soon as I can!`,
-                    );
-                    setSubmitting(false);
-                    resetForm();
-                    console.log(
-                      "Email sent successfully!",
-                      result.status,
-                      result.text,
-                    );
-                  },
-                  (error) => {
-                    setSendStatus("SEND");
-                    setSubmitting(false);
-                    console.log("Email failed to send", error.text);
-                  },
-                );
+              emailjs.send(serviceId, templateId, values, "wgi6cGen04bpt-EVb").then(
+                (result) => {
+                  setSendStatus("SENT!");
+                  alert(`Thank you for your message. I'll get back to you as soon as I can!`);
+                  setSubmitting(false);
+                  resetForm();
+                  console.log("Email sent successfully!", result.status, result.text);
+                },
+                (error) => {
+                  setSendStatus("SEND");
+                  setSubmitting(false);
+                  console.log("Email failed to send", error.text);
+                },
+              );
             }}
           >
             {(props) => (
@@ -82,24 +72,15 @@ export default function Contact() {
                 data-netlify="true"
               >
                 <div className="flex select-none items-center justify-start gap-6 p-4 text-base-100">
-                  <Image
-                    src={contact.src}
-                    alt="contact"
-                    width={70}
-                    height={70}
-                  />
+                  <Image src={contact.src} alt="contact" width={70} height={70} />
                   <div>
-                    <div>Have any questions? Want to work together?</div>{" "}
-                    <div>I&apos;d love to hear from you!</div>
+                    <div>Have any questions? Want to work together?</div> <div>I&apos;d love to hear from you!</div>
                   </div>
                 </div>
                 <div className="flex flex-col rounded-xl border-8 border-base-300 bg-[#272727] p-7">
                   <div className="flex w-full gap-6">
                     <div className="flex min-h-24 w-full flex-col">
-                      <label
-                        className="select-none text-base-100"
-                        htmlFor="from_name"
-                      >
+                      <label className="select-none text-base-100" htmlFor="from_name">
                         Name
                       </label>
                       <Field
@@ -111,18 +92,11 @@ export default function Contact() {
                         onChange={props.handleChange}
                       />
                       <ErrorMessage name="from_name">
-                        {(msg) => (
-                          <span className="ml-3 select-none text-primary">
-                            {msg}
-                          </span>
-                        )}
+                        {(msg) => <span className="ml-3 select-none text-primary">{msg}</span>}
                       </ErrorMessage>
                     </div>
                     <div className="flex min-h-24 w-full flex-col">
-                      <label
-                        className="select-none text-base-100"
-                        htmlFor="email"
-                      >
+                      <label className="select-none text-base-100" htmlFor="email">
                         Email
                       </label>
                       <Field
@@ -134,19 +108,12 @@ export default function Contact() {
                         onChange={props.handleChange}
                       />
                       <ErrorMessage name="email">
-                        {(msg) => (
-                          <span className="ml-3 select-none text-primary">
-                            {msg}
-                          </span>
-                        )}
+                        {(msg) => <span className="ml-3 select-none text-primary">{msg}</span>}
                       </ErrorMessage>
                     </div>
                   </div>
                   <div className="flex min-h-44 w-full flex-col">
-                    <label
-                      className="select-none text-base-100"
-                      htmlFor="message"
-                    >
+                    <label className="select-none text-base-100" htmlFor="message">
                       Message
                     </label>
                     <Field
@@ -159,22 +126,17 @@ export default function Contact() {
                       onChange={props.handleChange}
                     />
                     <ErrorMessage name="message">
-                      {(msg) => (
-                        <span className="ml-3 select-none text-primary">
-                          {msg}
-                        </span>
-                      )}
+                      {(msg) => <span className="ml-3 select-none text-primary">{msg}</span>}
                     </ErrorMessage>
                   </div>
-                  <button
+                  <Button
                     disabled={props.isSubmitting}
-                    className={`${
-                      props.isSubmitting ? "animate-spin" : ""
-                    } btn mx-auto`}
+                    size="sm"
+                    className={`${props.isSubmitting ? "animate-spin" : ""} mx-auto`}
                     type="submit"
                   >
                     {sendStatus}
-                  </button>
+                  </Button>
                 </div>
               </Form>
             )}
