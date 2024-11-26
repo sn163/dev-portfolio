@@ -2,19 +2,16 @@
 
 # dependencies
 /node_modules
-.github
 /.pnp
 .pnp.js
 vite-env.d.ts
 .next
 next-env.d.ts
 .husky
+/out
 
 # testing
 /coverage
-
-# production
-/dist
 
 # misc
 .DS_Store
