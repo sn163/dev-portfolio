@@ -10,6 +10,7 @@
     "@types/react-dom": "^18.0.6",
     "@vercel/analytics": "^1.4.1",
     "@vercel/speed-insights": "^1.1.0",
+    "cross-env": "^7.0.3",
     "dotenv": "^16.4.5",
     "formik": "^2.4.5",
     "next": "^15.0.3",
@@ -27,12 +28,14 @@
   "scripts": {
     "start": "next start",
     "dev": "next dev --turbopack",
-    "build": "next build",
+    "build": "cross-env ANALYZE=true next build",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
     "format": "prettier --write src",
     "prepare": "husky",
-    "knip": "knip"
+    "knip": "knip",
+    "analyze:server": "cross-env BUNDLE_ANALYZE=server next build",
+    "analyze:browser": "cross-env BUNDLE_ANALYZE=browser next build"
   },
   "browserslist": {
     "production": [
