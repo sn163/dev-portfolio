@@ -75,7 +75,6 @@
   "nextBundleAnalysis": {
     "budget": 512000,
     "budgetPercentIncreaseRed": 85,
-    "showDetails": true,
-    "buildOutputDirectory": "dist"
+    "showDetails": true
   }
 }
