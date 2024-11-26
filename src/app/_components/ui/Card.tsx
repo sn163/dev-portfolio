@@ -1,5 +1,5 @@
 import Image from "next/image";
-import uuid from "react-uuid";
+import { v4 as uuidv4 } from "uuid";
 type CardProps = {
   title: string;
   url: string;
@@ -12,7 +12,7 @@ type CardProps = {
 };
 
 export const Card = (props: CardProps) => {
-  const id = uuid();
+  const id = uuidv4();
   const { title, url, description, image, skills } = props;
   return (
     <div className="card m-2 w-full max-w-2xl select-none rounded-2xl bg-base-300 text-base-100 shadow-xl">
