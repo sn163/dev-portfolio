@@ -6,20 +6,19 @@ name: "Next.js Bundle Analysis"
 on:
   pull_request:
     branches:
-      - main # When PR is created to `main` from `dev`
+      - main # Trigger on PRs to `main` from `dev`
   push:
     branches:
-      - dev # If you want to trigger on push to `dev` for artifact upload
+      - dev # Trigger on pushes to `dev`
 
 defaults:
   run:
-    # change this if your nextjs app does not live at the root of the repo
     working-directory: ./
 
 permissions:
-  contents: read # for checkout repository
-  actions: read # for fetching base branch bundle stats
-  pull-requests: write # for comments
+  contents: read # For checking out repository
+  actions: read # For fetching base branch bundle stats
+  pull-requests: write # For commenting
 
 jobs:
   analyze:
@@ -35,65 +34,63 @@ jobs:
       - name: Install dependencies
         uses: bahmutov/npm-install@v1
 
-      - name: Restore next build
+      - name: Restore next build cache
         uses: actions/cache@v3
         id: restore-build-cache
         env:
           cache-name: cache-next-build
         with:
-          # if you use a custom build directory, replace all instances of `.next` in this file with your build directory
-          # ex: if your app builds to `dist`, replace `.next` with `dist`
           path: .next/cache
-          # change this if you prefer a more strict cache
           key: ${{ runner.os }}-build-${{ env.cache-name }}
 
       - name: Build next.js app
         run: ./node_modules/.bin/next build
 
-      # Analyze bundle of the dev branch
-      - name: Analyze bundle
-        run: npx -p nextjs-bundle-analysis report
-
-      # Upload bundle analysis artifact from dev branch
+      # On `dev` branch, upload the analysis artifact
       - name: Upload bundle analysis artifact
+        if: github.ref_name == 'dev'
         uses: actions/upload-artifact@v3
         with:
           name: bundle-analysis
           path: .next/analyze/__bundle_analysis.json
 
-      # If this is a PR, download the artifact from the base branch (main) for comparison
-      - name: Download base branch bundle stats (main)
+      # On PR to `main`, download the `dev` artifact for comparison
+      - name: Download dev branch bundle stats
+        if: github.event_name == 'pull_request'
         uses: dawidd6/action-download-artifact@v2
-        if: github.event_name == 'pull_request' && success() && github.event.number
         with:
-          workflow: Next.js Bundle Analysis # Workflow name on the `main` branch
-          name: bundle-analysis # The name of the artifact
-          branch: main # Reference `main` as the base branch
-          path: .next/analyze/base # Store it in the `base` directory
+          workflow: Next.js Bundle Analysis # Workflow name on the `dev` branch
+          name: bundle-analysis # Name of the artifact
+          branch: dev # Reference `dev` as the source branch
+          path: .next/analyze/base
 
-      # Verify if the base artifact is downloaded
-      - name: Verify Downloaded Base Artifacts
+      # Ensure the analyze directory exists for safety
+      - name: Create Analyze Directory
+        run: mkdir -p .next/analyze/base
+
+      # Verify if the dev artifact is downloaded (exit if not found)
+      - name: Verify Downloaded Dev Artifacts
+        if: github.event_name == 'pull_request'
         run: |
-          echo "Checking for base directory..."
-          ls -laR .next/analyze/base || echo "Base directory does not exist."
+          echo "Checking for dev base directory..."
+          ls -laR .next/analyze/base || (echo "Dev base directory does not exist. Exiting..." && exit 1)
 
-      # Compare dev bundle with base (main) branch bundle
+      # Compare the dev bundle with the current main branch bundle
       - name: Compare with Base Branch Bundle
-        if: success() && github.event.number
-        run: |
-          ls -laR .next/analyze/base || echo "Base directory does not exist."
-          npx -p nextjs-bundle-analysis compare
+        if: github.event_name == 'pull_request'
+        run: npx -p nextjs-bundle-analysis compare
 
-      # Debugging step to check the contents of the downloaded artifact
+      # Debugging step to check contents of the analyze directory
       - name: Debug Download Artifact
+        if: github.event_name == 'pull_request'
         run: |
-          echo "Attempting to download artifact from main..."
-          ls -la .next/analyze || echo "Artifact directory does not exist."
+          echo "Contents of .next/analyze directory:"
+          ls -la .next/analyze || echo "Analyze directory does not exist."
 
-      # Get and post the analysis results as a comment on the PR
+      # Post the analysis results as a comment on the PR
       - name: Get Comment Body
         id: get-comment-body
-        if: success() && github.event.number
+        if: github.event_name == 'pull_request'
         run: |
           echo "body<<EOF" >> $GITHUB_OUTPUT
           echo "$(cat .next/analyze/__bundle_analysis_comment.txt)" >> $GITHUB_OUTPUT
@@ -101,22 +98,15 @@ jobs:
 
       - name: Find Comment
         uses: peter-evans/find-comment@v2
-        if: success() && github.event.number
+        if: github.event_name == 'pull_request'
         id: fc
         with:
           issue-number: ${{ github.event.number }}
           body-includes: "<!-- __NEXTJS_BUNDLE -->"
 
-      - name: Create Comment
+      - name: Create or Update Comment
         uses: peter-evans/create-or-update-comment@v2
-        if: success() && github.event.number && steps.fc.outputs.comment-id == 0
-        with:
-          issue-number: ${{ github.event.number }}
-          body: ${{ steps.get-comment-body.outputs.body }}
-
-      - name: Update Comment
-        uses: peter-evans/create-or-update-comment@v2
-        if: success() && github.event.number && steps.fc.outputs.comment-id != 0
+        if: github.event_name == 'pull_request'
         with:
           issue-number: ${{ github.event.number }}
           body: ${{ steps.get-comment-body.outputs.body }}
