@@ -16,7 +16,7 @@ export default function Footer() {
               alt="location"
               height={22}
               width={22}
-              className="contact-icons object-contain"
+              className="mr-2 object-contain"
               loading="lazy"
             />
             Los Angeles, CA
@@ -27,7 +27,7 @@ export default function Footer() {
               height={22}
               width={22}
               alt="phone"
-              className="contact-icons object-contain"
+              className="mr-2 object-contain"
               loading="lazy"
             />
             626-863-5972
@@ -38,7 +38,7 @@ export default function Footer() {
               height={20}
               width={20}
               alt="email"
-              className="contact-icons object-contain"
+              className="mr-2 object-contain"
               loading="lazy"
             />
             sonnynguyen163@gmail.com
@@ -55,7 +55,7 @@ export default function Footer() {
                 height={23}
                 width={23}
                 alt="linkedin"
-                className="contact-icons object-contain"
+                className="mr-2 object-contain"
                 loading="lazy"
               />
               LinkedIn
@@ -73,7 +73,7 @@ export default function Footer() {
                 height={20}
                 width={20}
                 alt="github"
-                className="contact-icons object-contain"
+                className="mr-2 object-contain"
                 loading="lazy"
               />
               Github
