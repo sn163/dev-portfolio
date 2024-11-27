@@ -2,8 +2,8 @@ import { TypeAnimation } from "react-type-animation";
 import githubSVG from "@/public/github.svg";
 import linkedinSVG from "@/public/linkedin.svg";
 import scrollSVG from "@/public/arrow-circle-down.svg";
-import portrait from "@/public/imgs/portrait.png";
-import hero from "@/public/imgs/hero-bg.jpg";
+import portrait from "@/public/imgs/portrait.webp";
+import hero from "@/public/imgs/hero-bg.webp";
 import Image from "next/image";
 import { Container } from "../ui/Container";
 import { Button } from "../ui/Button";
@@ -79,13 +79,19 @@ export default function Home() {
               </li>
             </ul>
           </div>
-          <Image
-            className="mx-auto h-auto w-48 max-w-sm rounded-full border-4 border-gray-950 shadow shadow-gray-950 md:w-auto"
-            src={portrait}
-            alt="portrait"
-            width={420}
-            height={280}
-          />
+          <picture>
+            <source srcSet={portrait.src} type="image/webp" />
+            <Image
+              className="mx-auto h-auto w-48 max-w-sm rounded-full border-4 border-gray-950 shadow shadow-gray-950 md:w-auto"
+              src={portrait}
+              alt="portrait"
+              width={420}
+              height={280}
+              quality={100}
+              priority={true}
+              loading="eager"
+            />
+          </picture>
         </div>
 
         <div className="mb-10 flex items-center justify-center md:mb-20">

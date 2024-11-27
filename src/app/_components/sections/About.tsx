@@ -54,9 +54,23 @@ export default function About() {
           <div className="about-img-container flex flex-col items-center justify-center md:flex-row">
             <div className="mt-2.5 md:mt-0 md:pl-7">
               {isMobile ? (
-                <Image src={aboutMePic.src} width={150} height={100} alt="about me pic" />
+                <Image
+                  src={aboutMePic.src}
+                  width={150}
+                  height={100}
+                  alt="about me pic"
+                  className="h-auto"
+                  loading="lazy"
+                />
               ) : (
-                <Image src={aboutMePic.src} width={280} height={100} alt="about me pic" />
+                <Image
+                  src={aboutMePic.src}
+                  width={280}
+                  height={100}
+                  alt="about me pic"
+                  className="h-auto"
+                  loading="lazy"
+                />
               )}
             </div>
           </div>

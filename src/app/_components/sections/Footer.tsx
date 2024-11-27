@@ -16,8 +16,8 @@ export default function Footer() {
               alt="location"
               height={22}
               width={22}
-              objectFit="contain"
-              className="contact-icons"
+              className="contact-icons object-contain"
+              loading="lazy"
             />
             Los Angeles, CA
           </li>
@@ -27,8 +27,8 @@ export default function Footer() {
               height={22}
               width={22}
               alt="phone"
-              objectFit="contain"
-              className="contact-icons"
+              className="contact-icons object-contain"
+              loading="lazy"
             />
             626-863-5972
           </li>
@@ -38,8 +38,8 @@ export default function Footer() {
               height={20}
               width={20}
               alt="email"
-              objectFit="contain"
-              className="contact-icons"
+              className="contact-icons object-contain"
+              loading="lazy"
             />
             sonnynguyen163@gmail.com
           </li>
@@ -55,9 +55,8 @@ export default function Footer() {
                 height={23}
                 width={23}
                 alt="linkedin"
-                objectFit="contain"
-                className="contact-icons text-primary"
-                style={{ fill: "white" }}
+                className="contact-icons object-contain"
+                loading="lazy"
               />
               LinkedIn
             </a>
@@ -74,8 +73,8 @@ export default function Footer() {
                 height={20}
                 width={20}
                 alt="github"
-                objectFit="contain"
-                className="contact-icons text-primary"
+                className="contact-icons object-contain"
+                loading="lazy"
               />
               Github
             </a>
