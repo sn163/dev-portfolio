@@ -8,7 +8,6 @@ export default function Resume() {
 
   const jobsList = jobs.map((x) => {
     const bulletpoints = x.description.map((x) => <li key={`jobs-${uuidv4()}`}>{x}</li>);
-
     const resumeTitle = x.link ? (
       <a href={x.link} target="_blank" rel="noreferrer noopener">
         {x.company}
@@ -16,11 +15,10 @@ export default function Resume() {
     ) : (
       x.company
     );
-
     return (
       <div key={uuidv4()}>
         <h3 className="resume-title text-4xl text-primary">{resumeTitle}</h3>
-        <div className="prose mb-4 mt-2 space-x-1">
+        <div className="prose my-4 space-x-1">
           <span className="text-lg font-light italic">
             {x.title}{" "}
             <span className="resume-date text-center text-sm uppercase tracking-wider text-[#acacac]">{x.date}</span>
@@ -33,11 +31,10 @@ export default function Resume() {
 
   const projectsList = projects.map((x) => {
     const bulletpoints = x.description.map((x) => <li key={`projects-${uuidv4()}`}>{x}</li>);
-
     return (
       <div key={uuidv4()}>
         <h3 className="resume-title text-4xl text-primary">{x.project_title}</h3>
-        <div className="mb-4 mt-2">
+        <div className="my-4">
           <span className="prose text-lg font-light italic">{x.subtitle}</span>
         </div>
         <ul className="prose mx-5 list-disc space-y-3">{bulletpoints}</ul>

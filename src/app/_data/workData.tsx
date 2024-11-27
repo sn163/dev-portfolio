@@ -4,7 +4,7 @@ export const workData = [
     url: "https://www.dropps.com/",
     description: "Eco-friendly Household/Laundry E-commerce",
     image: {
-      src: "/dropps.jpg",
+      src: "/dropps.webp",
       alt: "dropps",
     },
     badge: null,
@@ -26,7 +26,7 @@ export const workData = [
     url: "https://www.overvue.org/",
     description: "Prototyping Development Tool for Vue Developers",
     image: {
-      src: "/overvue.jpg",
+      src: "/overvue.webp",
       alt: "overvue",
     },
     badge: null,
@@ -38,7 +38,7 @@ export const workData = [
     description: "Event Entertainment Services Provider",
     badge: null,
     image: {
-      src: "/sociallite.jpg",
+      src: "/sociallite.webp",
       alt: "social lite",
     },
     skills: ["JavaScript", "HTML", "CSS"],
