@@ -1,6 +1,3 @@
-# Copyright (c) HashiCorp, Inc.
-# SPDX-License-Identifier: MPL-2.0
-
 name: "Next.js Bundle Analysis"
 
 on:
@@ -16,24 +13,28 @@ defaults:
     working-directory: ./
 
 permissions:
-  contents: read # For checking out repository
-  actions: read # For fetching base branch bundle stats
-  pull-requests: write # For commenting
+  contents: read # Required for repository checkout
+  actions: read # Required for accessing workflows
+  pull-requests: write # For commenting on PRs
 
 jobs:
   analyze:
     runs-on: ubuntu-latest
     steps:
+      # Checkout the repository
       - uses: actions/checkout@v3
 
+      # Install Node.js
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 18
 
+      # Install dependencies
       - name: Install dependencies
         uses: bahmutov/npm-install@v1
 
+      # Restore Next.js build cache
       - name: Restore next build cache
         uses: actions/cache@v3
         id: restore-build-cache
@@ -43,10 +44,23 @@ jobs:
           path: .next/cache
           key: ${{ runner.os }}-build-${{ env.cache-name }}
 
-      - name: Build next.js app
+      # Build the Next.js app
+      - name: Build Next.js app
         run: ./node_modules/.bin/next build
 
-      # On `dev` branch, upload the analysis artifact
+      # Analyze bundle for the `dev` branch
+      - name: Analyze bundle
+        run: |
+          mkdir -p .next/analyze
+          npx -p nextjs-bundle-analysis report
+
+      # Debugging: Verify analyze directory and file
+      - name: Debug Analyze Directory
+        run: |
+          echo "Contents of .next/analyze directory:"
+          ls -la .next/analyze || echo "Analyze directory not created."
+
+      # Upload bundle analysis artifact on `dev` branch
       - name: Upload bundle analysis artifact
         if: github.ref_name == 'dev'
         uses: actions/upload-artifact@v3
@@ -54,47 +68,53 @@ jobs:
           name: bundle-analysis
           path: .next/analyze/__bundle_analysis.json
 
-      # On PR to `main`, download the `dev` artifact for comparison
+      # Compare bundle during a PR to `main`
       - name: Download dev branch bundle stats
         if: github.event_name == 'pull_request'
         uses: dawidd6/action-download-artifact@v2
         with:
-          workflow: Next.js Bundle Analysis # Workflow name on the `dev` branch
-          name: bundle-analysis # Name of the artifact
-          branch: dev # Reference `dev` as the source branch
+          workflow: Next.js Bundle Analysis
+          name: bundle-analysis
+          branch: dev # Reference the `dev` branch artifact
           path: .next/analyze/base
 
-      # Ensure the analyze directory exists for safety
-      - name: Create Analyze Directory
-        run: mkdir -p .next/analyze/base
-
-      # Verify if the dev artifact is downloaded (exit if not found)
+      # Ensure base directory exists for safety
       - name: Verify Downloaded Dev Artifacts
         if: github.event_name == 'pull_request'
         run: |
-          echo "Checking for dev base directory..."
-          ls -laR .next/analyze/base || (echo "Dev base directory does not exist. Exiting..." && exit 1)
+          echo "Checking for base directory from dev..."
+          ls -laR .next/analyze/base || (echo "Dev base directory not found. Exiting..." && exit 1)
 
-      # Compare the dev bundle with the current main branch bundle
-      - name: Compare with Base Branch Bundle
+      # Compare `dev` bundle with `main`
+      - name: Compare with Main Branch Bundle
         if: github.event_name == 'pull_request'
-        run: npx -p nextjs-bundle-analysis compare
+        run: |
+          if [ -f ".next/analyze/base/__bundle_analysis.json" ]; then
+            npx -p nextjs-bundle-analysis compare
+          else
+            echo "Base artifact for comparison not found. Skipping."
+          fi
 
-      # Debugging step to check contents of the analyze directory
+      # Debug: Verify contents of analyze directory
       - name: Debug Download Artifact
         if: github.event_name == 'pull_request'
         run: |
-          echo "Contents of .next/analyze directory:"
+          echo "Contents of .next/analyze directory after download:"
           ls -la .next/analyze || echo "Analyze directory does not exist."
 
-      # Post the analysis results as a comment on the PR
+      # Post analysis results as a comment on the PR
       - name: Get Comment Body
         id: get-comment-body
         if: github.event_name == 'pull_request'
         run: |
-          echo "body<<EOF" >> $GITHUB_OUTPUT
-          echo "$(cat .next/analyze/__bundle_analysis_comment.txt)" >> $GITHUB_OUTPUT
-          echo EOF >> $GITHUB_OUTPUT
+          if [ -f ".next/analyze/__bundle_analysis_comment.txt" ]; then
+            echo "body<<EOF" >> $GITHUB_OUTPUT
+            cat .next/analyze/__bundle_analysis_comment.txt >> $GITHUB_OUTPUT
+            echo EOF >> $GITHUB_OUTPUT
+          else
+            echo "Bundle analysis comment file not found."
+            exit 1
+          fi
 
       - name: Find Comment
         uses: peter-evans/find-comment@v2
