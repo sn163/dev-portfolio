@@ -3,7 +3,7 @@ import emailjs from "@emailjs/browser";
 import { Field, Form, ErrorMessage, Formik } from "formik";
 import * as yup from "yup";
 import { FadeInSection } from "../ui/FadeInSection";
-import hero from "@/public/imgs/hero-bg.jpg";
+import hero from "@/public/imgs/hero-bg.webp";
 import Image from "next/image";
 import contact from "@/public//contact-pic.webp";
 import { Container } from "../ui/Container";
@@ -21,7 +21,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="w-full scroll-mt-16 overflow-hidden"
+      className="w-full scroll-mt-16 overflow-hidden "
       style={{
         backgroundImage: `url(${hero.src})`,
         backgroundSize: "cover",
@@ -72,7 +72,7 @@ export default function Contact() {
                 data-netlify="true"
               >
                 <div className="flex select-none items-center justify-start gap-6 p-4 text-base-100">
-                  <Image src={contact.src} alt="contact" width={70} height={70} />
+                  <Image src={contact.src} alt="contact" width={70} height={70} loading="lazy" />
                   <div>
                     <div>Have any questions? Want to work together?</div> <div>I&apos;d love to hear from you!</div>
                   </div>

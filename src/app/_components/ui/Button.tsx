@@ -1,5 +1,6 @@
 import { ReactNode, ButtonHTMLAttributes, AnchorHTMLAttributes } from "react";
 import Image from "next/image";
+import { cx } from "class-variance-authority";
 
 type ButtonSizes = "sm" | "md" | "lg";
 type ButtonVariants = "link" | "button";
@@ -26,7 +27,7 @@ const buttonSizes = {
 };
 
 export const Button = ({ children, variant, size, className, href, icon, ...rest }: ButtonProps) => {
-  const buttonClassName = `btn-main flex justify-center items-center ${className ? className + " " : ""} ${buttonSizes[size]}`;
+  const buttonClassName = cx(`btn-main flex justify-center items-center ${buttonSizes[size]}`, className);
 
   if (variant === "link") {
     return (
@@ -37,8 +38,7 @@ export const Button = ({ children, variant, size, className, href, icon, ...rest
             alt={icon.alt}
             width={icon.width}
             height={icon.height}
-            className={icon.className}
-            objectFit="contain"
+            className={`${icon.className} object-contain`}
           />
         )}
         <span className="flex h-full items-center justify-center font-bold text-base-100">{children}</span>

@@ -26,8 +26,8 @@ export const Card = (props: CardProps) => {
         <Image
           alt={image.alt}
           src={image.src}
-          width={0}
-          height={0}
+          width={200}
+          height={200}
           className="h-96 w-full rounded-t-2xl"
           loading="lazy"
         />
