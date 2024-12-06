@@ -1,18 +1,17 @@
 import { TypeAnimation } from "react-type-animation";
-import githubSVG from "@/public/github.svg";
-import linkedinSVG from "@/public/linkedin.svg";
 import scrollSVG from "@/public/arrow-circle-down.svg";
 import portrait from "@/public/imgs/portrait.webp";
 import hero from "@/public/imgs/hero-bg.webp";
 import Image from "next/image";
 import { Container } from "../ui/Container";
 import { Button } from "../ui/Button";
+import { Linkedin, GitHub, ArrowDownCircle } from "react-feather";
 
 export default function Home() {
   return (
     <section
       id="home"
-      className="w-full scroll-mt-16 overflow-hidden bg-base-300"
+      className="w-full overflow-hidden bg-base-300"
       style={{
         backgroundImage: `url(${hero.src})`,
         backgroundSize: "cover",
@@ -47,11 +46,10 @@ export default function Home() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="LinkedIn"
+                  className="group"
                   icon={{
-                    src: linkedinSVG.src,
-                    alt: "github",
-                    width: 25,
-                    height: 25,
+                    src: Linkedin,
+                    size: 21,
                     className: "mb-0.5 mr-2",
                   }}
                 >
@@ -66,11 +64,10 @@ export default function Home() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="GitHub"
+                  className="group"
                   icon={{
-                    src: githubSVG.src,
-                    alt: "github",
-                    width: 22,
-                    height: 22,
+                    src: GitHub,
+                    size: 20,
                     className: "mb-0.5 mr-2",
                   }}
                 >
@@ -99,7 +96,7 @@ export default function Home() {
             href="#about"
             className="s-hero__scroll-link flex items-center space-x-5 text-base hover:motion-reduce:animate-bounce"
           >
-            <Image src={scrollSVG.src} width={35} height={35} alt="scroll arrow" />
+            <ArrowDownCircle size={35} />
             <span className="scroll-text text-base">View More</span>
           </a>
         </div>
