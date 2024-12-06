@@ -1,6 +1,6 @@
 import { ReactNode, ButtonHTMLAttributes, AnchorHTMLAttributes } from "react";
-import Image from "next/image";
 import { cx } from "class-variance-authority";
+import { Icon } from "react-feather";
 
 type ButtonSizes = "sm" | "md" | "lg";
 type ButtonVariants = "link" | "button";
@@ -11,10 +11,8 @@ type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> &
     variant?: ButtonVariants;
     size: ButtonSizes;
     icon?: {
-      src: string;
-      alt: string;
-      width: number;
-      height: number;
+      src: Icon;
+      size: number;
       className?: string;
     };
     text?: string;
@@ -33,12 +31,9 @@ export const Button = ({ children, variant, size, className, href, icon, ...rest
     return (
       <a href={href} className={buttonClassName} {...rest}>
         {icon && (
-          <Image
-            src={icon.src}
-            alt={icon.alt}
-            width={icon.width}
-            height={icon.height}
-            className={`${icon.className} object-contain`}
+          <icon.src
+            size={icon.size}
+            className={`${icon.className} group duration-500 ease-in-out group-hover:scale-125 group-hover:animate-pulse`}
           />
         )}
         <span className="flex h-full items-center justify-center font-bold text-base-100">{children}</span>

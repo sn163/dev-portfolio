@@ -44,7 +44,7 @@ export default function About() {
   );
 
   return (
-    <section id="about" className="w-full scroll-mt-16 overflow-hidden bg-[#272727]">
+    <section id="about" className="w-full overflow-hidden bg-[#272727]">
       <Container className="min-h-screen">
         <div className="section-title-container">
           <h2 className="section-title-light">ABOUT</h2>

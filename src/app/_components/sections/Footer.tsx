@@ -1,9 +1,4 @@
-import locationSVG from "@/public/location.svg";
-import iphoneSVG from "@/public/iphone.svg";
-import emailSVG from "@/public/email.svg";
-import githubSVG from "@/public/github.svg";
-import linkedinSVG from "@/public/linkedin.svg";
-import Image from "next/image";
+import { Linkedin, Smartphone, Mail, GitHub, MapPin } from "react-feather";
 
 export default function Footer() {
   return (
@@ -11,36 +6,15 @@ export default function Footer() {
       <div className="container m-auto flex min-h-28 max-w-screen-xl flex-col items-center justify-center gap-1">
         <ul className="contact-icons-group my-1">
           <li>
-            <Image
-              src={locationSVG.src}
-              alt="location"
-              height={22}
-              width={22}
-              className="mr-2 object-contain"
-              loading="lazy"
-            />
+            <MapPin size={21} className="mr-2" color="#ff4d59" />
             Los Angeles, CA
           </li>
           <li>
-            <Image
-              src={iphoneSVG.src}
-              height={22}
-              width={22}
-              alt="phone"
-              className="mr-2 object-contain"
-              loading="lazy"
-            />
+            <Smartphone size={22} className="mr-2" color="#ff4d59" />
             626-863-5972
           </li>
           <li>
-            <Image
-              src={emailSVG.src}
-              height={20}
-              width={20}
-              alt="email"
-              className="mr-2 object-contain"
-              loading="lazy"
-            />
+            <Mail size={22} className="mr-2" color="#ff4d59" />
             sonnynguyen163@gmail.com
           </li>
           <li>
@@ -50,14 +24,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Image
-                src={linkedinSVG.src}
-                height={23}
-                width={23}
-                alt="linkedin"
-                className="mr-2 object-contain"
-                loading="lazy"
-              />
+              <Linkedin size={22} className="mr-2" color="#ff4d59" />
               LinkedIn
             </a>
           </li>
@@ -68,14 +35,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Image
-                src={githubSVG.src}
-                height={20}
-                width={20}
-                alt="github"
-                className="mr-2 object-contain"
-                loading="lazy"
-              />
+              <GitHub size={21} className="mr-2" color="#ff4d59" />
               Github
             </a>
           </li>

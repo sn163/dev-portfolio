@@ -13,7 +13,7 @@ export const viewport: Viewport = { width: "device-width", initialScale: 1 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className="scroll-pt-16 overflow-x-hidden scroll-smooth">
+    <html lang="en" className="overflow-x-hidden scroll-smooth">
       <body className="m-0 overflow-x-hidden bg-neutral">
         <div id="root">{children}</div>
         <Analytics />

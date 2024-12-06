@@ -21,7 +21,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="w-full scroll-mt-16 overflow-hidden "
+      className="w-full overflow-hidden"
       style={{
         backgroundImage: `url(${hero.src})`,
         backgroundSize: "cover",
@@ -29,7 +29,7 @@ export default function Contact() {
         backgroundRepeat: "no-repeat",
       }}
     >
-      <Container className="min-h-[calc(100vh-11rem)]">
+      <Container className="min-h-[calc(100vh-7rem)]">
         <div className="section-title-container">
           <h2 className="section-title-light">CONTACT</h2>
           <div className="section-title-bar" />

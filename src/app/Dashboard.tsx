@@ -15,7 +15,7 @@ export default function Dashboard() {
   return (
     <div id="dashboard">
       <DynamicNavHeader />
-      <div>
+      <div className="md:ml-28 lg:ml-32 xl:ml-36 2xl:ml-40">
         <Hero />
         <About />
         <Resume />

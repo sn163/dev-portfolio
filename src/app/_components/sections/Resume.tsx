@@ -64,23 +64,27 @@ export default function Resume() {
     );
   });
 
-  const skillsList = skills.map((x) => (
-    <li key={`skills-${uuidv4()}`} className="prose-sm m-1 rounded-md bg-primary px-2.5 py-1 font-semibold text-white">
-      {x}
-    </li>
-  ));
+  const skillsList = (skillsCategory: string[]) =>
+    skillsCategory.map((x) => (
+      <li
+        key={`skills-${uuidv4()}`}
+        className="prose-sm m-1 rounded-md bg-primary px-2.5 py-1 font-semibold text-white"
+      >
+        {x}
+      </li>
+    ));
 
   return (
-    <section id="resume" className="h-full w-full scroll-mt-16 overflow-hidden bg-base-100">
+    <section id="resume" className="h-full w-full overflow-hidden bg-base-100">
       <Container className="h-full">
         <div className="section-title-container">
           <h2 className="section-title-dark">RESUME</h2>
           <div className="section-title-bar" />
           <div className="mt-10 flex space-x-4">
-            <Button variant="link" size="md" href="/sonny_nguyen_cv.pdf" rel="noreferrer noopener" target="_blank">
+            <Button variant="link" size="lg" href="/sonny_nguyen_cv.pdf" rel="noreferrer noopener" target="_blank">
               VIEW PDF
             </Button>
-            <Button variant="link" size="md" href="/sonny_nguyen_cv.pdf" download="sonny_nguyen_resume.pdf">
+            <Button variant="link" size="lg" href="/sonny_nguyen_cv.pdf" download="sonny_nguyen_resume.pdf">
               DOWNLOAD PDF
             </Button>
           </div>
@@ -103,8 +107,22 @@ export default function Resume() {
           {divider}
           <li key={`skills-section-${uuidv4()}`} className="flex justify-start gap-2">
             <div className="resume-header mt-2 flex justify-start">SKILLS</div>
-            <div>
-              <ul className="my-2 flex flex-wrap">{skillsList}</ul>
+            <div className="skills-title space-y-7">
+              <div className="text-xl font-bold">
+                Languages &amp; Concepts: <ul className="my-2 flex flex-wrap">{skillsList(skills.languages)}</ul>
+              </div>
+              <div className="text-xl font-bold">
+                Frameworks &amp; Libraries: <ul className="my-2 flex flex-wrap">{skillsList(skills.frameworks)}</ul>{" "}
+              </div>
+              <div className="text-xl font-bold">
+                Tools &amp; Technologies: <ul className="my-2 flex flex-wrap">{skillsList(skills.tools)}</ul>{" "}
+              </div>
+              <div className="text-xl font-bold">
+                UI / UX: <ul className="my-2 flex flex-wrap">{skillsList(skills.ui)}</ul>{" "}
+              </div>
+              <div className="text-xl font-bold">
+                Databases &amp; Cloud: <ul className="my-2 flex flex-wrap">{skillsList(skills.databases)}</ul>{" "}
+              </div>
             </div>
           </li>
           {divider}

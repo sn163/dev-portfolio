@@ -122,27 +122,10 @@ h1 {
   min-width: 13rem;
 }
 
-/* ------------------------------------------------------------------- 
-## Navbar
-------------------------------------------------------------------- */
-.nav-link.active,
+/* .nav-list li .active,
 .nav-link:hover {
   color: #ff4d59;
-}
-
-.nav-list .nav-item:nth-child(n + 1):nth-child(-n + 3):after {
-  color: #dedede;
-  font-size: 100%;
-  margin: 0 1rem;
-  font-weight: 400;
-}
-
-@media screen and (min-width: 768px) {
-  .nav-list .nav-item:nth-child(n + 1):nth-child(-n + 3):after {
-    content: " | ";
-    margin: 0 2.5rem;
-  }
-}
+} */
 
 /* ------------------------------------------------------------------- 
 ## Hero Section
@@ -184,13 +167,6 @@ h1 {
 /* ------------------------------------------------------------------- 
 ## About Section
 ------------------------------------------------------------------- */
-.s-about {
-  background-color: #272727;
-  overflow: hidden;
-  margin: 0;
-  scroll-margin-top: var(--h-header);
-}
-
 .about-img-container {
   padding: 1.5px 0;
 }
@@ -220,6 +196,7 @@ h1 {
 ------------------------------------------------------------------- */
 .resume-title,
 .project-title,
+.skills-title,
 .project-subtitle {
   font-family: "Raleway", sans-serif;
 }
@@ -280,10 +257,8 @@ h1 {
 }
 
 .contact-icons-group li {
-  background-color: #272727;
   padding: 7px 15px;
   color: #fbfcfa;
-  border: 1px solid #ff4d59;
   min-width: 10rem;
   display: flex;
   justify-content: space-around;
