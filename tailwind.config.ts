@@ -2,9 +2,15 @@ import type { Config } from "tailwindcss";
 
 export default {
   mode: "jit",
-  content: [
-    "./src/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
+  content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ["Inter", "sans-serif"], // Override the default sans font
+        raleway: ["Raleway", "sans-serif"],
+      },
+    },
+  },
   daisyui: {
     themes: [
       {

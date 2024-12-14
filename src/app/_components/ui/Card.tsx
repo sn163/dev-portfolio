@@ -1,43 +1,32 @@
 import Image from "next/image";
 import { v4 as uuidv4 } from "uuid";
-type CardProps = {
-  title: string;
-  url: string;
-  description: string;
-  image: {
-    src: string;
-    alt: string;
-  };
-  skills: string[];
-};
+import { Project } from "./CardSlider";
+
+type CardProps = Project;
 
 export const Card = (props: CardProps) => {
   const id = uuidv4();
   const { title, url, description, image, skills } = props;
   return (
-    <div className="card m-2 w-full max-w-2xl select-none rounded-2xl bg-base-300 text-base-100 shadow-xl">
-      <a
-        href={url}
-        target="_blank"
-        title={title}
-        rel="noreferrer noopener"
-        className="flex h-96 w-full overflow-hidden p-4"
-      >
-        <Image
-          alt={image.alt}
-          src={image.src}
-          width={200}
-          height={200}
-          className="h-96 w-full rounded-t-2xl"
-          loading="lazy"
-        />
+    <div className="card m-2 select-none text-base-100">
+      <a href={url} target="_blank" title={title} rel="noreferrer noopener" className="flex w-full px-4 pt-4">
+        <div className="h-[30rem] w-full">
+          <Image
+            alt={image.alt}
+            src={image.src}
+            width={200}
+            height={200}
+            className="h-full w-full rounded-t-2xl object-cover object-top"
+            loading="lazy"
+          />
+        </div>
       </a>
-      <div className="card-body space-y-4">
-        <a href={url} className="project-title card-title">
+      <div className="card-body w-full pb-12 font-raleway">
+        <a href={url} className="prose prose-2xl my-0 font-bold text-primary no-underline">
           {title}
         </a>
-        <span className="project-subtitle">{description}</span>
-        <div className="card-actions pb-4">
+        <p className="prose font-sans text-base-100">{description}</p>
+        <div className="card-actions mt-4">
           {skills.map((skill, index) => (
             <div
               key={`${id}-${index}`}

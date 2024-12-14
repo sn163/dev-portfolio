@@ -17,8 +17,8 @@ export default function Resume() {
     );
     return (
       <div key={uuidv4()}>
-        <h3 className="resume-title text-4xl text-primary">{resumeTitle}</h3>
-        <div className="prose my-4 space-x-1">
+        <h3 className="resume-title text-3xl text-primary">{resumeTitle}</h3>
+        <div className="my-4 space-x-1">
           <span className="text-lg font-light italic">
             {x.title}{" "}
             <span className="resume-date text-center text-sm uppercase tracking-wider text-[#acacac]">{x.date}</span>
@@ -33,9 +33,9 @@ export default function Resume() {
     const bulletpoints = x.description.map((x) => <li key={`projects-${uuidv4()}`}>{x}</li>);
     return (
       <div key={uuidv4()}>
-        <h3 className="resume-title text-4xl text-primary">{x.project_title}</h3>
+        <h3 className="font-raleway text-3xl text-primary">{x.project_title}</h3>
         <div className="my-4">
-          <span className="prose text-lg font-light italic">{x.subtitle}</span>
+          <span className="text-lg font-light italic">{x.subtitle}</span>
         </div>
         <ul className="prose mx-5 list-disc space-y-3">{bulletpoints}</ul>
       </div>
@@ -45,7 +45,7 @@ export default function Resume() {
   const achievementsList = achievements.map((x) => {
     return (
       <div key={uuidv4()}>
-        <h3 className="resume-title mb-3 text-4xl text-primary">{x.title}</h3>
+        <h3 className="mb-3 font-raleway text-3xl text-primary">{x.title}</h3>
         <span className="prose">{x.description}</span>
       </div>
     );
@@ -54,9 +54,9 @@ export default function Resume() {
   const schoolsList = education.map((x) => {
     return (
       <div key={uuidv4()}>
-        <h3 className="resume-title text-4xl text-primary">{x.school_name}</h3>
+        <h3 className="font-raleway text-3xl text-primary">{x.school_name}</h3>
         <div className="mb-2 mt-2">
-          <span className="prose text-lg">{x.description}</span>
+          <span className="text-lg">{x.description}</span>
           {x.major && <span className="major prose text-lg font-light italic">{x.major}</span>}
         </div>
         <span className="prose mb-2">{x.location}</span>
@@ -108,20 +108,24 @@ export default function Resume() {
           <li key={`skills-section-${uuidv4()}`} className="flex justify-start gap-2">
             <div className="resume-header mt-2 flex justify-start">SKILLS</div>
             <div className="skills-title space-y-7">
-              <div className="text-xl font-bold">
-                Languages &amp; Concepts: <ul className="my-2 flex flex-wrap">{skillsList(skills.languages)}</ul>
+              <div className="prose prose-xl  font-bold">
+                Languages &amp; Concepts:{" "}
+                <ul className="my-2 flex list-none flex-wrap pl-0">{skillsList(skills.languages)}</ul>
               </div>
-              <div className="text-xl font-bold">
-                Frameworks &amp; Libraries: <ul className="my-2 flex flex-wrap">{skillsList(skills.frameworks)}</ul>{" "}
+              <div className="prose prose-xl font-bold">
+                Frameworks &amp; Libraries:{" "}
+                <ul className="my-2 flex list-none flex-wrap pl-0">{skillsList(skills.frameworks)}</ul>{" "}
               </div>
-              <div className="text-xl font-bold">
-                Tools &amp; Technologies: <ul className="my-2 flex flex-wrap">{skillsList(skills.tools)}</ul>{" "}
+              <div className="prose prose-xl font-bold">
+                Tools &amp; Technologies:{" "}
+                <ul className="my-2 flex list-none flex-wrap pl-0">{skillsList(skills.tools)}</ul>{" "}
               </div>
-              <div className="text-xl font-bold">
-                UI / UX: <ul className="my-2 flex flex-wrap">{skillsList(skills.ui)}</ul>{" "}
+              <div className="prose prose-xl font-bold">
+                UI / UX: <ul className="my-2 flex list-none flex-wrap pl-0">{skillsList(skills.ui)}</ul>{" "}
               </div>
-              <div className="text-xl font-bold">
-                Databases &amp; Cloud: <ul className="my-2 flex flex-wrap">{skillsList(skills.databases)}</ul>{" "}
+              <div className="prose prose-xl font-bold">
+                Databases &amp; Cloud:{" "}
+                <ul className="my-2 flex list-none flex-wrap pl-0">{skillsList(skills.databases)}</ul>{" "}
               </div>
             </div>
           </li>

@@ -1,9 +1,8 @@
 /* ------------------------------------------------------------------- 
 ## Font Imports
 ------------------------------------------------------------------- */
-@import url("https://fonts.googleapis.com/css?family=Oswald:400,300,700");
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600&display=swap");
 
 /* ------------------------------------------------------------------- 
 ## Tailwind Directives
@@ -32,6 +31,24 @@ main {
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
+}
+
+.swiper-pagination-bullet {
+  width: 20px !important;
+  height: 20px !important;
+  text-align: center !important;
+  border-radius: 7 !important;
+  line-height: 20px !important;
+  font-size: 12px !important;
+  color: #000 !important;
+  opacity: 1 !important;
+  background: #dedede !important;
+  user-select: none !important;
+}
+
+.swiper-pagination-bullet-active {
+  color: #fff !important;
+  background-color: #ff4d59 !important;
 }
 
 /* ------------------------------------------------------------------- 
@@ -121,11 +138,6 @@ h1 {
   color: #272727;
   min-width: 13rem;
 }
-
-/* .nav-list li .active,
-.nav-link:hover {
-  color: #ff4d59;
-} */
 
 /* ------------------------------------------------------------------- 
 ## Hero Section

@@ -1,5 +1,4 @@
 import { TypeAnimation } from "react-type-animation";
-import scrollSVG from "@/public/arrow-circle-down.svg";
 import portrait from "@/public/imgs/portrait.webp";
 import hero from "@/public/imgs/hero-bg.webp";
 import Image from "next/image";
